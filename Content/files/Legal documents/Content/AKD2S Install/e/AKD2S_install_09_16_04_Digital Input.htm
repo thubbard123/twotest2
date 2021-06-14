@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="780" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">Digital Inputs<MadCap:keyword term="Inputs:Digital" /><a name="DigitalIn"></a></h1>
+        <p>The drive provides 8 digital inputs on X21. Dual axis drives and drives with built-in option IO or DX offer additional 4 inputs on X22 and 2 programmable Input/Outputs on X22. If X23 is built-in and not used for feedback or EEO function, then it offers 4 additional programmable Input/Outputs.</p>
+        <p>All inputs can be used to initiate pre-programmed actions. A list of actions is included in the <MadCap:variable name="Primary.WorkBenchName" />. If an input is programmed, it must be saved to the drive.</p>
+        <p>The drive provides 4 safe digital inputs on X21 and X22. These inputs can be used as safe inputs, based on the installed functional option <MadCap:xref class="XrefSee" href="fsm/AKD2S_install_20_00_Functional Safety.htm">(➜ # 1)</MadCap:xref>.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">Maximum distance for unshielded I/O lines is 3 m inside the cabinet. If the I/O cable leaves the cabinet, it must be EMC shielded.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Depending on the selected function, the inputs are high or low active. Digital input filter can be set in <MadCap:variable name="Primary.WorkBenchName" /> to change sensitivity of the inputs<MadCap:conditionalText MadCap:conditions="Primary.exclude from language project"> (see Online Help)</MadCap:conditionalText>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><a name="_Toc226791153"></a>Digital-In 1 and 2</h2>
+        <p>These inputs (IEC 61131-2 Type 1) are particularly fast and are therefore suitable for position latch functions. They can also be used as 24 V inputs for electronic gearing <MadCap:xref class="XrefSee" href="AKD2S_install_09_15_00_Electronic Gearing_Master Slave.htm#Electron" MadCap:conditions="Default.Exclude from WorkBench">(➜ # 1)</MadCap:xref>.</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DGND</li>
+            <li class="ListBullet">High: 11 to 30 V/2 to 15 mA , Low: -5 to +5 V/&lt;15 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+            <li class="ListBullet">High accuracy latch: motor feedback position or interpolated time is latched or captured within 2 µs of input signal transition (with digital input filter set to 40 ns)</li>
+            <li class="ListBullet">The <MadCap:variable name="Primary.DriveName_AKD2G" /> capture engine is polled every 62.5 µs (16 kHz) by the firmware</li>
+        </ul>
+        <p class="Bold">Wiring example</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-49.png" style="height: auto;width: 480px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Digital-In 3 to 12</h2>
+        <p>These inputs (IEC 61131-2 Type 1) are programmable with the setup software. </p>
+        <p class="Bold">Manufacturer setting:</p>
+        <ul>
+            <li class="ListBullet">Digital-In 3: HW-Enable Axis 1</li>
+            <li class="ListBullet">Digital-In 4: HW-Enable Axis 2</li>
+            <li class="ListBullet">Digital-In 5 ...12: off</li>
+        </ul>
+        <p>Choose the function you require in <MadCap:variable name="Primary.WorkBenchName" />. For more information refer to <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DGND</li>
+            <li class="ListBullet">High: 11 to 30 V/2 to 15 mA , Low: -5 to +5 V/&lt;15 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+        </ul>
+        <p class="Bold">Wiring example</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-11.png" style="height: auto;width: 480px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Digital-In/Out 1 and 2</h2>
+        <p>Pins X22/A20-A21 (Digital-In/Out 1) and X22/B20-B21 (Digital-In/Out 2) can be defined as either inputs or outputs. For programming refer to <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">NOT compatible with 24V signal level! Will be damaged if connected to +24V!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Technical characteristics if configured as input</p>
+        <ul>
+            <li class="ListBullet">RS485, reference common line is AGND</li>
+            <li class="ListBullet">No wire break detection</li>
+            <li class="ListBullet">Digital IN/OUT 1/2: Selectable DC termination for differential or single ended input</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+        </ul>
+        <p class="Bold">Wiring example</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-48.png" style="width: 488px;height: 231px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 name="_Toc226791154" MadCap:autonum="1.4 &#160;&#160;">Digital-In/Out 3 to 6</h2>
+        <p>X23 can be used for digital I/O. The channels can be defined as inputs or outputs. For programming refer to <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">NOT compatible with 24V signal level! Will be damaged if connected to +24V!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Technical characteristics if configured as input</p>
+        <ul>
+            <li class="ListBullet">RS485, reference common line is 0V</li>
+            <li class="ListBullet">No wire break detection</li>
+            <li class="ListBullet">Digital IN/OUT 3/4: Selectable DC termination for differential or single ended input</li>
+            <li class="ListBullet">Digital IN/OUT 5/6: AC termination for single ended input</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+        </ul>
+        <p class="Bold">Wiring example</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-50.png" style="height: auto;width: 470px;" />
+        </p>
+    </body>
+</html>

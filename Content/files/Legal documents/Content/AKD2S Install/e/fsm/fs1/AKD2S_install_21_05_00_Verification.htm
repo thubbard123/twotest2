@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="426" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from AKD2_Safety3,Default.Exclude from AKD2_Safety2,Default.Exclude from AKD">
+    <head>
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Verification<a name="Verifica"></a><MadCap:keyword term="Verification;Commissioning" /></h1>
+        <p>
+            <a name="FS1-WI-1757">
+            </a>Check and verify the STO wiring (examples <MadCap:xref class="XrefSee" href="AKD2S_install_21_04_00_STO.htm#wiring">(➜ # 1)</MadCap:xref>). <a name="WI-593"></a>The installation must be verified by trained personnel after any changes to the installation. The expertise of the personnel must be&#160;appropriate to&#160;the complexity and safety integrity level of the drive system.</p>
+        <p class="Bold">Proof test<a name="FS1-61508-32h"></a></p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">
+                            <a name="FS1-13849-13">
+                            </a>
+                            <a name="FS1-WI-778">
+                            </a>You must test the STO function after initial start of the axis, after each intervention into the wiring of the system, or after exchange of one or several components of the drive system. The proof test intervall shall be one year to meet the required PFH.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Precondition: <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a> = 1</p>
+        <p>
+            <b>Warning: </b>Do not enter hazardous area during proof test!</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 270px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Method 1, axis remain enabled</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Method 2, axis disabled</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListNumbered">Stop the axis to standstill.</li>
+                            <li class="ListNumbered" style="font-weight: bold;">Caution: Block vertical load.</li>
+                            <li class="ListNumbered">Keep the axis enabled. </li>
+                            <li class="ListNumbered">Activate the STO function for example by opening the protective screen.</li>
+                            <li class="ListNumbered">The axis displays fault F9000.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListNumbered">Stop the axis to standstill. </li>
+                            <li class="ListNumbered" style="font-weight: bold;">Caution: Block vertical load.</li>
+                            <li class="ListNumbered">Disable the axis.</li>
+                            <li class="ListNumbered">Activate the STO function, for example, by opening the protective screen</li>
+                            <li class="ListNumbered">The axis displays fault W9000.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

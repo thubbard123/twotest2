@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="221" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table>
+            <col style="width: 125px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <MadCap:snippetBlock src="01danger.flsnp" />
+                    </td>
+                    <td>
+                        <p class="TableWarningText" style="font-weight: bold;">High Voltage up to 900 V!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="TableWarningText">There is a danger of serious personal injury or death by electrical shock or electrical arcing. Capacitors can still have dangerous voltages present up to <MadCap:variable name="Primary.WaitMinutes" /> minutes after switching off the supply power. Control and power connections can still be live, even if the motor is not rotating. </p>
+        <ul class="left1">
+            <li class="ListBullet">Only install and wire the equipment when it is not live.</li>
+            <li class="ListBullet">Make sure that the cabinet is safely disconnected (for instance, with a lock-out and warning signs). </li>
+            <li class="ListBullet">Never remove electrical connections to the drive while it is live. </li>
+            <li class="ListBullet">Wait at least <MadCap:variable name="Primary.WaitMinutes"></MadCap:variable> minutes after disconnecting the drive from the main supply power before touching potentially live sections of the equipment (e.g. contacts) or undoing any connections. </li>
+            <li class="ListBullet">To be sure, measure the voltage in the DC bus link and wait until it has fallen below 50 V. </li>
+        </ul>
+    </body>
+</html>

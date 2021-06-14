@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="15" MadCap:lastHeight="761" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="optionAS" MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Brake interruption contact;Safety:Brake Interruption" />Brake interruption contact</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">General information<MadCap:keyword term="Response Time:Brake Interruption" /></h2>
+        <p>The brake interruption contact can be used to implement an SBC (<b>S</b>afe <b>B</b>rake <b>C</b>ontrol) functionality to the application. The X9 contact interrupts the BR+ line X29/5 (index A for axis 1, index B for axis 2). <br />To achieve a SIL2 / PLd for the SBC functionality, you have to use a qualified external 24 V safety relay. The safety relay must be controlled by a safety controller <MadCap:xref href="#Technica">(➜ # 1)</MadCap:xref>. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The user who implements the SBC function must test the brake function regularly, for example with a standardized SBT.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Resulting classification (SIL and/or PL level) for SBC must be calculated across the drive system. Component quality selection for logic and brake depends on the objectives to be achieved for PL and SIL. This must be determined and implemented by the user.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" colspan="3" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;">
+                        <p class="TableContentCenter">MTTFd Values</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;">
+                        <p class="TableContentCenter">Safety PLC + Safety Relay</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;">
+                        <p class="TableContentCenter"><MadCap:variable name="Primary.DriveVariant_MKD" />-N</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;">
+                        <p class="TableContentCenter">Motor-Brake</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">Manufacturer data</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">	MTTFd = infinite, because no error possible due to fault exclusions. Can be neglected in the totals calculation.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentCenter">Manufacturer data</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Safety instructions<MadCap:keyword term="Safety Instructions:Brake Interruption" /></h2>
+        <table style="caption-side: top;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_warnings.css');" class="TableStyle-82079_warnings" cellspacing="1">
+            <col class="TableStyle-82079_warnings-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_warnings-Column-Column2">
+            </col>
+            <tr class="TableStyle-82079_warnings-Body-Body2">
+                <td class="TableStyle-82079_warnings-BodyE-Column1-Body2">
+                    <img src="../../Resources/Images/Symbols/n/warning_r_suspended_loads.png" MadCap:mediastyle="@media print { height: 15mm;width: auto; }" style="width: auto;height: 17mm;">
+                    </img>
+                </td>
+                <td class="TableStyle-82079_warnings-BodyD-Column2-Body2">
+                    <table>
+                        <col style="width: 125px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <MadCap:snippetBlock src="../../Resources/Snippets/e/01caution.flsnp" />
+                                </td>
+                                <td>
+                                    <p class="TableWarningText" style="font-weight: bold;">Cranes, suspended load!<a name="srs63"></a><a name="srs43"></a></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="TableWarningText">Serious injury could result when a suspended load is not properly blocked. Functional safety requires a mechanical brake, operated by a safety controller. </p>
+                    <ul class="left1" style="padding-bottom: 0px;">
+                        <li class="ListBulletWarning">Add a safe mechanical blocking (for instance, a motor-holding brake) and connect it to X29 <MadCap:xref href="#Technica">(➜ # 1)</MadCap:xref>. </li>
+                        <li class="ListBulletWarning">Set parameter MOTOR.BRAKEIMM to 1 with vertical axes, to apply the motor holding brake immediately after faults or Hardware Disable.</li>
+                        <li class="ListBulletWarning">Switch the brake interruption contact by a safety controller via a safety relay.</li>
+                        <li class="ListBulletWarning">Ensure that the jumper is removed <MadCap:xref href="#Wiring">(➜ # 1)</MadCap:xref>.</li>
+                        <li class="ListBulletWarning">Test the brake function regularly, for example with a standardized SBT.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Signal diagram (sequence)</h2>
+        <p>Fault F305 will be activated, if the sequence requirements given below are not fulfilled.</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD_SBC-sequence.png" style="height: 275px;width: auto;" />
+        </p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Enclosure, wiring<a name="srs45"></a></h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Avoid pollution of the connectors with conductive obstacles. Observe the required ambient conditions<MadCap:conditionalText MadCap:conditions="Default.Exclude from WorkBench,Default.Not in KAS"> as described in chapter Ambient Conditions <MadCap:xref href="MKD_07_05_Ambient Conditions.htm">(➜ # 1)</MadCap:xref></MadCap:conditionalText>.<br></br></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="ListBullet">To avoid failures for wiring in cabinet: failure exclusion of DIN EN 13849.</li>
+            <li class="ListBullet">To avoid failures for wiring from drive to motor: use a shielded cable.</li>
+        </ul>
+        <p> The cables must be laid durably (firmly), protected from outside damage (for example, by laying the cable in a duct), placed in different sheathed cables, or protected individually by grounding connection. Wiring must meet the requirements of the standard IEC 60204-1.</p>
+        <p>Maximum cable length for safety relevant I/Os is 30 m.</p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;"><a name="Technica"></a>Technical data and connection</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">If the brake interruption contact is not used, it must be closed by a jumper.<br />Use cable with minimum 0.5 mm² cross section to jumper pins X9A/1-2 and X9B/1-2.</li>
+                            <li class="ListBullet">Connector X9 ensures requirements of pollution level 3 according to IEC 60664-1.</li>
+                            <li class="ListBullet">The Safety Relay contacts must be able to switch min. 2.5A, 24V +/- 10%</li>
+                            <li class="ListBullet">Ensure that the jumper is removed, if you want to connect the external safety device.<a name="srs40_41"></a><a name="srs43"></a><br /></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Pinout connector X9</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col style="width: 153px;" class="TableStyle-82079_invisible-Column-Column1">
+            </col>
+            <col style="width: 389px;" class="TableStyle-82079_invisible-Column-Column1">
+            </col>
+            <tr class="TableStyle-82079_invisible-Body-Body1">
+                <td style="" class="TableStyle-82079_invisible-BodyE-Column1-Body1">
+                    <img src="../../Resources/Images/MKD/n/MKD-x9A_B.png" style="width: 112px;height: auto;" />
+                    <br />
+                </td>
+                <td class="TableStyle-82079_invisible-BodyD-Column1-Body1">
+                    <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 130px;">
+                        </col>
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 130px;">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                                <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">X9 A</p>
+                                </th>
+                                <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">Axis 1</p>
+                                </th>
+                                <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">X9 B</p>
+                                </th>
+                                <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                                    <p class="TableHeaderCenter">Axis 2</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">1</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">BrInt Out</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">1</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">BrInt Out</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">2</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">BrInt In</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">2</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">BrInt In</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold" style="font-weight: bold;">Wiring<a name="Wiring"></a> Example for axis 1</p>
+        <p>Environment notes and wiring requirements: <MadCap:xref href="#srs43">(➜ # 1)</MadCap:xref>. </p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-N_X29-X31-X9_connection.png" style="width: 403px;height: 380px;" />
+        </p>
+    </body>
+</html>

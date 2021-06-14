@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="927" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <a name="OSSD">
+            </a>OSSD<MadCap:keyword term="OSSD" /></h1>
+        <p class="Bold">Test pulses on safe digital inputs (SIN1 to SIN4)</p>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+                        <img src="../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft" MadCap:conditions="Default.Exclude from AKD2_Safety1">The used Safety Controller must be compatible to OSSD (Output Switching Signal Device) according to IEC 61496-1.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Safety controllers check their outputs periodically during the normal operation. Their self-test processes create pulses to the safe inputs of the drive.</p>
+        <p>
+            <img src="png/A0613-09.png" style="height: auto;width: 430px;">
+            </img>
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_Standard_Table.css');width: 450px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 95px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Timing</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">min</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">max</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">T1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">150 µs</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">1 ms</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">T2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">100 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">1 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">T3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" colspan="2">
+                        <p class="TableContentCenter">&gt; T1 (non-overlapping)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Test pulses with 150 µs ≤ T1 ≤ 1 ms and T2 ≥ 100 ms will not have any influence to the safety function. Test pulses, which are outside of this specification, will switch the safety function, but will not create a dangerous situation.</p>
+                        <p class="TableContentLeft">The SMM software enters the I/O Failure State (fault reaction time ≤ 2ms)</p>
+                        <ul class="left1">
+                            <li class="ListBullet">if no test pulse is detected for a period of 5 seconds,</li>
+                            <li class="ListBullet">if three test pulses on different channels overlap three times in succession.</li>
+                        </ul>
+                        <p class="TableContentLeft" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3">With Safety Option 1 test pulses are ignored.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">
+            <a name="Test">
+            </a>Test pulses on safe digital outputs (SOUT1 to SOUT4)</p>
+        <p>The safe digital outputs can be used as 24 V source voltage to be switched by an external safety relay to STO inputs.</p>
+        <p>
+            <img src="png/A0613-43.png" style="height: auto;width: 430px;">
+            </img>
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_Standard_Table.css');width: 450px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 95px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Timing</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">min</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">max</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">T1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">450 µs</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">550 µs</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">T2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">810 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">990 ms</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">T3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" colspan="2">
+                        <p class="TableContentCenter">&gt; T1 (non-overlapping)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The output test pulses are compatible with the safe digital input requirements. There is only one test pulse on all four outputs at a time. They do not overlap each other. Be sure to use a force-guide relay, converter, or controller that does not respond to these test pulses.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

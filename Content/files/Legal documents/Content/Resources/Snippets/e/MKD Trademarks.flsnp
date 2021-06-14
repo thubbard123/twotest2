@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="217" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p class="left"><b>Trademarks</b>
+        </p>
+        <ul class="left1">
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">MKD is a registered trademark of Kollmorgen Corporation.</li>
+            <li class="ListBullet">EnDat is a registered trademark of Dr. Johannes Heidenhain GmbH.</li>
+            <li class="ListBullet">EtherCAT is a registered trademark and patented technology, licensed by Beckhoff Automation GmbH.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">Ethernet/IP is a registered trademark of ODVA, Inc.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">Ethernet/IP Communication Stack: copyright (c) 2009, Rockwell Automation.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">sercos<span style="vertical-align: super;">®</span> is a registered trademark of sercos<span style="vertical-align: super;">®</span> international e.V.</li>
+            <li class="ListBullet">HIPERFACE is a registered trademark of Max Stegmann GmbH.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">PROFINET is a registered trademark of PROFIBUS and PROFINET International (PI).</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">SIMATIC is a registered trademark of SIEMENS AG.</li>
+            <li class="ListBullet">SpeedTec is a registered trademark of TE Connectivity Industrial GmbH.</li>
+            <li class="ListBullet">Windows is a registered trademark of Microsoft Corporation.</li>
+        </ul>
+    </body>
+</html>

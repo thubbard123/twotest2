@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="This is my publish destination"
+  Host="madcaptyler.zendesk.com"
+  User="MyAccountId"
+  Password=""
+  Directory="C:\Users\thubbard\Documents\Bugs\NewFolder"
+  Port=""
+  ViewUrl="http://www.madcapsoftware.com/"
+  Type="scm"
+  ClickUrl="https://madcaptyler.zendesk.com"
+  DefaultCategory="360005886193"
+  DefaultSection="360012275013"
+  PermissionGroup="761493"
+  PreserveUnsafeHtml="false"
+  PublishAfterUpload="false"
+  ProviderType="Git"
+  Database="C:\Users\thubbard\Documents\Bugs\NewFolder\.git"
+  DatabaseRoot="C:\Users\thubbard\Documents\Bugs\NewFolder"
+  PushToRemote="true"
+  RemoteRepository="origin"></CatapultDestination>

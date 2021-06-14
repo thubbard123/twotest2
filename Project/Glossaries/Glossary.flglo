@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    SortAs="pieta"
+    glossTerm="Glossary.Term1"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>pietà</Term>
+    </Terms>
+    <Definition
+      Link="">A pietà is a subject in Christian art depicting the Virgin Mary cradling the dead body of Jesus, most often found in sculpture.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term2">
+    <Terms>
+      <Term>Impressionism</Term>
+    </Terms>
+    <Definition>19th-century art movement characterized by relatively small, thin, yet visible brush strokes, open composition, emphasis on accurate depiction of light in its changing qualities (often accentuating the effects of the passage of time), ordinary subject matter, inclusion of movement as a crucial element of human perception and experience, and unusual visual angles. Impressionism originated with a group of Paris-based artists whose independent exhibitions brought them to prominence during the 1870s and 1880s.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term0">
+    <Terms>
+      <Term>feedback</Term>
+    </Terms>
+    <Definition>everyone talking abt kendall for burberry when twigs and shygirl r RIGHT THERE literally eating her up</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term3">
+    <Terms>
+      <Term>Bernini</Term>
+    </Terms>
+    <Definition>his stuff is the coolest secretly</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

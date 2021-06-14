@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="933" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2,Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Fault messages</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Fault messages" />Fault<a name="Fehler"></a> and <MadCap:keyword term="Warnings" /><a name="Warnmeldungen"></a>Warning Messages</h1>
+        <p MadCap:conditions="Default.Exclude from Safety Guide">When a fault occurs, the <MadCap:variable name="Primary.DriveVariant_MKD" />-C fault relay is opened, the output stage of the connected drive axes are switched off (motors lose all torque), or the load is dynamically braked. The specific behavior depends on the type of fault. The seven segment LED display shows the number of the fault that occurred. If a warning is issued prior to the fault, the warning is shown and has the same number as the associated fault. Warnings do not trip the power stages of the connected drive axes. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/MKD/e/MKD-C_LED.png" />
+                        <br />
+                        <br />
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.DriveVariant_MKD" /> fault codes or warning codes are displayed constantly if present. Fault messages are coded with "F", warnings are coded with "n".</p>
+                        <p class="TableContentLeft">The LED displays the fault or warning number as follows: F-1-0-1-[break] or n-1-0-1-[break]. The highest priority fault is displayed. Multiple faults may be present when a fault condition is occurring. Check the <MadCap:variable name="Primary.WorkBenchName" /> Fault Screen or read the status of DRV.FAULTS through the controller or HMI for the entire list of faults.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">Eliminate errors and faults in compliance with work safety rules. Troubleshooting only by qualified and trained staff.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">More information about warnings and fault messages, causes, remedy and clearing faults can be found in the <MadCap:variable name="Primary.WorkBenchName" /> online help.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-C Faults</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 62px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Code</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Fault/Warning</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F101</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Firmware type mismatch.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F102</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Resident firmware failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F103</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Resident FPGA failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F104</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Operational FPGA failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F105</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Non-volatile memory stamp invalid.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F106</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Non-volatile memory data (might occur when downloading firmware).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F125</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Fieldbus synchronization frames lost.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F136</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Firmware and FPGA versions are not compatible.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F201</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Internal RAM failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F202</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">External RAM failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F203</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Code Integrity failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F204</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM read failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F205</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM corrupted serial number stamp.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F206</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM corrupted serial number data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F207</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM corrupted parameter stamp.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F208</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM corrupted parameter data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F209</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM read failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F210</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM corrupted serial number stamp.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F212</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM corrupted serial number data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F213</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM corrupted parameter stamp.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F214</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM corrupted parameter data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F219</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board EEPROM write failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F230</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM write failed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F232</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board EEPROM invalid data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F234</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control over temperature sensor 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F235</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power over temperature sensor 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F236</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power over temperature sensor 2.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F237</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power over temperature sensor 3.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F238</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power over temperature sensor 4.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F240</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control under temperature sensor 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F241</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power under temperature sensor 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F242</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power under temperature sensor 2.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F243</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power under temperature sensor 3.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F246</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power under temperature sensor 4.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F305</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Brake open circuit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F501</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Bus over voltage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F503</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Bus capacitor overloaded.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F519</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Regen short circuit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F521</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Regen over power.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F523</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Bus over voltage FPGA.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F531</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power stage fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F536</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Standby power supply fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F537</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Precharge fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F541</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AC input phase 1 missing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F542</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AC input phase 2 missing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F543</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AC input phase 3 missing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F545</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String current over peak limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F546</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String current over continous limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F561</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Too many nodes connected on string 2.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F562</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Too many nodes connected on string 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F563</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Too many nodes connected on string 3.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F564</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Number of connected nodes on string 1 has decreased.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F565</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Number of connected nodes on string 2 has decreased.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F567</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Number of connected nodes on string 3 has decreased.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F568</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 1 current over peak limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F569</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 2 current over peak limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F571</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 3 current over peak limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F572</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 1 current over continuous limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F573</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 2 current over continuous limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F574</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 3 current over continuous limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F576</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 1 desaturated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F578</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 2 desaturated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F579</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 3 desaturated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F580</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 1 over current.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F581</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 2 over current.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F582</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">String 3 over current.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F583</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Rectifier desaturated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F584</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Total string current over peak limit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F587</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">All AC input phases lost while drive was enabled.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F621</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board CRC fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F623</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board CRC fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F624</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board watchdog fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F625</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board communication fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F626</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Power board FPGA not configured.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F627</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Control board watchdog fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F628</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Front door packet not received on string 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F629</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Front door packet not received on string 2.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F630</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">FPGA cyclic read fault.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F632</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Front door packet not received on string 3.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">F702</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Fieldbus communication lost.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">F706</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Fieldbus cyclic setpoints missing.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-N and AKD-N faults</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');caption-side: top;" MadCap:mediastyle="@media print { mc-table-style: url('file:///E:/AKD Documentation/Legal documents/Content/Resources/TableStyles/82079_Standard_Table.css'); }" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 82px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Code</p>
+                    </th>
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Fault/Warning</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F101, n101</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Firmware incompatible. The FPGA is a laboratory FPGA.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F102, n102</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Resident firmware failed. Operational FPGA is not a default FPGA.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F103</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Resident FPGA failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F104</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Operational FPGA failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F105</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Non-volatile memory stamp invalid.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F106</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Non-volatile memory data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n107</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Positive limit switch triggered.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n108</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Negative limit switch triggered.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F120</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Failed to default parameters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F121</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F123, n123</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Invalid motion task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td style="" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F124</p>
+                </td>
+                <td style="" class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Cogging Compensation non volatile memory data error (CRC).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F125, n125</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fieldbus synchronization frames lost.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F126, n126</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bode plot: too much movement.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F127</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Incomplete emergency procedure.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F128</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">MPOLES/FPOLES not integer.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F129</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fieldbus Heartbeat lost.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F130</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Secondary feedback supply over current.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F131</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Secondary feedback A/B line break.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F132</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Secondary feedback Z line break.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F133</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fault number changed to F138. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F134</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Secondary feedback illegal state.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F135, n135</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fault on feedback 2 prevents remote commutation on feedback 1.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F136</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Firmware and FPGA versions are not compatible.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n137</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing and feedback mismatch.
+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F138</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Instability during autotune.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F139</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Target position overshot due to invalid motion task activation.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n151</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Not enough distance to move; motion exception.	</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n152</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Not enough distance to move; following motion exception.	</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n153</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Velocity limit violation, exceeding max limit. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n154</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Following motion failed; check motion parameters.	</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n156</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Target position crossed due to stop command.	</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n157</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing index pulse not found.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n158</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing reference switch not found.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n159</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Failed to set motion task parameters</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n160</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motion task activation failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n161</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing procedure failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n163</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">MT.NUM exceeds limit.	</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n164</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motion task is not initialized.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n165</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motion task target position is out.
+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n167</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">SW limit switch traversed</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n168</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Invalid bit combination in the motion task control word. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n169</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">1:1 profile cannot be triggered on the fly.
+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n170</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Customer profile table is not initialized.
+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n171</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motion task activation is currently pending</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n174</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Homing maximum distance exceeded</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n179</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Teaching of cogging compensation stopped before finishing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n180</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Cogging compensation not active. Axis needs to be homed first.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F201</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Internal RAM failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F202</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">External RAM failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F203</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Code integrity failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F204 to F232</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">EEPROM failure detected</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F234 to F237</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">(n234 to n237) Temperature sensor high.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F240 to F243</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">(n240 to n243) Temperature sensor low.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F245</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">External fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F247</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bus voltage exceed allowed thresholds.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F248</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Option board EEPROM corrupted.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F249</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Option board downstream checksum.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F250</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Option board upstream checksum.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F251</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Option board watchdog.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F252</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Firmware and option board FPGA types are not compatible.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F253</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Firmware and option board FPGA versions are not compatible.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F256, n256</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Analog Input, overvoltage</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F257, n257</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Analog Input, undervoltage</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F301, n301</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motor overheated.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F302</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Over speed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F303</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Run away.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F304, n304</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motor foldback.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F305</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Brake open circuit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F306</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Brake short circuit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F307</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Brake applied during enable state.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F308</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Voltage exceeds motor rating.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n309</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Motor I²t load.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F312</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Brake released when it should be applied.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F401</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Failed to set feedback type.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F402</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Analog signal amplitude fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F403</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">EnDat communication fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F404</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Illegal Hall state (111, 000).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F405</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">BiSS watchdog fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F406</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">BiSS multicycle fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F407</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">BiSS sensor fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F408 to F416</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">SFD feedback fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F417</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Broken wire in primary feedback.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F418</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Primary feedback power supply.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F419</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Encoder init procedure failed</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F420</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">FB3 EnDat Communications Fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F421</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">SFD position sensor fault</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F423</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Non volatile memory failure - Extended Multiturn</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F436</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">EnDat overheated.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F438, n438</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Deviation from predicted trajectory fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F439, n439</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Following error (magnitude).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F450</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Following error (presentation).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F451, n451</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: battery.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F452</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Extended multiturn not supported with this feedback.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F453 to F459</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: communication.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F460</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: over speed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F461</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: counting Error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F462</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: counting overflow.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" style="height: 5px;">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F463</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: overheat.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F464</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Tamagawa encoder: multiturn
+error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F465</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Excessive shock detected by feedback device.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F467</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Feedback fault on feedback 1 (see FB1.FAULTS for details). In case of BiSS: communications.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F468-->F468</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->FB2.SOURCE not set, remote commutation not possible.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F469-->F469</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->FB1.ENCRES is not power of two, remote commutation not possible.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F469-->F470</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Feedback fault on feedback 3.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F471</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Operation in Position Mode with Halls Only feedback not allowed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F473</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Insufficient movement</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F475</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Excess movement.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F476</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Fine-coarse delta too large.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F478, n478</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Over speed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F479, n479</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Loop angle delta too large.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F480</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Fieldbus command velocity too high.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F481</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Fieldbus command velocity too low.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F482</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Commutation not initialized.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F483</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Motor U phase missing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F484</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Motor V phase missing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F485</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Motor W phase missing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F486</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Input change rate exceeds maximum speed of emulated encoder.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F487</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Validating positive movement Failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F489</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Validating negative movement Failed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F490</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Validating commutation angle timed out.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F491</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Validating commutation angle moved too far - bad comm angle.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F492</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Wake &amp; Shake - Validating commutation angle required more than MOTOR.ICONT.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F493</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Invalid commutation detected – motor accelerating in the wrong direction.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n495</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft"> Failed to process recorded cogging compensation table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F501, n501</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bus over voltage.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F502</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bus under voltage. Warning issued prior to fault. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F503</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bus capacitor overload.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F504 to F518</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Internal supply voltage fault</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F519</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Regen short circuit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F521, n521</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Regen over power.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F523</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Bus over voltage FPGA</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F524, n524</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Drive foldback.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F525</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Output over current.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F526</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Current sensor short circuit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F527</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Iu conversor digital analógico atual preso.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F528</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Iv conversor digital analógico atual preso..</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F529</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Iu current offset limit exceeded.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F530</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Iv current offset limit exceeded.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F531</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Power stage fault.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F532</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Drive motor parameters setup incomplete.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F534</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Failed to read motor parameters from feedback device.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F535</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Power-board over-temperature fail.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F541-->F541, n541</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->AC input phase 1 missing.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F542-->F542, n542</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->AC input phase 2 missing.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F543-->F543, n543</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->AC input phase 3 missing.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F560</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Regen near capacity, could not prevent over voltage.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F570, n570</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Mains phase loss.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n580</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Using derivate of position with sensorless feedback type in position mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n581</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Zero velocity with induction sensorless feedback type in position mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n582</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Velocity has been limited, commutation frequency max. 599 Hz to meet ECCN-3A225 / AL-3A225 limits.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F587</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Loss of all AC&#160;input phases.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n601</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Modbus data rate is too high.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F602<br /></p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Safe torque off.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n603</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">OPMODE incompatible with CMDSOURCE</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">n604</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">EMUEMODE&#160;incompatible with DRV.HANDWHEELSRC.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F621-->F621</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Control Board CRC fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F623-->F623</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Power Board CRC fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F624-->F624</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Power Board Watchdog fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F625-->F625</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Power Board Communication fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F626-->F626</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Power Board FPGA not configured.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F627-->F627</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Control Board Watchdog fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F630-->F630</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->FPGA cyclic read fault.<!--comEnd--></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--F630-->F631</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <!--comBegin-->Issue command timed out.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F701</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fieldbus runtime.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F702, n702</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fieldbus communication lost.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F703</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Emergency timeout occurred while axis should disable.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">F706, n706</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Fieldbus cyclic setpoints missing.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

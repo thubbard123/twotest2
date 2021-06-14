@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="105" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/AKD_technicaldata.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../Resources/TableStyles/AKD_technicaldata.css');" class="TableStyle-AKD_technicaldata" cellspacing="0" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety2">
+            <col style="width: 90px;" class="TableStyle-AKD_technicaldata-Column-Column1">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-AKD_technicaldata-Head-Header1">
+                    <th class="TableStyle-AKD_technicaldata-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Edition</p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadD-Column2-Header1">
+                        <p class="TableHeaderLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1" MadCap:conditions="Revisions.Exclude from back,Primary.exclude from language project">
+                <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">...</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft" style="text-align: left;">Table with lifecycle information of this document <MadCap:xref href="AKD2S_install_Revisions.htm" class="ConceptPageNumber">(➜ # 1)</MadCap:xref></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Beta, xx/2021</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">Beta edition</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

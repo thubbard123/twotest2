@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" class="" MadCap:lastBlockDepth="8" MadCap:lastHeight="932" MadCap:lastWidth="641" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;"><a name="Zwischenkreis"></a>
+            <MadCap:keyword term="DC bus link, interface" />DC Bus link connector X3</h1>
+        <p>The DC bus link can be connected in parallel so that the power returned from slowing down motors is divided between all the drives that are connected to the same DC bus link circuit. Every drive must have its own power connection to mains voltage sharing the same branch, over current protection devices, even if the DC bus link is used. Drives working generatively very often should be placed beside drives, which need energy. That reduces current flow on longer distances. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">The sum of the rated currents for all drives connected in parallel to an <MadCap:variable name="Primary.DriveName_AKD2G" /> must not exceed 48&#160;A.<br />Examples:12S-12S-12D-12D-12D or 06D-12S-12D-06D-06D-03S-03S-03S</p>
+                        <p class="TableContentLeft">Wiring: Use 6&#160;mm² unshielded single cores with a max. length of 200&#160;mm; use 6&#160;mm² shielded cables for longer lengths. In this case no fuse for line protection is required.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The drives can be destroyed if DC bus link voltages are different. Only drives with mains supply that share the same AC branch, over current protection devices (identical mains supply voltage) may have the DC bus links interconnected.</p>
+                        <p class="TableContentLeft">Interconnection of DC bus links works best in systems powered by 3-phase AC or DC power. Consult <MadCap:variable name="Primary.CompanyName" /> for DC bus linking with single phase AC power input.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="caption-side: top;border-left-style: none;border-left-width: 1px;border-left-color: #000000;border-right-style: none;border-right-width: 1px;border-right-color: #000000;border-top-style: none;border-top-width: 1px;border-top-color: #000000;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #000000;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');" class="TableStyle-82079_invisible" cellspacing="0">
+            <col style="width: 167px;" class="TableStyle-82079_invisible-Column-Column1" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tr class="TableStyle-82079_invisible-Body-Body1">
+                <td class="TableStyle-82079_invisible-BodyE-Column1-Body1">
+                    <img src="../../Resources/Images/AKD2/n/akd2-x3-FS1.png" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" style="width: 140px;height: auto;" />
+                    <img src="../../Resources/Images/AKD2/n/akd2-x3.png" MadCap:conditions="Default.Exclude from AKD2_Safety1" style="width: 140px;height: auto;" />
+                </td>
+                <td class="TableStyle-82079_invisible-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">8 pin, pitch 7.62 mm</li>
+                        <li class="ListBullet">optional T version</li>
+                        <li class="ListBullet">Mating connector data <MadCap:xref class="XrefSee" href="AKD2S_install_09_03_Wiring.htm#Connecto">(➜ # 1)</MadCap:xref></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p> <![CDATA[ ]]></p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 31px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 65px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Label</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">+DC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">+DC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">DC Bus link positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter"> -DC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">-DC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">DC Bus link negative</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">
+            <MadCap:keyword term="Fusing:DC Bus Link" />Fusing</h2>
+        <p>External regen fusing FB1/FB2 <MadCap:xref class="XrefSee" href="AKD2S_install_09_12_05_External brake resistor.htm#Fusing">(➜ # 1)</MadCap:xref>. DC bus link fusing depends on topology (see next page <MadCap:xref href="#Wiring">(➜ # 1)</MadCap:xref>).</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Wiring <br />topology<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Ampere <br />rating@240V<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Ampere <br />rating@480V<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">UL region<br />example Eaton:</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">CE Region<br />example Mersen:</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="5" style="font-weight: bold;"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Group: Fgroup</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">max. 30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">na</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DFJ-30<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP6M30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Busbar: Fbus</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">max. 15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">na</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DFJ-15<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP6M15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="5" style="font-weight: bold;"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Group: Fgroup</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" colspan="2">
+                        <p class="TableContentCenter">max. 30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FWP-30B<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP10M30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Busbar: Fbus</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" colspan="2">
+                        <p class="TableContentCenter">max. 15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">FWP-15B<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">HP10M15</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><a name="Wiring"></a>Wiring example with T connectors</h2>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-42.png" style="height: 320px;width: auto;" />
+        </p>
+        <p>Without DC Bus fuses, other devices can become damaged or destroyed if, for example, a device fails due to an internal short circuit. If multiple drives are connected in parallel, then it is usual to insert DC Bus fuses (Fgroup) between groups of drives (with a group consisting of two or three devices, depending on the current) in order to limit any possible resulting damage. Fgroup fuses cannot avoid damage by current peaks completely.</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/akd2_dc_bus_link_group.png" style="width: 378px;height: 144px;" />
+        </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="Wiring2"></a>Wiring example with busbar</h2>
+        <p>If a device fails in this system due to a short-circuit, only its fuses (Fbus) are tripped and the rest of the network continues uninterrupted. The solid busbars can conduct significantly larger currents than T connectors, because the compensating current does not flow through the connector as above. </p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/akd2_dc_bus_link.png" style="width: 351px;height: 212px;" />
+        </p>
+    </body>
+</html>

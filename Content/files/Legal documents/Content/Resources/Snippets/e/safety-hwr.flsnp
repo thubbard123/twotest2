@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="79" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p class="Bold">Check Hardware Revision!</p>
+        <p>Check the Hardware Revision Number of the product (see product label). This number is the link between your product and the manual. The product Hardware Revision Number must match the Hardware Revision Number on the cover page of the manual.</p>
+    </body>
+</html>

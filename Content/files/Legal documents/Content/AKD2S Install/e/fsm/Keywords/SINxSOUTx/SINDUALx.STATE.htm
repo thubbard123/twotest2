@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="898" MadCap:lastWidth="641">
+    <head>
+        <link href="../../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">SINDUAL#.STATE</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Description</h2>
+        <p>Reads the state of one safe dual digital input according to the number identified in the command. The safe dual input is composed of two physical safe inputs. The configuration of the safe dual input is determined by the safety parameters.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Usage</h2>
+        <p>The state of the safe dual input is determined by the state of the two underlying safe inputs.</p>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/SWLS.EN.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 89px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">SIN1.STATE</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">SIN2.STATE</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">SINDUAL1.STATE</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">I/O failure</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">I/O failure</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="text-align: center;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>When dual channel mode is selected the drive supervises if the two inputs are in a different state for longer than 100 ms. If this occurs, an I/O failure fault is generated and the drive is put in safe-state.</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Context</h2>
+        <p>For more information, see<MadCap:xref href="../../fs2/AKD2S_install_22_02_00_Technical Data.htm#Safe2" class="RefGuideXRefNoPage"> "Safe digital inputs" (➜ # 1)</MadCap:xref></p>
+        <p MadCap:conditions="Primary.exclude from legal project">Related safety parameters:</p>
+        <ul MadCap:conditions="Primary.exclude from legal project">
+            <li><a href="../SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">SAFEPARAM.SIN.DISTINCTPULSE</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SINDUALx.EN.htm">SAFEPARAM.SINDUAL#.EN</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SOUTx.SOURCE.htm">SAFEPARAM.SOUT#.SOURCE</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SOUTDUALx.EN.htm">SAFEPARAM.SOUTDUAL#.EN</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SOUTDUALx.SOURCE.htm">SAFEPARAM.SOUTDUAL#.SOURCE</a>
+            </li>
+            <li><a href="SINx.STATE.htm">SIN#.STATE</a>
+            </li>
+            <li><a href="SOUTx.STATE.htm">SOUT#.STATE</a>
+            </li>
+            <li><a href="SOUTDUALx.STATE.htm">SOUTDUAL#.STATE</a>
+            </li>
+        </ul>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Versions</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 89px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 250px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Action</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Version</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Implemented</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">02-00-00-000</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft"> Implemented in SMM revision v0.32</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">General Information</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/AKD_technicaldata.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 105px;">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Read Only</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Units</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Range</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">0 or 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Default Value</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Data Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Stored in Non Volatile Memory</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

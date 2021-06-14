@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="852" MadCap:lastWidth="641" class="">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Trouble Shooting</title>
+    </head>
+    <body>
+        <h1 name="Trouble" MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Trouble Shooting" />Troubleshooting</h1>
+        <p class="left">Drive problems occur for a variety of reasons, depending on the conditions in your installation. The causes of faults in multi-axis systems can be especially complex. If you cannot resolve a fault or other issue using the troubleshooting guidance presented below, customer support can give you further assistance.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">Eliminate errors and faults in compliance with work safety rules. Troubleshooting only by qualified and trained staff.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">More details on the removal of faults <MadCap:xref href="../../AKD2G User Manual/Drive FaultsandWarningsTable.htm" class="XrefSee" MadCap:conditions="Primary.exclude from legal project">(see "Faults and Messages")</MadCap:xref> <MadCap:conditionalText MadCap:conditions="Primary.exclude from language project">can be found in the <MadCap:variable name="Primary.WorkBenchName" /> User Manual</MadCap:conditionalText>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 130px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 235px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Problem</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Possible Causes</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Remedy</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">HMI message: <br />Communication fault</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">wrong cable used, cable plugged into wrong position on drive or PC </li>
+                        <li class="ListNumbered">wrong PC interface selected</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">plug cable into the correct sockets on the drive and PC</li>
+                        <li class="ListNumbered">select correct interface</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive does not enable</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">HW Enable configured but not wired</li>
+                        <li class="ListNumbered">HW or SW Enable not set</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">connect HW Enable to the selected input</li>
+                        <li class="ListNumbered">Apply 24V to HW Enable and select SW Enable in <MadCap:variable name="Primary.WorkBenchName" /> / Fieldbus</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor does not rotate</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">drive not enabled </li>
+                        <li class="ListNumbered">software enable not set </li>
+                        <li class="ListNumbered">break in setpoint cable </li>
+                        <li class="ListNumbered">motor phases swapped </li>
+                        <li class="ListNumbered">brake not released </li>
+                        <li class="ListNumbered">drive is mechanically blocked </li>
+                        <li class="ListNumbered">motor pole no. set incorrectly </li>
+                        <li class="ListNumbered">feedback set up incorrectly</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">apply ENABLE signal </li>
+                        <li class="ListNumbered">set software enable </li>
+                        <li class="ListNumbered">check setpoint cable </li>
+                        <li class="ListNumbered">correct motor phase sequence </li>
+                        <li class="ListNumbered">check brake control </li>
+                        <li class="ListNumbered">check mechanics</li>
+                        <li class="ListNumbered">set motor pole no. </li>
+                        <li class="ListNumbered">set up feedback correctly</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor oscillates</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">gain is too high (speed controller) </li>
+                        <li class="ListNumbered">feedback cable shielding broken </li>
+                        <li class="ListNumbered">AGND not wired up</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">reduce AXIS#.VL.KP (speed controller)</li>
+                        <li class="ListNumbered">replace feedback cable</li>
+                        <li class="ListNumbered">join AGND to CNC-GND</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive reports <br />following error</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">Irms or Ipeak set too low</li>
+                        <li class="ListNumbered">current or velocity limits apply<br /></li>
+                        <li class="ListNumbered"> accel/decel ramp is too long</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">verify motor/drive sizing</li>
+                        <li class="ListNumbered">verify that AXIS#.IL.LIMITN/P, AXIS#.VL.LIMITN/P are not limiting the drive</li>
+                        <li class="ListNumbered">reduce AXIS#.ACC/AXIS#.DEC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor overheating</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">motor operating above its rating</li>
+                        <li class="ListNumbered">motor current settings incorrect</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">verify motor/drive sizing</li>
+                        <li class="ListNumbered">verify motor continuous and peak current values are set correctly</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive too soft</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">AXIS#.VL.Kp (velocity) too low</li>
+                        <li class="ListNumbered">AXIS#.VL.Ki (velocity) too low</li>
+                        <li class="ListNumbered">filters set too high</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">increase AXIS#.VL.KP (velocity)</li>
+                        <li class="ListNumbered">increase AXIS#.VL.KI (velocity)</li>
+                        <li class="ListNumbered">refer to documentation regarding reducing filtering (AXIS#.VL.AR*)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive runs roughly</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListNumbered">AXIS#.VL.Kp (velocity) too high</li>
+                        <li class="ListNumbered">AXIS#.VL.Ki (velocity) too high</li>
+                        <li class="ListNumbered"> filters set too low</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <ul class="left1">
+                            <li class="ListNumbered">reduce AXIS#.VL.KP (velocity)</li>
+                            <li class="ListNumbered">reduce AXIS#.VL.KI (velocity)</li>
+                            <li class="ListNumbered">refer to documentation regarding increasing filtering (AXIS#.VL.AR*)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

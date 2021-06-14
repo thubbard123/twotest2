@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="9" MadCap:lastHeight="935" MadCap:lastWidth="641" class="" MadCap:searchable="True" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/AKD_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">LED signals</h1>
+        <p>The EtherCAT Status and Link/Activity LEDs functionality is specified according to the "EtherCAT Indicator Labeling Specification" defined by the EtherCAT Technology Group.</p>
+        <p class="Bold"><a name="led_description"></a>EtherCAT RUN Status (green)</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 103px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">LED states</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft"> Slave State </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Off </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">INITIALISATION</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Blinking </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">PREOPERATIONAL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Single Flash</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft"> SAFEOPERATIONAL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">On </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">OPERATIONAL </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Flickering </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">INITIALISATION or BOOTSTRAP</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">EtherCAT ERROR&#160;Status (red)</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">ERR State</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Error Name</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">On </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Application controller failure </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">n Flashes</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Reserved</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Triple Flash</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Reserved</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Double Flash</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Process Data Watchdog Timeout / EtherCAT Watchdog Timeout</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Single Flash</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Local Error</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Blinking </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Invalid Configuration</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Flickering </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Booting Error</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Off </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">No error</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">EtherCAT Link/Activity</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Link </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Activity </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Condition</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Link/Activity Code</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Yes </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Port open</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">On</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Yes </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Yes </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Port open</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Flickering</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Not applicable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Port closed </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Off</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Yes </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Yes/No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Port closed (mode needs manual open)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Inverted double flash</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Local PHY auto negotiation error</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Single Flash</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Remote PHY auto negotiation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Double Flash</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">No </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Unknown PHY auto negotiation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Triple Flash</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For more information refer to the <MadCap:variable name="Primary.WorkBenchName" /> online help.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-C</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 207px;" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <img src="../../Resources/Images/MKD/e/MKD-C_LED.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">The <b>LED 7-segment</b> display indicates the status of the drive after the 24 V supply is switched on. </p>
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.DriveVariant_MKD" /> fault codes or warning codes are displayed constantly if present. Fault messages are coded with "F" or "E", warnings are coded with "n". </p>
+                        <p class="TableContentLeft"> The IP address can be flashed across the 7-segment display by pressing B1 <MadCap:xref href="MKD_07_22_Pushbuttons.htm">(➜ # 1)</MadCap:xref>.</p>
+                        <p class="TableContentLeft"> The IP address can be configured with rotary switch S1 <MadCap:xref href="MKD_07_23_Rotary Switches.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>EtherCAT STAT LEDs</b>: There is one LED per string. As the LED is a bi-colored LED, it is used to display both the RUN (Green) and Error (RED) status.</p>
+        <p><b>EtherCAT L/A LEDs</b>: These are the EtherCAT Link/Activity LEDs associated with the Motion Bus IN (X10) and OUT (X11) ports. Activity description seetable above.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-N</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 185px;" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <img src="../../Resources/Images/MKD/e/MKD-N_LED.png" style="height: auto;width: 175px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft"><b>DRIVE LEDs</b>: There is one LED per Axis. The LED delivers information with three colors (red, green, orange) and blink frequency (see <MadCap:variable name="Primary.WorkBenchName" /> Help). </p>
+                        <table style="mc-table-style: url('../../Resources/TableStyles/AKD_Standard_Table.css');" class="TableStyle-AKD_Standard_Table" cellspacing="0">
+                            <col class="TableStyle-AKD_Standard_Table-Column-Column1" style="width: 135px;" />
+                            <col class="TableStyle-AKD_Standard_Table-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-AKD_Standard_Table-Head-Header1">
+                                    <th class="TableStyle-AKD_Standard_Table-HeadE-Column1-Header1">Color</th>
+                                    <th class="TableStyle-AKD_Standard_Table-HeadD-Column1-Header1">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">Green</td>
+                                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">Enabled and running</td>
+                                </tr>
+                                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">blink green/orange</td>
+                                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">Enabled and running with warning</td>
+                                </tr>
+                                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">blink orange</td>
+                                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">Safe bus voltage</td>
+                                </tr>
+                                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                    <td class="TableStyle-AKD_Standard_Table-BodyB-Column1-Body1">blink red/orange/green</td>
+                                    <td class="TableStyle-AKD_Standard_Table-BodyA-Column1-Body1">Fault</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Local Fieldbus STAT LEDs</b>: There is one LED per Axis. As the LED is a bi-colored LED, it is used to display both the RUN (Green) and Error (RED) status.</p>
+        <p><b>Local Fieldbus L/A LEDs</b>: These are the Link/Activity LEDs associated with the Local Fieldbus Bus IN (X27) and OUT (X28) ports. Activity description see <MadCap:xref href="#led_description">(➜ # 1)</MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">RJ45 LED signals</h2>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-C, X18 (Service)</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 147px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">LED#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Name</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Function</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <img src="../../Resources/Images/MKD/n/MKD-x18_LEDs_pinout.png" style="width: 92px;height: 44px;" />
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED1</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF= not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED2</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">Activity</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = running, OFF = not running</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-C, X10, X11 (Motion Bus)</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 147px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">LED#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Name</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Function</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <img src="../../Resources/Images/MKD/n/MKD-x10_11_LEDs_pinout.png" style="width: 118px;height: 92px;" />
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED3</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF= not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED4</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED5</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF = not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED6</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-C, X22 (local fieldbus out)</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 147px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">LED#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Name</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Function</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <img src="../../Resources/Images/MKD/n/MKD-x22_LEDs_pinout.png" style="width: 93px;height: 45px;" />
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED7</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF= not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED8</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-N, X27, X28 (local fieldbus in/out)</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 198px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">LED#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Name</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Function</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 2px;border-right-color: #696969;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <img src="../../Resources/Images/MKD/n/MKD-x27_28_LEDs_pinout.png" style="width: 190px;height: 45px;" />
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED9</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF= not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED10</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">Activity</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = running, OFF = not running</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED11</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter"> Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">ON = active, OFF = not active</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">LED12</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

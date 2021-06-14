@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="937" MadCap:lastWidth="641" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Settings <a name="WI-2761"></a><a name="FS2-13849-2"></a></h1>
+        <h2 MadCap:conditions="Default.Exclude from AKD2_Safety1" MadCap:autonum="1.1 &#160;&#160;">Display, Push-Buttons and Rotary Switches</h2>
+        <p>
+            <img src="png/A0613-48.png" style="height: auto;width: 250px;" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" />
+            <img src="png/A0613-49.png" style="height: auto;width: 240px;" MadCap:conditions="Default.Exclude from AKD2_Safety1" />
+        </p>
+        <p class="Bold">Display (example for a dual-axis module)</p>
+        <p class="Bold">
+            <img src="png/A0613-47.png" style="height: 250px;width: auto;" />
+        </p>
+        <p class="Bold">Push-buttons (B1, B2)</p>
+        <p>A short button press invokes the action corresponding to the symbol directly above the button. On the dashboard for example, </p>
+        <ul>
+            <li class="ListBullet">a short press on B1 causes the menu system to appear, and </li>
+            <li class="ListBullet">a short press on B2 causes a help screen to appear.</li>
+            <li class="ListBullet">A long press (greater than 2 seconds) on B2 returns the display to the previous screen.</li>
+        </ul>
+        <table style="caption-side: top;width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 140px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">B1 / B2 Functions</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Boot from SD card</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Push both buttons during power up to boot with data from SD card. Press the buttons first, then hold it down while turning on the 24 V power supply.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Boot from flash <br />fallback image</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Remove the SD card, then press both buttons and hold them down while turning on the 24 V power supply to boot from an on-board recovery image.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Safety Acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Push B1 to acknowledge functional safety acknowledgement requests.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" class="Bold">Rotary Switches (S1, S2)<a name="rotary"></a></p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Two decimal coded rotary switches are used to set a unique SafeID for the drive module. S1 sets the ten place, S2 sets the one place.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Process: </p>
+        <ul>
+            <li class="ListNumbered" MadCap:conditions="Default.Exclude from AKD2_Safety1">Switch off 24V supply voltage.</li>
+            <li class="ListNumbered" MadCap:conditions="Default.Exclude from AKD2_Safety1">Set S1 and S2 to a unique SafeID.<br /></li>
+            <li class="ListNumbered" MadCap:conditions="Default.Exclude from AKD2_Safety1">Switch on the 24V supply voltage.</li>
+        </ul>
+        <h2 MadCap:conditions="Default.Exclude from AKD2_Safety1" MadCap:autonum="1.2 &#160;&#160;">Default safety parameters</h2>
+        <p class="Bold" MadCap:conditions="Default.Exclude from AKD2_Safety1">Default device parameters</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">The <MadCap:variable name="Primary.DriveName_AKD2G" /> will be shipped to customer pre-programmed. The SafeID will be set to 1 and a set of parameters will be downloaded in the non-volatile memory of the SMM. When these parameters are cleared or when the SafeID is changed, this parameter set is lost and cannot be retrieved. The drive is ready to operate with pre-configured STO function.</p>
+        <p class="Bold" MadCap:conditions="Default.Exclude from AKD2_Safety1"><MadCap:variable name="Primary.WorkBenchName" /> Safety default parameters</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">These are the parameters presented by default when adding a new safety device to a safety project. The SafeID is set to 1 by default. The user can change some of these parameters, all of them or none of them. </p>
+        <p class="Bold" MadCap:conditions="Default.Exclude from AKD2_Safety1">FSoE parametrization: default parameters</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Safety parameters can be downloaded through EtherCAT SDO <MadCap:xref href="AKD2S_install_20_08_03 Safety Parameter Download.htm#Download2">(➜ # 1)</MadCap:xref> and then validated through FSoE using the SRA CRC (<a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.SRACRC.htm">AXISx.SAFE.FSOE.SRACRC</a>). By default, parameters will be downloaded with their default values found in the ESI file (default values in the ESI corresponds to the default values used by <MadCap:variable name="Primary.WorkBenchName" /> Safety).</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">To use FSoE parametrization, the user must clear the parameters from the non-volatile memory. The user can keep the default configuration from the ESI file by just using the default SRA CRC (found in the ESI file). The “FSoE parameters” are stored in the volatile memory only and they will be invalidated after a reboot or a restart of the FSoE stack.</p>
+        <h2 MadCap:conditions="Default.Exclude from AKD2_Safety1" MadCap:autonum="1.3 &#160;&#160;"><a name="SafeID"></a><a name="WI-6536"></a>
+            <MadCap:keyword term="SafeID" />SafeID</h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">If you set a functional safety system, you have the responsibility to ensure, that</p>
+                        <ul class="left1">
+                            <li class="ListBullet">every <MadCap:variable name="Primary.DriveName_AKD2G" /> has a distinct SafeID, </li>
+                            <li MadCap:conditions="Default.Exclude from AKD2_Safety1" class="ListBullet">every device on the safe fieldbus has a unique FSoE address,</li>
+                            <li MadCap:conditions="Default.Exclude from AKD2_Safety1" class="ListBullet"> the SafeID is adjusted to the application during commissioning <MadCap:xref href="AKD2S_install_25_00_Commissioning.htm">(➜ # 1)</MadCap:xref>,</li>
+                            <li MadCap:conditions="Default.Exclude from AKD2_Safety1" class="ListBullet"> the SafeID is validated to the application <MadCap:xref href="AKD2S_install_25_00_00_Validation.htm">(➜ # 1)</MadCap:xref>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Restarting the drive after changing the SafeID will result in the loss of this default configuration and will cause a non-operational state as long as no other parameter package is downloaded and validated.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Restarting the drive after changing the SafeID in general will invalidate the current safety configuration. Returning the SafeID to the previously configured value afterwards will not revalidate the previously used configuration. In order to use this or another configuration again, a new download and validation of a parameter package is necessary.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <img src="../../../Resources/Images/Symbols/e/0info.png" style="height: auto;width: 27mm;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The SafeID value 00 will also invalidate/clear the safety configuration after a restart but cannot be used as regular value for operation.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">The SafeID is calculated based on the rotary switches setting: </p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">SafeID = 10 • S1 + S2</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Example: <br />Rotary switches: S1 = 2, S2 = 3 → SafeID = 10 • 2 + 3 = 23</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Press the button B1 on the front of the drive or read the parameter <a href="Keywords/SAFE/SAFE.ID.htm">SAFE.ID</a> to check the ID.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1"><b>Default:</b> When shipped, the SafeID is preset to 01 by default (SafeID = 1). The default safety configuration is bound to this SafeID.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" class="pagebreak">&#160;</p>
+        <h2 MadCap:conditions="Default.Exclude from AKD2_Safety1" MadCap:autonum="1.4 &#160;&#160;"><a name="FSoE"></a>
+            <MadCap:keyword term="FSoE Node Address" />FSoE Node Address</h2>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">The unique FSoE address for every axis is derived from the set SafeID.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_Standard_Table.css');width: 500px;" class="TableStyle-82079_Standard_Table" cellspacing="0" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 113px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Axis</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">FSoE address</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Minimum<br />FSoE Address</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">Maximum<br />FSoE Address</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">SafeID • 100 +1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">101</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">9901</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">SafeID • 100 +2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">102</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentCenter">9902</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" class="Bold">Example for FSoE address setting:</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Rotary switches setting: S1 = 2, S2 = 3 → SafeID = 10 • 2 + 3 = 23<br />Resulting FSoE address for axis 1 : 23 • 100 + 1 = 2301<br />Resulting FSoE address for axis 2 : 23 • 100 + 2 = 2302</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1"><b>Default:</b> With default SafeID setting (01) the resulting FSoE addresses are 1001 / 1002.</p>
+        <h2 MadCap:conditions="Default.Exclude from AKD2_Safety1" MadCap:autonum="1.5 &#160;&#160;">
+            <MadCap:keyword term="Instances" />Instances</h2>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Many safety functions offer several instances. An instance is an independent, separately selectable and configurable variant of the respective function. The activation source for each instance can be selected individually (safe digital input or FSoE).</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Some instances are labeled “Fault Reaction”. In case of an error detection or an internal malfunction, these instances will be executed by default.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <img src="../../../Resources/Images/Symbols/e/0info.png" style="height: auto;width: 27mm;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">SS1 instance 1 and STO are the default fault reactions and cannot be deactivated.</p>
+                        <p class="TableContentLeft">Configure these instances accordingly.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

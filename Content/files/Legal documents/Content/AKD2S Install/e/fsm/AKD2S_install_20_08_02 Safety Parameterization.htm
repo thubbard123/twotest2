@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="2" MadCap:lastHeight="494" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <title>
+        </title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Parameters Editor</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">
+            <a name="Common">
+            </a>Common safety parameters </h2>
+        <p class="Bold">For general safety settings select "Common" and "General".</p>
+        <p>
+            <img src="png/safety-common-general.png" style="height: auto;width: 530px;" />
+        </p>
+        <p>The SafeID (set with the rotary switches on the drive) is visible in the first line. </p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <p class="Bold">For safe input setting select "Common" and "Inputs"</p>
+        <p class="Bold">
+            <img src="png/safety-common-inputs.png" style="width: 530px;height: auto;" />
+        </p>
+        <p>Define the required behavior for OSSD test pulses <MadCap:xref class="XrefSee" href="AKD2S_install_20_06_OSSD.htm">(➜ # 1)</MadCap:xref>. If you use dual channel inputs for a safety function, select the used safe input pair. For parameter description refer to <MadCap:xref class="XrefSee" href="Keywords/SAFEPARAM/SAFEPARAM.SINDUALx.EN.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p class="Bold">For safe output setting select "Common" and "Outputs"</p>
+        <p class="Bold">
+            <img src="png/safety-common-outputs.png" style="width: 530px;height: auto;">
+            </img>
+        </p>
+        <p> If you need dual channel outputs for a status message, select the used safe output pair. <br />For parameter description refer to <MadCap:xref class="XrefSee" href="Keywords/SAFEPARAM/SAFEPARAM.SOUTDUALx.EN.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Axis safety parameters</h2>
+        <p>Choose the axis (1), select category (2), safety function (3) and instance number (4) .</p>
+        <p>
+            <img src="png/FS2-select.png" style="width: 530px;height: auto;" />
+        </p>
+        <p>Parameterization see description of the specific safety function <MadCap:xref class="XrefSee" href="fs2/AKD2S_install_22_00_00_FS2.htm" MadCap:conditions="Default.Exclude from AKD2_Safety3">(➜ # 1)</MadCap:xref> <MadCap:xref class="XrefSee" href="fs3/AKD2S_install_23_00_00_FS3.htm" MadCap:conditions="Default.Exclude from AKD2_Safety2">(➜ # 1)</MadCap:xref>. For parameter description refer to <MadCap:xref class="XrefSee" href="Keywords/FS_Keywords.htm#Safe">(➜ # 1)</MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Define a parameterization package</h2>
+        <p>When all parameters for all safety functions and for all devices are set, you can finish the parameterization. You must define a parameter bundle called "Parameterization Package".</p>
+        <p>Make sure you are on the device topology “Safety”, click on your Safety Group name, and then on the "Safety Parameters" tab at the top. Then click on “new package” button.</p>
+        <p>
+            <img src="png/fs-setup-01.png" style="height: auto;width: 530px;" />
+        </p>
+        <p>The safety parameters are bundled to a package in the “Parameterization Packages” screen.</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">View / Export / Delete a parameterization package</h2>
+        <p>To see the contents of a parameter package, select the according package (1), click on the arrow next to “View” (2) and select “View Parameter Report” (3).</p>
+        <p>To save a parameter package externally click on “Export” (4). </p>
+        <p>To delete this package, click on “Delete” (4).</p>
+        <p>
+            <img src="png/fs-setup-01a.png" style="height: auto;width: 530px;" />
+        </p>
+    </body>
+</html>

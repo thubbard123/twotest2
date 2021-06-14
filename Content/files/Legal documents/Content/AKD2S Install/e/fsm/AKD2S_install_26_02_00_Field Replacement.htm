@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="522" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Field replacement<MadCap:keyword term="Field replacement (FS)" /></h1>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Field replacement must be performed by a trained person. After the drive is replaced and re-configured, the drive must be verified and proof tested before normal operation is started.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">The drive that will be used as replacement must</p>
+        <ul>
+            <li class="ListBullet">match the specification of the replaced drive in term of voltage, features and safety option, see <MadCap:xref href="../AKD2S_install_06_03_Part Number Scheme.htm" class="RefGuideXRefNoPage">"Part Number Scheme" (➜ # 1)</MadCap:xref>,</li>
+            <li class="ListBullet">contain firmwares with same versions, particularly for the SMM. If not, a firmware upgrade must be performed (contact customer support),</li>
+            <li class="ListBullet">have invalidated safety parameters.</li>
+        </ul>
+        <p class="Bold">Reconfiguring the replacement drive</p>
+        <ul>
+            <li class="ListBullet">Other drive on the same safety group or on the same machine should not be impacted by this process.</li>
+            <li class="ListBullet">Before power on, the replacement drive safeID must match the one of the replaced drive. Change the rotary switches accordingly.</li>
+            <li class="ListBullet">Validate the new safeID if needed during the boot of the drive, see <MadCap:xref href="AKD2S_install_25_00_00_Validation.htm" class="RefGuideXRefNoPage"> "Validation" (➜ # 1)</MadCap:xref>. It is important that the safeID is configured and validated before downloading new parameters.</li>
+            <li class="ListBullet">Download safety parameters on the replacement drive. SafeID value is used to choose the right set of parameters for this drive (see <MadCap:xref href="AKD2S_install_20_08_03 Safety Parameter Download.htm" class="RefGuideXRefNoPage">"Safety Parameter Download" (➜ # 1)</MadCap:xref>). Depending on your application, this could be:</li>
+            <li class="ListBulletIndent">	using <MadCap:variable name="Primary.WorkBenchName" />. Use the project of your safety application to download the parameters, </li>
+            <li class="ListBulletIndent">using non-safe field bus,</li>
+            <li class="ListBulletIndent">using FSoE.</li>
+        </ul>
+    </body>
+</html>

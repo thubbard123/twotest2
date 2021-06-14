@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Exclude from AKD2_Safety1" xml:lang="en-us" MadCap:lastBlockDepth="7" MadCap:lastHeight="752" MadCap:lastWidth="641">
+    <head>
+        <link href="../../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">AXIS#.SAFE.FUNCTIONGRAPH</h1>
+        <p>This parameter returns the graph of the safety functions configured in the safety parameters.</p>
+        <p>The following format is used:</p>
+        <p><b>NODEID</b>: Name(<b>NODENAME</b>); Type(<b>NODETYPE</b>); State(<b>NODESTATE</b>); FunctionSource(<b>LIST_OF_FUNCTION_SOURCE</b>); FaultReactionSource(<b>LIST_OF_FAULT_REACTION</b>); InputSource(<b>LIST_OF_INPUTSOURCE</b>); FSoESource(<b>LIST_OF_FSOE_SOURCE</b>); Properties(<b>LIST_OF_PROPERTIES</b>)</p>
+        <ul>
+            <li class="ListBullet"><![CDATA[	]]><b>NODEID</b>: node unique id, built as follows:</li>
+            <li class="ListBulletIndent">Safe functions: SOS, SS1_1, SLS_3, ...</li>
+            <li class="ListBulletIndent">	Safe inputs: SIN1_SOS, SINDUAL2_SS1_2, ...</li>
+            <li class="ListBulletIndent">FSoE: FSOE_SOS, FSOE_SS1_1, ...</li>
+            <li class="ListBulletIndent">I/O Error: IOError</li>
+            <li class="ListBullet"><![CDATA[	]]><b>NODENAME</b>: function name to display (eg FSoE, SIN1, SS1_1, ...) [displayed in the block]</li>
+            <li class="ListBullet"><![CDATA[	]]><b>NODETYPE</b>: node type – SIN, SINDUAL, FSOE, FUNCTION, ERROR [type of graphical block]</li>
+            <li class="ListBullet"><b>NODESTATE</b> can be: [colorization of the block]</li>
+            <li class="ListBulletIndent">	For FUNCTION: “Idle”, “ProcessComplete”, “Active”, “Faulted”</li>
+            <li class="ListBulletIndent">	For SIN, SINDUAL or FSoE: “On”, “Off”</li>
+            <li class="ListBulletIndent">	For ERROR: “Normal”, “Error”</li>
+            <li class="ListBullet"><b>LIST_OF_FUNCTION_SOURCE</b>, <b>LIST_OF_FAULT_REACTION</b>, <b>LIST_OF_INPUTSOURCE</b> and <b>LIST_OF_FSOE_SOURCE</b> are a list of <b>NODEIDs</b> separated by a comma</li>
+            <li class="ListBullet"><b>LIST_OF_PROPERTIES</b>: string list to display separated by commas</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Versions</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/SWLS.EN.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 90px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 250px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Version</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Implemented</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Next release</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <p class="left">Implemented in SMM revision v0.54</p>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">General Information</h2>
+        <table class="TableStyle-82079_Standard_Table" cellspacing="0" style="mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;" />
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Info</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Units</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Range</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Default Value</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Data Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Stored in Non Volatile Memory</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="352" MadCap:lastWidth="641" class="" MadCap:searchable="True" MadCap:conditions="Default.Not in KAS">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Regen circuit;Dynamic Braking" />Dynamic Braking</h1>
+        <p>Dynamic braking is a method to slow down a servo system by dissipating the mechanical energy driven by the motor back EMF. The <MadCap:variable name="Primary.DriveVariant_MKD" />-N drives have a built in advanced dynamic braking mode which operates fully in hardware. When activated, the drive shorts the motor terminals in phase with the back EMF (q axis) but continues to operate the non-force producing current loop (d-axis) with 0 current. This forces all of the dynamic braking current to be stopping current and insures the fastest stopping/amp of motor terminal current. </p>
+        <ul>
+            <li class="ListBullet">When current is not being limited, the mechanical energy is being dissipated in the motor resistance.</li>
+            <li class="ListBullet"> When current is being limited, energy is returned to the <MadCap:variable name="Primary.DriveVariant_MKD" />-C bus capacitors. </li>
+            <li class="ListBullet">The drive also limits the maximum dynamic braking motor terminal current via the <i>DRV.DBILIMIT</i> parameter to insure that the drive, motor, and customer load do not see excessive currents/forces. </li>
+        </ul>
+        <p>Whether and how the <MadCap:variable name="Primary.DriveVariant_MKD" /> uses dynamic braking depends on (<i>DRV.DISMODE</i>). </p>
+    </body>
+</html>

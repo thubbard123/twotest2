@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="9" MadCap:lastHeight="926" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">I/O Connection<MadCap:keyword term="Outputs:Basic Data" /><MadCap:keyword term="Inputs:Basic Data" /><a name="I/O"></a><MadCap:keyword term="I/O-Connection" /></h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Technical Data Inputs/Outputs <MadCap:variable name="Primary.DriveVariant_MKD" />-C</h2>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 173px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Interface</p>
+                    </th>
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Electrical Data</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Digital inputs (X15B)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">ON: 15 VDC to 30 VDC, 2 mA to 15 mA</li>
+                        <li class="ListBullet">OFF: -3 VDC to 5 VDC, &lt; 1 mA</li>
+                        <li class="ListBullet">update rate 250 µs</li>
+                        <li class="ListBullet">galvanic isolation for 250 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Digital outputs (X15B)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">max. 30 VDC, 100 mA</li>
+                        <li class="ListBullet">short circuit proof</li>
+                        <li class="ListBullet">galvanic isolation for 250 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Relay output (X15A)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">max. 30 VDC, 1A</li>
+                        <li class="ListBullet">max. 42 VAC, 1 A</li>
+                        <li class="ListBullet">time open/close 10ms</li>
+                        <li class="ListBullet">isolation 400 VDC contact/coil</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">STO-Enable inputs (X16A/B)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">ON: 18 VDC to 30 VDC, <MadCap:variable name="Primary.DriveName" />-C with one AKD-N 80 mA, every additional AKD-N + 25 mA</li>
+                        <li class="ListBullet">OFF: 0 VDC to 12 VDC, &lt; 50 mA</li>
+                        <li class="ListBullet">immunity 60 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">STO-Status outputs (X15A)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">max. 30 VDC, 100 mA</li>
+                        <li class="ListBullet">galvanic isolation for 250 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Technical Data Inputs/Outputs <MadCap:variable name="Primary.DriveVariant_MKD" />-N</h2>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 173px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Interface</p>
+                    </th>
+                    <th style="" class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Electrical Data</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Digital inputs (X24)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">ON: 15 VDC to 30 VDC, 2 mA to 15 mA</li>
+                        <li class="ListBullet">OFF: -3 VDC to 5 VDC, &lt; 1 mA</li>
+                        <li class="ListBullet">galvanic isolation for 30 VDC</li>
+                        <li class="ListBullet">2 high speed inputs: update rate 2 µs</li>
+                        <li class="ListBullet">1 standard input: update rate 250 µs</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Digital output (X24)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">max. 30 VDC, 100 mA</li>
+                        <li class="ListBullet">short circuit proof</li>
+                        <li class="ListBullet">galvanic isolation for 30 VDC</li>
+                        <li class="ListBullet">Update rate 250 µs</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STO input (X26)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">ON: 18 VDC to 30 VDC, 80 mA</li>
+                        <li class="ListBullet">OFF: 0 VDC to 12 VDC, &lt; 50 mA</li>
+                        <li class="ListBullet">immunity 60 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STO outputs (X24)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">as per IEC61131-2 type 1</li>
+                        <li class="ListBullet">max. 30 VDC, 100 mA</li>
+                        <li class="ListBullet">short circuit proof</li>
+                        <li class="ListBullet">galvanic isolation for 30 VDC</li>
+                        <li class="ListBullet">Update rate 62.5 µs</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h2 name="InterfaceIO" MadCap:autonum="1.3 &#160;&#160;">Pinout <MadCap:variable name="Primary.DriveVariant_MKD" />-C I/O connectors X15 and X16<a name="Pinout"></a></h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">X15 (I/O)</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">X16 (STO)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/MKD/n/MKD-x15A_B.png" style="height: 160px;width: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <img src="../../Resources/Images/MKD/n/MKD-x16A_B.png" style="width: auto;height: 160px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Digital I/O signals are connected to X15A and X15B</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 99px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X15A<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Abbreviation</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Relay Output +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Relay +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">Relay Output, programmable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_09_11_03_Digital Output.htm#BTB/RTO">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Relay Output -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Relay -</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status String 2+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status 2+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Global STO Status of String 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="4">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_20_01_01_STO Global STO.htm#Wiring">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status String 2-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status 2-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status String 3+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status 3+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Global STO Status of String 3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status String 3-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status 3-</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableHeaderCenter">X15B<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Abbreviation </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Enable, programmable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_09_11_02_Digital Input.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Programmable</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Programmable</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Common</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">DCOM</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Common line for digital inputs</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Output +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-Out+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Transistor Output, programmable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_09_11_03_Digital Output.htm#DigitalOut">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Output -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-Out-</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">STO signals are connected to X16A and X16B </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableHeaderCenter">X16A<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Abbreviation </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">24V STO supply voltage </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="6">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_20_01_01_STO Global STO.htm#Wiring">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable String 2 +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO String 2 +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="4">
+                        <p class="TableContentLeft">Global STO Enable of String 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable String 2 -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO String 2 -</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Ground</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">GND STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Ground of 24 V STO supply</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableHeaderCenter">X16B<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Abbreviation </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">24V STO supply voltage </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="6">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_20_01_01_STO Global STO.htm#Wiring">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable String 3 +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO String 3 +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="4">
+                        <p class="TableContentLeft">Global STO Enable String of 3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable String 3 -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO String 3 -</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Ground</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">GND STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Ground of 24 V STO supply</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Pinout <MadCap:variable name="Primary.DriveVariant_MKD" />-N I/O connectors X24 and X26</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">X24 (I/O)</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">X26 (STO)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/MKD/n/MKD-x24A_B.png" style="width: 179px;height: 237px;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <img src="../../Resources/Images/MKD/n/MKD-x26A_B.png" style="width: 177px;height: 234px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Digital I/O signals are connected to X24A (axis 1) and X24B (axis 2 if available)</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableHeaderCenter">X24<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Abbreviation </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Enable, programmable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_09_11_02_Digital Input.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Programmable</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Input 3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-In 3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Programmable</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Common</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">DCOM</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Common line for digital inputs</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Output +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-Out+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Transistor Output, programmable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_09_11_03_Digital Output.htm#DigitalOut">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital Output -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Digital-Out-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status Out+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="3" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Local STO Status</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="3" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_20_01_02_STO Local STO MKD-N.htm#Wiring">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Status Out-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO-Status -</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">STO signals are connected to X26A (axis 1) and X26B (axis 2 if available)</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 135px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 70px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableHeaderCenter">X26<br />Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Abbreviation </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Wiring Diagram</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">+ 24 V STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">24V STO supply voltage </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="6">
+                        <p class="TableContentLeft">
+                            <MadCap:xref href="MKD_20_01_02_STO Local STO MKD-N.htm#Wiring">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO +</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">Local STO Enable +</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO-Enable -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">STO -</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" rowspan="2">
+                        <p class="TableContentLeft">Local STO Enable -</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">STO Ground</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">GND STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Ground of 24 V STO supply</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

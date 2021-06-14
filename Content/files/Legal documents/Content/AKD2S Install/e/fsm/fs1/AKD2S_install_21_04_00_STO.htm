@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="16" MadCap:lastHeight="877" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3,Default.Exclude from AKD">
+    <head>
+        <link href="../../../../Resources/TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;"> STO (Safe Torque Off)<MadCap:keyword term="STO" /></h1>
+        <p>
+            <b>S</b>afe <b>T</b>orque <b>O</b>ff description for drive option Functional Safety 1.</p>
+        <p>STO is suited for SIL 2 according to IEC 62061 and PLd / Cat.3 according to ISO 13849-1. <a name="61508-32k-FS1"></a>STO is a type A subsystem according to IEC 61508.</p>
+        <p>STO turns off the drive output stage that powers the motor. STO function corresponds to an uncontrolled braking according to IEC 60204-1, category 0. </p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Important Notes</h2>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The safety properties given in this documentation refers to the device AKD2G with functional safety option 1. The user has to determine the safety properties of the safety chain.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_warnings.css');" class="TableStyle-82079_warnings" cellspacing="1">
+            <col class="TableStyle-82079_warnings-Column-Column1" style="width: 108px;">
+            </col>
+            <col class="TableStyle-82079_warnings-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_warnings-Body-Body2">
+                    <td class="TableStyle-82079_warnings-BodyB-Column1-Body2">
+                        <img src="../../../../Resources/Images/Symbols/n/warning_r_suspended_loads.png" MadCap:mediastyle="@media print { height: 15mm;width: auto; }" style="width: auto;height: 17mm;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_warnings-BodyA-Column2-Body2">
+                        <table>
+                            <col style="width: 125px;" />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <MadCap:snippetBlock src="../../../../Resources/Snippets/e/01warning.flsnp" />
+                                    </td>
+                                    <td>
+                                        <p class="TableWarningText" style="font-weight: bold;">Vertical load could fall!</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="TableWarningText">Serious injury could result when a suspended load is not properly blocked. The drive cannot hold a vertical load when STO is active. </p>
+                        <ul class="left1">
+                            <li class="ListBullet">Add a safe mechanical blocking (for instance, a motor-holding brake).</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Activation</h2>
+        <p>The digital STO inputs (channel A and B) must be connected to the output of a safety device, which at least meets the requirements of PLd, Cat.&#160;3 according to ISO&#160;13849. Technical data of the safe inputs <MadCap:xref class="XrefSee" href="AKD2S_install_21_02_00_Technical Data.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p> If one of the STO inputs goes open-circuit or 0&#160;V, then power supply to the motor stops within 3.5&#160;ms. The motor will lose all torque and coast to a stop. </p>
+        <p>If the drive detects that the two STO inputs are in a different state for longer than 100 ms, then a simultaneity fault F9005 occurs <MadCap:xref class="XrefSee" href="#Fault">(➜ # 1)</MadCap:xref>.</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Review the enclosure and wiring instructions <MadCap:xref class="XrefSee" href="../AKD2S_install_20_04_Enclosure_Wiring.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Wiring example STO single axis, SIL2/PLd, Emergency Stop<a name="wiring"></a></p>
+        <p>Note: <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a> should be set to 1 if STO is activated by a switch.</p>
+        <p>
+            <img src="../png/A0611-05.png" style="width: 360px;height: auto;" />
+        </p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <p class="Bold">Wiring example STO dual axis, SIL2/PLd, Safety Control</p>
+        <p>
+            <img src="../png/A0611-04.png" style="height: auto;width: 470px;" />
+        </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Restart</h2>
+        <p>Example for Axis 1.</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 143px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">AXIS1.SAFE.STO.<br />REPORTFAULT = 1 </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">AXIS1.SAFE.STO.<br />REPORTFAULT = 0<br /></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Example 1: <br />Axis 1 was disabled, STO is activated</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Message W9000 </p>
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">deactivate STO</li>
+                            <li class="ListNumbered">enable axis 1</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">deactivate STO</li>
+                            <li class="ListNumbered">enable axis 1</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Example 2: <br />Axis 1 was enabled, STO is activated</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Messages W9000 and F9000 </p>
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">disable axis 1</li>
+                            <li class="ListNumbered">deactivate STO</li>
+                            <li class="ListNumbered">clear fault</li>
+                            <li class="ListNumbered">enable axis 1</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">deactivate STO</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Example 3: <br />Axis 1 was disabled, STO is activated faulty</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Message F9005 </p>
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">check wiring</li>
+                            <li class="ListNumbered">remedy the cause</li>
+                            <li class="ListNumbered">deactivate STO</li>
+                            <li class="ListNumbered">clear fault </li>
+                            <li class="ListNumbered">enable axis 1</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Message F9005</p>
+                        <p class="TableContentLeft">Restart:</p>
+                        <ul class="left1">
+                            <li class="ListNumbered">check wiring</li>
+                            <li class="ListNumbered">remedy the cause</li>
+                            <li class="ListNumbered">deactivate STO</li>
+                            <li class="ListNumbered">clear fault</li>
+                            <li class="ListNumbered">enable axis 1</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="color: #ff0000;">&#160;</p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Timing</h2>
+        <p>Example for axis 1.</p>
+        <p>
+            <img src="../png/A0611-44.png" style="width: 511px;height: auto;" />
+        </p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 65px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 67px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Timing</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">max</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO channel A enabled (0 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t1 to t2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO enable delay (response time)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO active</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO channel B enabled (0 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t1 to t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">100 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">accepted delay between dual channel edges</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO channel B disabled (+24 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO channel A disabled (+24 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t4 to t5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">100 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">accepted delay between dual channel edges</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t5 to t6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO release delay</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">t6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">STO release</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"> t6 to t7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Zero if <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a>=0<br />Until 'no fault' if <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a>=1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"> t7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Power section released.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">Safety Diagnostic view in <MadCap:variable name="Primary.WorkBenchName" /><a name="WI-2761"></a></h2>
+        <p> The <MadCap:variable name="Primary.WorkBenchName" /> view "Safety Diagnostic" shows the current status on the safe inputs (<a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.A.htm">AXIS#.SAFE.STO.A</a> / <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.B.htm">AXIS#.SAFE.STO.B</a>) and the logical status of the STO function for every axis.</p>
+        <p>
+            <img src="../png/STO-FS1-View.png" style="width: 291px;height: 210px;" />
+        </p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.6 &#160;&#160;">
+            <a name="Fault">
+            </a>Fault Reaction / Failure Messages<a name="61508-32a"></a></h2>
+        <p>With the dual-channel control of the STO (SIL2/PLd Cat.3) safety function, the switch-off paths STO-A-A# and STO-B-A# are switched separately by two outputs of a safety controller.</p>
+        <p>W9000 and F9000 are conditioned by the value of <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a>. If this parameter is set to 1 (default value) then the W9000 and F9000 will be triggered as described.</p>
+        <table style="caption-side: top;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 88px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 87px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 63px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">STO-A-A#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">STO-B-A#</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">ENABLE</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Drive<br />Message</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Motor<br />Torque</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderCenter">Safe State</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">W9000</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">F9000</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">F9005*</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">F9005*</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">F9005*</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">F9005*</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+        </table>
+        <p>* different status of STO-A/B for more than 100 ms<br />A#: A1 for axis 1 or A2 for axis 2.</p>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="207" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p>Only properly qualified personnel are permitted to perform such tasks as transport, installation and setup. Qualified specialist staff are persons with expertise in transport, installation, assembly, commissioning and operation of electrotechnical equipment.</p>
+        <ul>
+            <li class="ListBullet">Transport, storage, unpacking: only by personnel with knowledge of handling electrostatically sensitive components.</li>
+            <li class="ListBullet">Mechanical installation: only by personnel with mechanical expertise.</li>
+            <li class="ListBullet">Electrical installation: only by personnel with expertise in electrical engineering.</li>
+            <li class="ListBullet">Basic tests / setup: only by personnel with expertise in electrical engineering and drive technology.</li>
+        </ul>
+        <p>The qualified personnel must know and observe ISO 12100 / IEC 60364 / IEC 60664 and national accident prevention regulations.</p>
+    </body>
+</html>

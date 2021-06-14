@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="135" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table>
+            <col style="width: 125px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <MadCap:snippetBlock src="01caution.flsnp" />
+                    </td>
+                    <td>
+                        <p class="TableWarningText" style="font-weight: bold;">High EMC Voltage Level!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="TableWarningText">Risk of electrical shock, if the servo amplifier (or the motor) is not properly EMC-grounded. </p>
+        <ul class="left1">
+            <li class="ListBullet">Do not use painted (i.e. non-conductive) mounting plates. </li>
+            <li class="ListBullet">In unfavourable circumstances, use copper mesh tape between the earthing bolts and earth potential to deflect currents.</li>
+        </ul>
+    </body>
+</html>

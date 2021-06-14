@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="867" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">Wiring of Digital Outputs (X15, X24)<MadCap:keyword term="Outputs:Transistor" /><a name="DigitalOut"></a></h1>
+        <p>Digital I/O connectors X15A, X15B on <MadCap:variable name="Primary.DriveVariant_MKD" />-C and X24A, X24B on <MadCap:variable name="Primary.DriveVariant_MKD" />-N supply programmable digital outputs, <MadCap:xref href="MKD_09_11_00_I-O Connection.htm">(➜ # 1)</MadCap:xref>. Choose the required function in the setup software. A list of these pre-defined functions can be found in the setup software. If the output is to be assigned to a pre-defined function, then the parameter set must be saved in the device memory.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Transistor Outputs (X15B, X24)</h2>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">As per IEC61131-2 type 1</li>
+            <li class="ListBullet">Floating, max. 30 VDC, 100 mA</li>
+            <li class="ListBullet">Short circuit proof</li>
+            <li class="ListBullet">Galvanic isolation for 250 VDC</li>
+            <li class="ListBullet">Can be wired as sink or source (see examples below)</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p>Wiring diagram:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD_Transistor-Output.png" style="width: 472px;height: auto;" />
+        </p>
+        <p style="font-size: 9pt;">* On <MadCap:variable name="Primary.DriveVariant_MKD" />-N connector X24A is used for axis 1, X24B is used for axis 2 if built-in.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">
+            <MadCap:keyword term="FAULT relay;Outputs:Relay" /><a name="BTB/RTO"></a><a name="_Toc226791157">Relay Output (X15A)</a>
+        </h2>
+        <p>Operational readiness can be signaled by these floating relay contacts. With the relay output set to be a fault relay, there are two modes of operation:<br />- Contact closed when there is no fault<br />- Contact closed when there is no fault and the drive is enabled.</p>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">Relay output, max. 30 VDC or 42 VAC, 1 A</li>
+            <li class="ListBullet">Time to close: max. 10 ms</li>
+            <li class="ListBullet">Time to open: max. 10 ms</li>
+        </ul>
+        <p>Wiring diagram:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD_Relays-Output.png" style="width: 491px;height: auto;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="STO"></a>STO Status Outputs (X15A, X24)</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">STO Status signals can be used for information only. The signals should not be used for functional safe operations.</p>
+                        <p class="TableContentLeft">For detailled description of STO functionality refer to <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm">"Safe Torque Off (STO)" (➜ p. 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">As per IEC61131-2 type 1</li>
+            <li class="ListBullet">Floating, max. 30 VDC, 100 mA</li>
+            <li class="ListBullet">Short circuit proof</li>
+            <li class="ListBullet">Galvanic isolation for 250 VDC</li>
+            <li class="ListBullet">Can be wired as sink or source (current sourcing in the example below)</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p>Wiring diagram:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD_STO-Output.png" style="width: 472px;height: auto;">
+            </img>
+        </p>
+        <p style="font-size: 9pt;">* On <MadCap:variable name="Primary.DriveVariant_MKD" />-N connector X24A is used for axis 1, X24B is used for axis 2 if built-in.</p>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="806" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 name="elektrischeInstallation" MadCap:autonum="1 &#160;&#160;">Guide to Electrical Installation</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-C</h2>
+        <p>Remove the front protection cover:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/n/front-cover-out.png" style="width: auto;height: 200px;" />
+        </p>
+        <p>Install the power supply module as follows:</p>
+        <ul>
+            <li class="ListNumbered">Select cables according to IEC 60204 <MadCap:xref href="MKD_07_12_Cable and Wire.htm">(➜ # 1)</MadCap:xref> and the system topology <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Install <MadCap:keyword term="Grounding;Shielding" />shielding and ground the modules <MadCap:xref href="MKD_09_04_01_Shielding on drive.htm#Example">(➜ # 1)</MadCap:xref>. <br />Ground the mounting plate, the 24V supply GND and CNC-GND of the control system.</li>
+            <li class="ListNumbered">Install digital I/O lines</li>
+            <li class="ListNumbered">Install Safety I/O lines</li>
+            <li class="ListNumbered">Wire the device. <br /></li>
+        </ul>
+        <ul>
+            <li class="ListNumberedIndent">Wire the FAULT contact in series into the emergency off circuit of the system.</li>
+            <li class="ListNumberedIndent">If required, connect the external regen resistor (with fusing).</li>
+            <li class="ListNumberedIndent">Connect the <MadCap:variable name="Primary.DriveVariant_MKD" />-N drives. Close and secure all DC Bus sliders (X23).</li>
+            <li class="ListNumberedIndent">Connect the required AKD-N drives to string 2 or string 3. For local AKD-N connections refer to the <i>AKD-N Installation Manual</i>.</li>
+            <li class="ListNumberedIndent">Connect the digital inputs and the digital outputs, if required.</li>
+            <li class="ListNumberedIndent">Connect the global STO inputs for the used strings <MadCap:xref href="MKD_20_01_01_STO Global STO.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumberedIndent">Connect the local STO inputs of the used drive axes <MadCap:xref href="MKD_20_01_02_STO Local STO MKD-N.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumberedIndent">Connect the 24V power supply (required voltage value see electrical data <MadCap:xref href="MKD_07_03_Electrical Data.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumberedIndent">Connect the 24V STO power supply (PELV, required voltage values see <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm#STO2">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumberedIndent">Connect the mains choke. Use shielded cable between choke and <MadCap:variable name="Primary.DriveVariant_MKD" />-C.</li>
+            <li class="ListNumberedIndent">Connect the mains supply. Check maximum permitted voltage value <MadCap:xref href="MKD_07_03_Electrical Data.htm">(➜ # 1)</MadCap:xref>. <br />Check proper use of residual-current circuit breakers (RCD, <MadCap:xref href="MKD_03_02_Shock hazard protection.htm#Residual">(➜ # 1)</MadCap:xref>)</li>
+            <li class="ListNumberedIndent">Connect the PC <MadCap:xref href="MKD_09_13_00_Service interface.htm">(➜ # 1)</MadCap:xref> for setting up the drive system.</li>
+        </ul>
+        <ul start="6">
+            <li class="ListNumbered">Check the wiring and observe the system topology limits <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref>.</li>
+        </ul>
+        <p>Reinstall the front protection cover:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/front-cover-in.png" style="width: auto;height: 200px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><MadCap:variable name="Primary.DriveVariant_MKD" />-N (string 1)</h2>
+        <p>Install the drive module as follows:</p>
+        <ul>
+            <li class="ListNumbered">Select cables <MadCap:xref href="MKD_07_12_Cable and Wire.htm#Leitungen">(➜ # 1)</MadCap:xref> in accordance with the planned system topology <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Install grounding (PE) and ground the drive module <MadCap:xref href="MKD_09_04_01_Shielding on drive.htm#Example">(➜ # 1)</MadCap:xref>. Ground the mounting plates and the motor housings.</li>
+            <li class="ListNumbered">Install digital I/O lines</li>
+            <li class="ListNumbered">Install Safety I/O lines</li>
+            <li class="ListNumbered">Wire the drive: <br></br></li>
+        </ul>
+        <ul>
+            <li class="ListNumberedIndent">String 1 Power: close the sliding terminal (X23) to the adjacent module. Verify the position is monitored as "closed". Fasten the terminal screws. <br /></li>
+            <li class="ListNumberedIndent">Cover the DC Bus contacts of the last <MadCap:variable name="Primary.DriveVariant_MKD" />-N with the DC-Bus link cover.</li>
+            <li class="ListNumberedIndent">String 1 fieldbus: Connect the fieldbus ports of the modules (X22, X27, X28, <MadCap:xref href="MKD_09_09_00_String Connection.htm">(➜ # 1)</MadCap:xref>)</li>
+            <li class="ListNumberedIndent">Dual cable motor connection: <br />6 A and 12 A axes: Connect the motor power &amp; brake to X29, max. length 40 m.<br />24 A and 48 A axes: Connect the motor power to X29, max. length 40 m.<br />24 A and 48 A axes: Connect the motor brake to X30, max. length 40 m.<br />Connect the feedback to X32 , max. length 40 m.<br /></li>
+            <li class="ListNumberedIndent">Single cable motor connection:<br />6 A and 12 A axes: Connect the hybrid motor power&amp;brake to X29, max. length 40 m.<br />24 A and 48 A axes: Connect the motor power to X29, max. length 40 m.<br />24 A and 48 A axes: Connect the motor brake to X30, max. length 40 m.<br />Connect the hybrid motor cable feedback to X31, max. length 40 m.</li>
+        </ul>
+        <ul start="6">
+            <li class="ListNumbered">Check the wiring against the planned system topology <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref> and the wiring diagrams <MadCap:xref href="MKD_09_06_02_Connection Diagram.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Ensure the <MadCap:variable name="Primary.DriveVariant_MKD" />-N DC-Bus link cover is installed on the last <MadCap:variable name="Primary.DriveVariant_MKD" />-N before switching on mains power.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">AKD-N (strings 2 or 3)</h2>
+        <p>Install the drive as follows:</p>
+        <ul>
+            <li class="ListNumbered">Select cables <MadCap:xref href="MKD_07_12_Cable and Wire.htm#Leitungen">(➜ # 1)</MadCap:xref> in accordance with the planned system topology <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref> and with <i>AKD-N Installation Manual</i>.</li>
+            <li class="ListNumbered">Install grounding (PE) and ground the drive, see <i>AKD-N Installation Manual</i>. Ground the mounting plates and the motor housings.<br /></li>
+            <li class="ListNumbered">Wire the drive: <br /></li>
+        </ul>
+        <ul>
+            <li class="ListNumberedIndent">String 2: Connect the hybrid power cable between <MadCap:variable name="Primary.DriveVariant_MKD" />-C X20A/X21A and first AKD-N X1, max. length 40 m.</li>
+            <li class="ListNumberedIndent">String 3: Connect the hybrid power cable between <MadCap:variable name="Primary.DriveVariant_MKD" />-C X20B/X21B and first AKD-N X1, max. length 40 m.</li>
+            <li class="ListNumberedIndent">Connect the hybrid power cables between the AKD-N drives X1/X2.</li>
+            <li class="ListNumberedIndent">Dual cable motor connection: <br />Connect the motor cable to X4, max. length 5 m.<br />Connect the feedback device to X5, max. length 5 m.<br /></li>
+            <li class="ListNumberedIndent">Single cable motor connection:<br />Connect the hybrid motor cable to X4, max. length 5 m.</li>
+        </ul>
+        <ul start="4">
+            <li class="ListNumbered">Check the wiring against the planned system topology <MadCap:xref href="MKD_09_05_System-Topology.htm">(➜ # 1)</MadCap:xref> and the wiring diagrams in the <i>AKD-N Installation</i> manual.</li>
+        </ul>
+    </body>
+</html>

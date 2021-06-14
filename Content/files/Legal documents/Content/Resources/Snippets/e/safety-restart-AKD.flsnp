@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="149" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="Bold">Automatic Restart!</p>
+        <table style="width: 100%;mc-table-style: url('../../TableStyles/AKD_invisible.css');" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col style="width: 111px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1">
+                        <img src="../../Images/Symbols/n/warning_r_autostart.png" style="height: 15mm;width: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">The drive might restart automatically after power on, voltage dip or interruption of the supply voltage, depending on the parameter setting. <br />Risk of death or serious injury for humans working in the machine. <br />If the parameter DRV.ENDEFAULT is set to 1, then place a warning sign to the machine (Warning: Automatic Restart at Power On) and ensure, that power on is not possible, while humans are in a dangerous zone of the machine. In case of using an undervoltage protection device, you must observe EN 60204-1:2006 chapter 7.5 .</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

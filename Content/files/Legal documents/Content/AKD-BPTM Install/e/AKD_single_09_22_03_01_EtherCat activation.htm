@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="6" MadCap:lastHeight="692" MadCap:lastWidth="1095" MadCap:conditions="Default.Exclude from MKD">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>ETHERCAT Activation with CC models</title>
+    </head>
+    <body>
+        <h1>EtherCAT activation with <MadCap:variable name="Primary.DriveName" />-CC models</h1>
+        <p><MadCap:variable name="Primary.DriveName" />-CC drive models are Drives, which support EtherCAT and CAN fieldbus types within one common software. CC drive models are delivered with EtherCAT set active. If you must change a drive from CANopen to EtherCAT, the DRV.TYPE parameter must be changed</p>
+        <ul>
+            <li class="ListNumbered">by software: connect the PC to the <MadCap:variable name="Primary.DriveName"></MadCap:variable> and change the parameter DRV.TYPE in the <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable> terminal screen (see DRV.TYPE parameter documentation) or</li>
+            <li class="ListNumbered">by hardware: with the rotary switches S1 &amp; S2 at the front and the button B1 on the top side of the Drive.</li>
+        </ul>
+        <p>The following steps are needed for changing the fieldbus type from CAN to EtherCAT with the rotary switches.</p>
+        <ul>
+            <li class="ListNumbered">Set the rotary switches on the front side of the <MadCap:variable name="Primary.DriveName" /> to the value of 89.<br /><img src="../../Resources/Images/AKD Install/n/rotary_switches.png" style="width: 158px;height: 102px;" /> <i>Set S1 to 8 and S2 to 9</i><br></br> <![CDATA[ ]]></li>
+            <li class="ListNumbered">Press the button B1 for about 3 seconds (starts DRV.NVSAVE).<br /><img src="../../Resources/Images/AKD Install/e/drivetype_B1.png" style="width: 389px;height: auto;" /><br /><br />The display shows <b>En</b> during the process of changing DRV.TYPE to EtherCAT.<br /><b>Do not switch off the 24[V] power supply while the seven segment shows En!</b><br /><br /></li>
+            <li class="ListNumbered">Wait until the display returns to the original state.</li>
+            <li class="ListNumbered"> Power cycle the drive by switching the 24 V power supply <b>off</b> and then <b>on</b> again.</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The seven segment display shows Er (Error) in case that the DRV.TYPE instruction failed. In this case please power cycle the drive and contact the <MadCap:variable name="Primary.CompanyName" /> customer support for further help.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

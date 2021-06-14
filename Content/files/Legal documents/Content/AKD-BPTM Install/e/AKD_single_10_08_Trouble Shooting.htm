@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:conditions="Default.Exclude from MKD">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="Trouble">
+            <MadCap:keyword term="Trouble Shooting" />Troubleshooting the <MadCap:variable name="Primary.DriveName" /></h1>
+        <p class="left">Drive problems occur for a variety of reasons, depending on the conditions in your installation. The causes of faults in multi-axis systems can be especially complex. If you cannot resolve a fault or other issue using the troubleshooting guidance presented below, customer support can give you further assistance.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">Eliminate errors and faults in compliance with work safety rules. Troubleshooting only by qualified and trained staff.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1" MadCap:conditions="Default.Exclude from Emerson,Default.Exclude from TG-Drives">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">More information about error messages, causes, remedy and clearing errors can be found in the <MadCap:variable name="Primary.WorkBenchName" /> online help and in <a href="http://kdn.kollmorgen.com/webhelp/workbench/English#UsersManual/Faults and Warnings.htm" target="_blank" style="font-weight: bold;">KDN</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 130px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 235px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Problem</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Possible Causes</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Remedy</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">HMI message: <br />Communication fault</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">wrong cable used, cable plugged into wrong position on drive or PC </li>
+                        <li class="ListBullet">wrong PC interface selected</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">plug cable into the correct sockets on the drive and PC</li>
+                        <li class="ListBullet">select correct interface</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive does not enable</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">HW Enable not wired</li>
+                        <li class="ListBullet">HW or SW Enable not set</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">connect HW Enable (X8 pin 4)</li>
+                        <li class="ListBullet">Apply 24V to HW Enable and select SW Enable in <MadCap:variable name="Primary.WorkBenchName" /> / Fieldbus</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor does not rotate</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">drive not enabled </li>
+                        <li class="ListBullet">software enable not set </li>
+                        <li class="ListBullet">break in setpoint cable </li>
+                        <li class="ListBullet">motor phases swapped </li>
+                        <li class="ListBullet">brake not released </li>
+                        <li class="ListBullet">drive is mechanically blocked </li>
+                        <li class="ListBullet">motor pole no. set incorrectly </li>
+                        <li class="ListBullet">feedback set up incorrectly</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">apply ENABLE signal </li>
+                        <li class="ListBullet">set software enable </li>
+                        <li class="ListBullet">check setpoint cable </li>
+                        <li class="ListBullet">correct motor phase sequence </li>
+                        <li class="ListBullet">check brake control </li>
+                        <li class="ListBullet">check mechanics</li>
+                        <li class="ListBullet">set motor pole no. </li>
+                        <li class="ListBullet">set up feedback correctly</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor oscillates</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">gain is too high (speed controller) </li>
+                        <li class="ListBullet">feedback cable shielding broken </li>
+                        <li class="ListBullet">AGND not wired up</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">reduce VL.KP (speed controller)</li>
+                        <li class="ListBullet">replace feedback cable</li>
+                        <li class="ListBullet">join AGND to CNC-GND</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive reports <br />following error</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">Irms or Ipeak set too low</li>
+                        <li class="ListBullet">current or velocity limits apply<br /> <br /></li>
+                        <li class="ListBullet"> accel/decel ramp is too long</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">verify motor/drive sizing</li>
+                        <li class="ListBullet">verify that IL.LIMITN/P,VL.LIMITN/P are not limiting the drive</li>
+                        <li class="ListBullet">reduce DRV.ACC/DRV.DEC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Motor overheating</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">motor operating above its rating</li>
+                        <li class="ListBullet">motor current settings incorrect</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">verify motor/drive sizing</li>
+                        <li class="ListBullet">verify motor continuous and peak current values are set correctly</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive too soft</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">Kp (speed controller) too low</li>
+                        <li class="ListBullet">Ki (speed controller) too low</li>
+                        <li class="ListBullet">filters set too high</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">increase VL.KP (speed controller)</li>
+                        <li class="ListBullet">increase VL.KI (speed controller)</li>
+                        <li class="ListBullet">refer to documentation regarding reducing filtering (VL.AR*)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Drive runs roughly</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">Kp (speed controller) too high</li>
+                        <li class="ListBullet">Ki (speed controller) too high</li>
+                        <li class="ListBullet"> filters set too low</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">
+                        <ul class="left1">
+                            <li class="ListBullet">reduce VL.KP (speed controller)</li>
+                            <li class="ListBullet">reduce VL.KI (speed controller)</li>
+                            <li class="ListBullet">refer to documentation regarding increasing filtering (VL.AR*)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">During installation, the message “Please wait while the installer finishes determining your disk space requirements” appears and never disappears. </p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">MSI installer issue.<br /> <br /> <br /></li>
+                        <li class="ListBullet">Harddisk space not sufficient</li>
+                    </ul>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">Cancel the installation and relaunch the installer (you may need to try several times, the problem is random).
+</li>
+                        <li class="ListBullet">Make sure that you have enough disk space on your hard disk (~500MB). </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

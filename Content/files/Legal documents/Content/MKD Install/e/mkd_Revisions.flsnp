@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="213" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/AKD_technicaldata.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../Resources/TableStyles/AKD_technicaldata.css');width: 640px;" class="TableStyle-AKD_technicaldata" cellspacing="0">
+            <col style="width: 78px;" class="TableStyle-AKD_technicaldata-Column-Column1">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-AKD_technicaldata-Head-Header1">
+                    <td class="TableStyle-AKD_technicaldata-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Revision</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-HeadD-Column2-Header1">
+                        <p class="TableHeaderLeft">Remarks</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1" MadCap:conditions="Revisions.Exclude from front">
+                    <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">A, 01/2019</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                        <p class="TableContentLeft">First edition</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1" MadCap:conditions="Revisions.Exclude from front">
+                    <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">B, 07/2019</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                        <p class="TableContentLeft">Connectors male-female corrected, MKD-C-CA added, RoHS statement, UL completed, <br />STO certified, brake interruption added, noise emission, X23 sense changed to Up, <br />X25 poles and pitch, fusing, faults/warnings updated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1" MadCap:conditions="Revisions.Exclude from back,Primary.exclude from language project">
+                    <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">...</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                        <p class="TableContentLeft" style="text-align: left;">Table with lifecycle information of this document see <MadCap:xref href="MKD_Revisions.htm">(➜ # 1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                    <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">C, 09/2019</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                        <p class="TableContentLeft">Chapter used standards removed, electrical data completed, 42kA rating, DC-Bus chapter completed, SuperCap notes added, Brake interruption contact completed, UL markings updated, Chapter functional safety completed</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                    <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">D, 02/2020</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                        <p class="TableContentLeft">Thermal dissipation and efficiency factor added</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                    <td class="TableStyle-AKD_technicaldata-BodyB-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">E, ??/2020</p>
+                    </td>
+                    <td class="TableStyle-AKD_technicaldata-BodyA-Column2-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">Global STO Input current corrected</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

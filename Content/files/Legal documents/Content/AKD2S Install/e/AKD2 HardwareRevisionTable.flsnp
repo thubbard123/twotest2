@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="100" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/AKD_technicaldata.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="left" style="font-weight: bold;">Hardware Revision (HR)</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/AKD_technicaldata.css');margin-left: 0;margin-right: auto;width: 640px;" class="TableStyle-AKD_technicaldata" cellspacing="0">
+            <col class="TableStyle-AKD_technicaldata-Column-Column1" style="width: 60px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2" style="width: 130px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2" style="width: 110px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2" style="width: 65px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-AKD_technicaldata-Head-Header1">
+                    <th class="TableStyle-AKD_technicaldata-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter"><MadCap:variable name="Primary.DriveName_AKD2G" />
+                        </p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">Firmware1</p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">Workbench</p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">KAS IDE</p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadD-Column2-Header1">
+                        <p class="TableHeaderLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 02-00-00-000</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 2.00.0.0000</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 3.01</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">First revision</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td style="" class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">&#160;</td>
+                <td style="" class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">&#160;</td>
+                <td style="" class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">&#160;</td>
+                <td style="" class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">&#160;</td>
+                <td style="" class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">&#160;</td>
+            </tr>
+        </table>
+    </body>
+</html>

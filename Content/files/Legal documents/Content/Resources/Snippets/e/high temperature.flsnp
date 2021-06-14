@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="118" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table>
+            <col style="width: 125px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <MadCap:snippetBlock src="01caution.flsnp" />
+                    </td>
+                    <td>
+                        <p class="TableWarningText" style="font-weight: bold;">High Temperature!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="TableWarningText">Risk of minor burns. The heat sink of the drive can reach temperatures up to 80°C in operation. </p>
+        <ul class="left1">
+            <li class="ListBullet">Check the heat sink temperature before handling the drive. </li>
+            <li class="ListBullet">Wait until the heat sink has cooled down to 40°C before touching it.</li>
+        </ul>
+    </body>
+</html>

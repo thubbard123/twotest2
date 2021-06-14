@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/82079_invisible_small.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>
+            <MadCap:variable name="Primary.WorkBenchName">
+            </MadCap:variable> 2.0 displays a multi-axis status bar with faults and warnings indicators.</p>
+        <table style="mc-table-style: url('../../TableStyles/82079_invisible_small.css');margin-left: 0;margin-right: auto;" class="TableStyle-82079_invisible_small" cellspacing="0">
+            <col class="TableStyle-82079_invisible_small-Column-Column1" />
+            <col class="TableStyle-82079_invisible_small-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible_small-Body-Body1">
+                    <td class="TableStyle-82079_invisible_small-BodyB-Column1-Body1">
+                        <img src="../../Images/AKD2G WorkBench Images/External/StatusBar.png" />
+                    </td>
+                    <td class="TableStyle-82079_invisible_small-BodyA-Column1-Body1">
+                        <ol>
+                            <li>AXIS1 information</li>
+                            <li>AXIS2 information</li>
+                            <li>Faults and Warnings Indicators</li>
+                            <li>AXIS1 Faults and Warnings screen</li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

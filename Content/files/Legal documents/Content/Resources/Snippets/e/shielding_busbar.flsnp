@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="15" MadCap:lastHeight="770" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../TableStyles/AKD_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;mc-table-style: url('../../TableStyles/AKD_invisible.css');width: 640px;" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col style="width: 213px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td rowspan="3" class="TableStyle-AKD_invisible-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">
+                            <img src="../../Images/Snippets/n/Schirmklemme_extern.png" style="left: 0;text-align: left;z-index: 2;mso-position-horizontal-relative: text;mso-position-vertical-relative: text;width: 100px;margin-left: 0pt;height: auto;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The power cable shields (line in, motor cable, external regen resistor) can be routed to an additional busbar via shield clamps.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.CompanyName" /> recommends using Weidmüller KLBÜ shield clamps.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">A possible scenario for setting up a busbar for the above shield clamps is described below.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;caption-side: top;mc-table-style: url('../../TableStyles/AKD_invisible.css');width: 640px;" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col style="width: 430px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <col style="width: 197px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td rowspan="4" class="TableStyle-AKD_invisible-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <img src="../../Images/Snippets/e/A0294-01.png" style="left: 0;text-align: left;z-index: 3;margin-left: 0pt;width: 427px;height: auto;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">1. Cut a busbar of the required length from a brass rail (cross-section 10 x 3 mm) and drill holes in it as indicated. All shield clamps required must fit between the drill holes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1">
+                        <table style="caption-side: top;mc-table-style: url('../../TableStyles/AKD_Standard_Table.css');" class="TableStyle-AKD_Standard_Table" cellspacing="0">
+                            <col class="TableStyle-AKD_Standard_Table-Column-Column1" />
+                            <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                                    <MadCap:snippetBlock src="01caution.flsnp" />
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                                    <p class="TableContentCenter">Risk of injury due to the spring force of the coil spring. <br />Use pincers.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">2. Squeeze together the coil spring and the supporting plate and push the busbar through the opening in the holder.</p>
+                        <p class="TableContentLeft">3. Mount the busbar with the shield clamps fitted on the assembly plate. Use either metal spacer bushes or screws with nuts and accessories to maintain a spacing of 50 mm. Earth the busbar using a single conductor with a cross-section of at least 2.5 mm². </p>
+                        <p class="TableContentLeft">4. Strip the external cable sheath to a length of approx. 30 mm, taking care not to damage the braided shield. Push the shield clamp up and route the cable to it via the busbar. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <table style="caption-side: top;mc-table-style: url('../../TableStyles/AKD_Standard_Table.css');" class="TableStyle-AKD_Standard_Table" cellspacing="0">
+                            <col class="TableStyle-AKD_Standard_Table-Column-Column1" />
+                            <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <MadCap:snippetText src="01notice.flsnp" />
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                                <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1" style="font-weight: normal;text-align: center;">
+                                    <p class="TableContentCenter" style="font-weight: normal;">Make sure there is good contact between the shield clamp and the braided shield.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

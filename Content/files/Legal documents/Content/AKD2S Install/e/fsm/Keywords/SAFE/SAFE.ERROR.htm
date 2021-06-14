@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>SAFE.ERROR</h1>
+        <h2>Description</h2>
+        <p>Indicates the current error code of the SMM. Possible values of SAFE.ERROR are:</p>
+        <table style="mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');border-left-style: solid;border-left-width: 2px;border-left-color: #696969;border-right-style: solid;border-right-width: 2px;border-right-color: #696969;border-top-style: solid;border-top-width: 2px;border-top-color: #696969;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 55px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">ID</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Failure</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Comments</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">No fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safe input fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SDB failure</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safe output fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">STO output fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder startup timeout</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The communication with the encoder reported a fatal problem.
+The timeout for the startup of the encoder occurred.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: No position available</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">No encoder position is available but is needed. No valid data is available.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Power supply fault (Vcc)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Undervoltage led to a reset of the SMM.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Black-channel fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The safe fieldbus detected a failure.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">9..11</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Fatal faults</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">No transmission to drive because there is no active communication.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">12</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safety parameter invalid</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The drive enters a safe state engaging the brake and removing power simultaneously. This happens when the configured sequence is unknown.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">13</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Brake output fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">14</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Temperature fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The temperature cools when the drive is switched off.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Internal discrepancy</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">A discrepancy between two micro controllers on the SMM was detected.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">16</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FPGA not suitable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The FPGA software is not suitable for use with this SMM.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">17</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Internal fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Error occurred. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">18</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">IO Fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Error occurred which can be fixed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">19</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Reserved</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">20</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">External memory fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">A failure occurred at the external non-volatile memory.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">21</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Manufacturing parameter invalid</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The manufacturing data is invalid.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">22</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">External discrepancy</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The two inputs used for a dual input are different. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">23</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Brake current fault</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The brake current is out of range.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">24</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: No speed available</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">No speed is available but is needed.
+No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">25</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Invalid association</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The association of the encoder to an axis is invalid. No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">26</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Invalid type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder type is invalid. 
+No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">27</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Communication Channel 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder communication failed on channel 1. 
+No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">28</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Communication Channel 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder communication failed on channel 2. 
+No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">29</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Communication timeout</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder reported a timeout in the communication. 
+No valid data is available.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Diagnostic test</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder reported an error in the diagnostic test. 
+No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">31</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Event Channel 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder reported an error on channel 1. No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">32</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Event Channel 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The encoder reported an error on channel 2. No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">33</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Encoder fault: <br />Position Drift</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">The position between channel 1 and 2 is different. No valid data is available.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety2">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p style="text-align: center;" class="TableContentCenter">34</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: normal;">
+                        <p class="TableContentLeft">Encoder fault: <br />Startup error</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">The encoder reported a failed startup test. No valid data is available.
+</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Code</h2><pre xml:space="preserve">--&gt; SAFE.ERROR
+0
+</pre>
+        <h2>Context</h2>
+        <p>For information on validation refer to <MadCap:xref href="../../AKD2S_install_27_00_00_Faults_Warnings.htm" class="RefGuideXRefNoPage"> "Safety Faults,&#160;Safety Warnings" (➜ # 1)</MadCap:xref>. </p>
+        <p MadCap:conditions="Primary.exclude from legal project">Related safety parameters:</p>
+        <ul MadCap:conditions="Primary.exclude from legal project">
+            <li><a href="SAFE.CFGERROR.htm">SAFE.CFGERROR</a>
+            </li>
+            <li><a href="SAFE.CHANGEPASSWORD.htm">SAFE.CHANGEPASSWORD</a>
+            </li>
+            <li><a href="SAFE.CLEARSAFEID.htm">SAFE.CLEARSAFEID</a>
+            </li>
+            <li><a href="SAFE.CRC.htm">SAFE.CRC</a>
+            </li>
+            <li><a href="SAFE.DEVICECRC.htm">SAFE.DEVICECRC</a>
+            </li>
+            <li><a href="SAFE.INVALIDATEPARAMS.htm">SAFE.INVALIDATEPARAMS</a>
+            </li>
+            <li><a href="SAFE.MONITORx.AXIS.htm">SAFE.MONITOR#.AXIS</a>
+            </li>
+            <li><a href="SAFE.MONITORx.DATA.htm">SAFE.MONITOR#.DATA</a>
+            </li>
+            <li><a href="SAFE.MONITORx.INSTANCE.htm">SAFE.MONITOR#.INSTANCE</a>
+            </li>
+            <li><a href="SAFE.MONITORx.SOURCE.htm">SAFE.MONITOR#.SOURCE</a>
+            </li>
+            <li><a href="SAFE.STATE.htm">SAFE.STATE</a>
+            </li>
+            <li><a href="SAFE.SWITCH.htm">SAFE.SWITCH</a>
+            </li>
+            <li><a href="SAFE.VALIDATEPARAM.htm">SAFE.VALIDATEPARAM</a>
+            </li>
+            <li><a href="SAFE.VALIDATIONLOG.htm">SAFE.VALIDATIONLOG</a>
+            </li>
+            <li><a href="SAFE.VERIFYFW.htm">SAFE.VERIFYFW</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.IOFAILUREACKSOURCE.htm">SAFEPARAM.IOFAILUREACKSOURCE</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">SAFEPARAM.SAFEFIELDBUS.ACTIVATION</a>
+            </li>
+        </ul>
+        <h2>Versions</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 89px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 250px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Action</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Version</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Implemented</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">02-00-00-000</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Implemented in SMM revision v0.32</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>General Information</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/AKD_technicaldata.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 191px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 170px;">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Read Only</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Units</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Range</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Default Value</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Data Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Stored in Non Volatile Memory</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="Primary.exclude from legal project">Fieldbus Information</h2>
+        <table class="TableStyle-82079_Standard_Table" cellspacing="0" style="mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');width: 527px;" MadCap:conditions="Primary.exclude from legal project">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 90px;" />
+            <col style="width: 56px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Fieldbus</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Index</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Sub-Index</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Data Type</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Float Scale</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Units</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Access</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">PDO Mappable</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">EtherCAT COE and CANopen</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">SAFE.ERROR</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x37C4</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">UNIT</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">RO</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="96" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p class="Bold">Pay attention to the technical data!</p>
+        <p>Adhere to the technical data and the specifications on connection conditions. If permissible voltage values or current values are exceeded, the devices can be damaged. Unsuitable motor or wrong wiring will damage the system components. Check the combination of drive and motor. Compare the rated voltage and current of the units.</p>
+    </body>
+</html>

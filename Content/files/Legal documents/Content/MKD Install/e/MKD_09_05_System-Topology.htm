@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="elektrischeInstallation" MadCap:conditions="Default.Exclude from Safety Guide">
+            <MadCap:keyword term="System Topology" />System topology of an <MadCap:variable name="Primary.DriveVariant_MKD" /> drive system</h1>
+        <h1 MadCap:conditions="Default.Exclude from Install">System limits</h1>
+        <h2 MadCap:conditions="Default.Exclude from Safety Guide">System limits</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 152px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"> Length String 2/3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft"> Maximum 100 m total cable length per string.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Number of <MadCap:variable name="Primary.DriveVariant_MKD" />-C</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Limited by fieldbus protocol.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Number of <MadCap:variable name="Primary.DriveVariant_MKD" />-N axes</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Maximum 14 axes for string 1, total maximum 28 axes if string 1 and 2 are combined (observe total power and current restrictions).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Number of AKD-N</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Maximum 14 per string, total maximum 28 on strings 2 and 3, (observe total power and current restrictions).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Global STO (String 2/3): <br />Number of AKD-N</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">AKD-N Hardware Rev. A or B: 8 AKD-N</li>
+                            <li class="ListBullet">AKD-N Hardware Rev. A or B with signal buffer: 14 AKD-N</li>
+                            <li class="ListBullet">AKD-N Hardware Rev. C: 14 AKD-N</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Output current</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Use coincidence factor of the axes for distribution and system power optimization.</p>
+                        <p class="TableContentLeft">String 1: 43 A, String 2: 16 A, String 3: 16 A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"> Total power</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">At 565 V to 680 V limited to 30&#160;kW.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"> String 2/3 power</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">At 565 V to 680 V limited to 10&#160;kW for each string.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"> String standby power</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">At 55 V limited to 180&#160;W for each string.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Motor Brake power</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">You can control up to 3 motor brakes per string. Available power for brakes is 76 W per string (= 3.2 A @ 24 VDC).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">Service Interface X18</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft"> Ethernet TCP/IP, 100 Mbit/s, max. cable distance 100&#160;m</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="Default.Exclude from Safety Guide"><a name="Topology"></a>Topology example with two external strings</h2>
+        <p MadCap:conditions="Default.Exclude from Safety Guide">
+            <img src="../../Resources/Images/MKD/e/MKD-C_dec-system_topology1.png" style="height: auto;width: 530px;" />
+        </p>
+        <h2 MadCap:conditions="Default.Exclude from Safety Guide">Topology example with one external string migrated to cabinet</h2>
+        <p class="left" MadCap:conditions="Default.Exclude from Safety Guide">
+            <img src="../../Resources/Images/MKD/e/MKD-C_dec-system_topology2.png" style="width: 640px;height: auto;" />
+        </p>
+    </body>
+</html>

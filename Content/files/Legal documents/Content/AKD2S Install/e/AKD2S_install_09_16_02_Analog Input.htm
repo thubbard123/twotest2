@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="913" MadCap:lastWidth="641" class="">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Inputs:Analog;Analog setpoints" /><a name="AnalogIn"></a>Analog Input</h1>
+        <p>The drive is fitted with differential inputs for analog torque, velocity, or position control. The standard drive offers one analog input on X21, dual axis drives and drives with built-in option IO or DX offer a second analog input on X22.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Maximum distance for unshielded I/O lines is 3 m inside the cabinet. If the I/O cable leaves the cabinet, it must be EMC shielded.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Differential input voltage range: ± 10 V</li>
+            <li class="ListBullet">Maximum input voltage referring to I/O Return: -12.5, +16.0 V</li>
+            <li class="ListBullet">Resolution: 16 Bit and fully monotonic</li>
+            <li class="ListBullet">Firmware update rate: 16 kHz</li>
+            <li class="ListBullet">Unadjusted offset: &lt; 50 mV</li>
+            <li class="ListBullet">Offset drift typ: 250 µV / ° C</li>
+            <li class="ListBullet">Gain or slope tolerance: +/- 3%</li>
+            <li class="ListBullet">Nonlinearity: &lt; 0.1% of full scale or 12.5 mV</li>
+            <li class="ListBullet">Common Mode Rejection Ratio: &gt; 30 dB at 60 Hz</li>
+            <li class="ListBullet">Input impedance: &gt; 13k Ωs</li>
+            <li class="ListBullet">Signal to noise ratio referred to full scale:</li>
+            <li class="ListBulletIndent">AIN.CUTOFF = 3000 Hz: 14 bit</li>
+            <li class="ListBulletIndent">AIN.CUTOFF = 800 Hz: 16 bit</li>
+        </ul>
+        <p class="Bold">Analog Input Wiring Diagram </p>
+        <p class="right">
+            <img src="../../Resources/Images/AKD2/e/A0611-09.png" style="width: 550px;height: auto;" />
+        </p>
+        <p>&#160;</p>
+        <p class="Bold">Application examples for set point input Analog-In:</p>
+        <ul>
+            <li class="ListBullet">reduced-sensitivity input for setting-up/jog operation</li>
+            <li class="ListBullet">pre-control/override</li>
+        </ul>
+        <p class="Bold">Defining the direction of rotation</p>
+        <p>Standard setting: clockwise rotation of the motor shaft (looking at the shaft end) affected by positive voltage between terminal (+ ) and terminal ( - )</p>
+        <p>To reverse the direction of rotation, swap the connections to terminals +/- or change parameter AXIS#.DIR in <MadCap:variable name="Primary.WorkBenchName" />.</p>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="240" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/AKD_technicaldata.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="left" style="font-weight: bold;">Hardware Revision (HR)</p>
+        <table style="caption-side: top;mc-table-style: url('../../TableStyles/AKD_technicaldata.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-AKD_technicaldata" cellspacing="0">
+            <col class="TableStyle-AKD_technicaldata-Column-Column1">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2" style="width: 126px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2" style="width: 92px;">
+            </col>
+            <col class="TableStyle-AKD_technicaldata-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-AKD_technicaldata-Head-Header1">
+                    <th style="" class="TableStyle-AKD_technicaldata-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">
+                            <MadCap:variable name="Primary.DriveName" />-N</p>
+                    </th>
+                    <th class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">
+                            <MadCap:variable name="Primary.DriveName" />-C</p>
+                    </th>
+                    <th style="" class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">Firmware/ <br /><MadCap:variable name="Primary.WorkBenchName" /></p>
+                    </th>
+                    <th style="" class="TableStyle-AKD_technicaldata-HeadF-Column2-Header1">
+                        <p class="TableHeaderCenter">Export<br />Classification</p>
+                    </th>
+                    <th style="" class="TableStyle-AKD_technicaldata-HeadD-Column2-Header1">
+                        <p class="TableHeaderLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td style="" class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">A</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 1.11</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">3A225</p>
+                </td>
+                <td style="" class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">
+                        <MadCap:variable name="Primary.DriveName" />-C and <MadCap:variable name="Primary.DriveName" />-N start revisions</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td style="" class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">A</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 1.13</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">
+                        <MadCap:variable name="Primary.DriveName" />-N Hardware Revision for export classification tracebility purposes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-AKD_technicaldata-Body-Body1">
+                <td style="" class="TableStyle-AKD_technicaldata-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">C</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">A</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">from 1.19</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyF-Column2-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-AKD_technicaldata-BodyD-Column2-Body1">
+                    <p class="TableContentLeft">
+                        <MadCap:variable name="Primary.DriveName" />-N usable for <MadCap:variable name="Primary.DriveVariant_MKD" />-C for extended string size</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

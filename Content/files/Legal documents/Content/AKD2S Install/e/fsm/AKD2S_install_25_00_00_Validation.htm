@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="881" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Validation<MadCap:keyword term="Validation (FS)" /><a name="WI-1757"></a><a name="WI-4693"></a><a name="WI-778"></a></h1>
+        <p>Validation is done on transferred parameters using CRC check. Parameters transferred by using FSoE (when FSoE parametrization is used) do not require user validation.</p>
+        <p>More information referring to parameter download <MadCap:xref class="XrefSee" href="AKD2S_install_20_08_03 Safety Parameter Download.htm">(➜ # 1)</MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">User log-in</h2>
+        <p>When you want to open a project in <MadCap:variable name="Primary.WorkBenchName" />, you must provide:</p>
+        <ul>
+            <li class="ListNumbered">User name</li>
+            <li class="ListNumbered">Date and time</li>
+            <li class="ListNumbered">SafeID</li>
+            <li class="ListNumbered">Password</li>
+        </ul>
+        <p>When the password is written to the object dictionary, the validation is triggered.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Validation of SafeID</h2>
+        <p>If the SafeID is not flagged as validated when booting, a message will be displayed to the user: "SafeID not validated". </p>
+        <ul>
+            <li class="ListNumbered">Read SafeID: Press the button B1 on the front of the drive to display the SafeID.</li>
+            <li class="ListNumbered">Compare the displayed SafeID with the paperwork.</li>
+            <li class="ListNumbered">If the SafeID is correct, press button B1 again within 10 seconds to validate.</li>
+            <li class="ListNumbered">If B1 is not pressed, the drive remains in the safe state.</li>
+        </ul>
+        <p>Validation of the SafeID is performed through FSoE</p>
+        <ul>
+            <li class="ListBullet">if FSoE parameterization is used and</li>
+            <li class="ListBullet">if the SafeID is not validated yet and</li>
+            <li class="ListBullet">if the SafeID matched the safe address defined in the safe PLC.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Validation of safety parameters<a name="WI-834"></a></h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The parameter CRC is equal to the system CRC. The character string of the SafeID is concatenated with the character string of the CRC.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The purpose of validation is to ensure that all safety parameters as a group are suitable for the application. </p>
+        <p>Example for invalid parameters: The parameters are valid for an elevator drive, but they are not for a paper machine drive.</p>
+        <p>The person responsible for validation must document decisions. Therefore the safety related system stores information about the user (user name, date of validation).</p>
+        <ul>
+            <li class="ListBullet">The user checks the System CRC. This value is read from the drive (read the parameter value <a href="Keywords/SAFE/SAFE.CRC.htm">SAFE.CRC</a>). This may require the user to sign a document about the correct parameters having been entered.</li>
+            <li class="ListBullet">The user must check, if all drives have been programmed correctly.</li>
+            <li class="ListBullet">The user requests a validation of all safety parameters. This is the exact moment when the user takes the responsibility for everything. The system adds the user name to the parameter set.</li>
+        </ul>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Validation of safe I/O installation</h2>
+        <p>
+            <a name="WI-593">
+            </a>
+            <a name="WI-1752">
+            </a>The installation of every drive must be validated by trained personnel after any changes to the installation. The expertise of the personnel must be&#160;appropriate to&#160;the complexity and safety integrity level of the drive system.</p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">
+            <br />
+        </p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">
+            <a name="Safe">
+            </a>Validation Report</h2>
+        <p>To assist commissioning and documentation, <MadCap:variable name="Primary.WorkBenchName" /> offers to print a “Safe Motion Validation Report” suiting the safety parameter configuration. Select the corresponding safety parameter package (1). To view the validation report, click on “View” (2) directly or “View Validation Report” (3).</p>
+        <p>
+            <img src="png/valreport-View.png" style="width: 528px;height: 207px;" />
+        </p>
+        <p>The “Safe Motion Validation Plan” lists all configured functions and their parameterized values (expected behavior). The validators can use it as guidance to verify all parameters and functions.</p>
+        <p class="Bold">Example for a Validation Report (extract):</p>
+        <p>
+            <img src="png/valreport1.png" style="width: 531px;height: 340px;" />
+        </p>
+    </body>
+</html>

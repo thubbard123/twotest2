@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="124" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <table style="margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td><a href="http://kdn.kollmorgen.com" target="_blank"><img src="../../Images/Logos/KDN.png" style="height: 120px;width: auto;" /></a>
+                    </td>
+                    <td>
+                        <p class="TableContentLeft">Join the <a href="http://kdn.kollmorgen.com" target="_blank"><MadCap:variable name="Primary.CompanyName" /> Developer Network</a> for product support. Ask the community questions, search the knowledge base for answers, get downloads, and suggest improvements.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

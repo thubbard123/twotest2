@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="6" MadCap:lastHeight="891" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Initial Drive Test" />Initial Drive Test Procedure</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Unpacking, mounting, and wiring the <MadCap:variable name="Primary.DriveName_AKD2G" /></h2>
+        <ul>
+            <li class="ListNumbered">Unpack the drive and accessories.</li>
+            <li class="ListNumbered">Mount the drive.</li>
+            <li class="ListNumbered">Wire the drive or apply the minimum wiring for drive testing as described below.</li>
+            <li class="ListNumbered">Make sure you have on hand the following information about the drive components:</li>
+            <li class="ListBulletIndent">rated mains supply voltage</li>
+            <li class="ListBulletIndent">motor type (motor data, if the motor type is not listed in the motor database)</li>
+            <li class="ListBulletIndent">feedback unit built into the motor (type, poles/lines/protocol)</li>
+            <li class="ListBulletIndent">moment of inertia of the load</li>
+        </ul>
+        <h2 name="minwiring" MadCap:autonum="1.2 &#160;&#160;">Minimum wiring for drive test without load, example</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">This wiring diagram based on default settings is for general illustration only and does not fulfill any requirements for EMC, functional safety, or functionality of your application.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="right">
+            <img src="../../Resources/Images/AKD2/e/A0611-35.png" style="width: auto;height: 520px;" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" />
+        </p>
+        <p class="right">
+            <img src="../../Resources/Images/AKD2/e/A0611-53.png" style="width: auto;height: 520px;" MadCap:conditions="Default.Exclude from AKD2_Safety1" />
+        </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Confirm connections (example: directly to PC)</h2>
+        <p>You can turn on logic power to the drive through the X10 connector (mains power voltage is not needed for communications).</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 122px;" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <img src="../../Resources/Images/AKD2/n/akd2-x20-green.png" style="width: 118px;height: 241px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Confirm that the link LEDs on the drive (green LED on the RJ45 connector) and on your PC are both illuminated. If both LEDs are illuminated, then you have a working electrical connection.</p>
+                        <p class="TableContentLeft">The LCD display shows a sign, if the connection between <MadCap:variable name="Primary.DriveName_AKD2G" /> and <MadCap:variable name="Primary.WorkBenchName" /> is active.<br /><img src="../../Resources/Images/AKD2/e/A0613-45.png" style="width: 198px;height: 139px;" /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use <MadCap:variable name="Primary.WorkBenchName" /> to configure the drive by using the service interface.</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">System integration</h2>
+        <p class="Bold">
+            <MadCap:keyword term="Address:MAC" />MAC Address</p>
+        <p>The unique MAC address is pre-defined by the manufacturer (see nameplate).</p>
+        <p>&#160;</p>
+        <p class="Bold">
+            <MadCap:keyword term="Address:Service IP" /><a name="TcpIpID"></a>Service IP Address</p>
+        <p>The <MadCap:variable name="Primary.DriveName_AKD2G" /> service port X20 supports auto-IP, DHCP and static IP addressing. </p>
+        <p>The drive is delivered with IP address 0.0.0.0. Depending on the connection (switch or PC) either DHCP or auto-IP mechanism assignes a unique IP address.</p>
+        <p><MadCap:variable name="Primary.WorkBenchName" /> uses the IP address to detect <MadCap:variable name="Primary.DriveName_AKD2G" /> devices in the LAN and start communication. With <MadCap:variable name="Primary.WorkBenchName" /> you can set a static IP address for the drive (parameter <i>IP.ADDRESS</i>).</p>
+        <p class="Bold">&#160;</p>
+        <p class="Bold">
+            <MadCap:keyword term="Address:Fieldbus" />EtherCAT Node Address</p>
+        <p>The EtherCAT node address is assigned automatically by the EtherCAT master. </p>
+        <p class="Bold"> </p>
+        <p class="Bold">CAN Node ID</p>
+        <p>Set a CAN node ID for the drive in <MadCap:variable name="Primary.WorkBenchName" /> (parameter <i>CANBUS.NODEID</i>).</p>
+        <p>&#160;</p>
+        <p class="Bold">PROFINET</p>
+        <p style="color: #000000;">The station name and IP address must be set manually through the PROFINET master.</p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <MadCap:keyword term="Address:SafeID" /><a name="SafeID"></a>SafeID</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Every module must have a unique SafeID in the safety system. Set the SafeID for every module with the two decimal rotary switches in the front. </p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <img src="../../Resources/Images/AKD2/e/A0613-04.png" style="width: 250px;height: auto;" />
+        </p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" style="text-decoration: underline;">Process to set the SafeID</p>
+        <ul MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <li class="ListNumbered">Switch off 24V supply voltage.</li>
+            <li class="ListNumbered">Set S1 and S2 to a unique SafeID.<br /></li>
+            <li class="ListNumbered">Switch on the 24V supply voltage.</li>
+        </ul>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">The SafeID is calculated based on the rotary switches setting: <br />SafeID = 10 • S1 + S2</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" style="text-decoration: underline;">Example</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Rotary switches: S1 = 2, S2 = 3 → SafeID = 10 • 2 + 3 = 23</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" style="text-decoration: underline;">Factory default setting</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Rotary Switch setting S1 = 0, S2 = 1. Resulting SafeID is 1.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">&#160;</p>
+        <p class="Bold" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+            <MadCap:keyword term="Address:FSoE" />FSoE Address</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">The unique FSoE address for every axis is derived from the set SafeID.</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">FSoE address for axis 1 = SafeID • 100 +1<br />FSoE address for axis 2 = SafeID • 100 +2</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" style="text-decoration: underline;">Example</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Rotary switches setting: S1 = 2, S2 = 3 → SafeID = 10 • 2 + 3 = 23<br />Resulting FSoE address for axis 1 = 23 • 100 + 1 = 2301<br />Resulting FSoE address for axis 2 = 23 • 100 + 2 = 2302</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1" style="text-decoration: underline;">Factory default setting</p>
+        <p MadCap:conditions="Default.Exclude from AKD2_Safety1">Rotary Switch setting S1 = 0, S2 = 1. Resulting SafeID is 1.<br />Resulting FSoE address for axis 1 = 1 • 100 + 1 = 101<br />Resulting FSoE address for axis 2 = 1 • 100 + 2 = 102</p>
+        <p class="pagebreak" MadCap:conditions="Default.Exclude from AKD2_Safety1">&#160;</p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">Install and start <MadCap:variable name="Primary.WorkBenchName" /></h2>
+        <p><MadCap:variable name="Primary.WorkBenchName" /> is available from the DVD included with the drive. <MadCap:variable name="Primary.WorkBenchName" /> is also available on the <MadCap:variable name="Primary.CompanyName" /> Website: <MadCap:variable name="Primary.CompanyWebsite" />. Select the install file and follow the instructions given by the installer.</p>
+        <p>Once installation is complete, click the <MadCap:variable name="Primary.WorkBenchName" /> icon to start the program. </p>
+        <h2 MadCap:autonum="1.6 &#160;&#160;">Setup the axis in <MadCap:variable name="Primary.WorkBenchName" /></h2>
+        <p>Use the setup wizard and</p>
+        <ul>
+            <li class="ListNumbered">Connect the axis,</li>
+            <li class="ListNumbered">Setup the axis and</li>
+            <li class="ListNumbered">Save parameter set to the drive.</li>
+        </ul>
+        <p MadCap:conditions="Primary.exclude from language project">Refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for details.</p>
+        <h2 MadCap:autonum="1.7 &#160;&#160;">Enable the axis (Hardware)</h2>
+        <ul>
+            <li class="ListNumbered">Switch 24 V to the STO inputs (X21/A11-B11 for axis 1 or X21/A12-B12 for axis 2)</li>
+            <li class="ListNumbered">Switch 24 V to the digital inputs for Hardware Enable Axis 1 (X21/A5) or 2 (X21/A6).</li>
+        </ul>
+        <h2 MadCap:autonum="1.8 &#160;&#160;">Move the motor axis</h2>
+        <ul>
+            <li class="ListNumbered">Select the axis in <MadCap:variable name="Primary.WorkBenchName" /></li>
+            <li class="ListNumbered">Enter Service Motion view</li>
+            <li class="ListNumbered">select "Reversing", check the default velocity and time settings for plausibility</li>
+            <li class="ListNumbered">Click on Start.</li>
+        </ul>
+        <h2 MadCap:conditions="Primary.Print" MadCap:autonum="1.9 &#160;&#160;">Tune the axis</h2>
+        <p MadCap:conditions="Primary.exclude from language project">Details see <MadCap:variable name="Primary.WorkBenchName" style="font-style: italic;" /><i> Online Help</i></p>
+    </body>
+</html>

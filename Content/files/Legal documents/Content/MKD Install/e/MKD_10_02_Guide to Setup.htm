@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="913" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 name="elektrischeInstallation" MadCap:autonum="1 &#160;&#160;">Guide to setup</h1>
+        <p>Presumptions for the setup:</p>
+        <ul>
+            <li class="ListNumbered">The drive is properly mounted <MadCap:xref href="MKD_08_04_Mounting.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Protective earth is connected <MadCap:xref href="MKD_09_04_01_Shielding on drive.htm#Example">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Mains supply voltage is connected <MadCap:xref href="MKD_09_07_02_Mains supply.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Auxiliary supply voltage is connected <MadCap:xref href="MKD_09_07_03_24V auxiliary supply.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">String cables are connected <MadCap:xref href="MKD_09_09_00_String Connection.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Safety Controller and PLC I/Os are connected <MadCap:xref href="MKD_09_11_00_I-O Connection.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">EtherCAT Master is connected <MadCap:xref href="MKD_09_12_00_Motion Bus interface.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListNumbered">Service PC is connected <MadCap:xref href="MKD_09_13_00_Service interface.htm">(➜ # 1)</MadCap:xref>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">System addresses</h2>
+        <p>To tune and configure the <MadCap:variable name="Primary.DriveVariant_MKD" /> system, it is recommended to connect <MadCap:variable name="Primary.WorkBenchName" /> to the <MadCap:variable name="Primary.DriveVariant_MKD" /> system.</p>
+        <p>The <MadCap:variable name="Primary.DriveVariant_MKD" /> system can be accessed through two different physical communication channels:</p>
+        <ul>
+            <li class="ListNumbered">Ethernet Service Port (X18) on the <MadCap:variable name="Primary.DriveVariant_MKD" />-C unit <MadCap:xref href="MKD_09_13_00_Service interface.htm">(➜ # 1)</MadCap:xref></li>
+            <li class="ListNumbered">	EtherCAT Bus In port (X10) on the <MadCap:variable name="Primary.DriveVariant_MKD" />-C unit <MadCap:xref href="MKD_09_12_00_Motion Bus interface.htm">(➜ # 1)</MadCap:xref></li>
+        </ul>
+        <p>Both communication channels allow a single point of connect to access the <MadCap:variable name="Primary.DriveVariant_MKD" />-C itself and all drives (<MadCap:variable name="Primary.DriveVariant_MKD" />-N’s, AKD-Ns) that are connected to this <MadCap:variable name="Primary.DriveVariant_MKD" />-C unit.</p>
+        <p class="Bold">
+            <MadCap:keyword term="Address:MAC" />MAC Address</p>
+        <p>The unique <MadCap:variable name="Primary.DriveVariant_MKD" />-C MAC address is pre-defined by the manufacturer (see nameplate). Every <MadCap:variable name="Primary.DriveVariant_MKD" />-N or AKD-N drive axis has a unique MAC address as well.</p>
+        <p class="Bold">
+            <MadCap:keyword term="Address:IP" />IP Address</p>
+        <p>The <MadCap:variable name="Primary.DriveVariant_MKD" />-C service port X18 supports Auto-IP and Static IP addressing.</p>
+        <p><u>Auto-IP:</u>
+            <br />All network devices that are connected receive a unique IP address in the range 169.254.x.y.<br />To configure this, follow the next steps:</p>
+        <ul>
+            <li class="ListNumbered">Set rotary switch S1 to "0" <MadCap:xref href="MKD_07_23_Rotary Switches.htm">(➜ # 1)</MadCap:xref>. Power up the the <MadCap:variable name="Primary.DriveVariant_MKD" />-C.</li>
+            <li class="ListNumbered">By default, the network adapter of your windows PC that is used to connect to the <MadCap:variable name="Primary.DriveVariant_MKD" />-C should be configured for automatic IP assignment. If automatic assignment is not default, you need to reconfigure the TCT/IP adapter: <br />Open Network &amp; Internet settings -&gt; Ethernet -&gt; Change adapter options -&gt; Right click on network adapter -&gt; Select TCP/IP -&gt; Properties -&gt; tab General: set both entries to "automatically". Reboot the PC.</li>
+            <li class="ListNumbered">Connect PC network adapter with Ethernet cable point to point to <MadCap:variable name="Primary.DriveVariant_MKD" />-C service interface (RJ45 connector X18).</li>
+            <li class="ListNumbered">If the link LED on X18 is green/blinking, the connection is working.</li>
+            <li class="ListNumbered">Wait until the network adapter has finished the AUTO-IP assignment. This can be detected by checking the 7 segment display. Once the <MadCap:variable name="Primary.DriveVariant_MKD" />-C has received an new IP address it will be shown in the display.</li>
+        </ul>
+        <p><u>Static IP:</u>
+            <br />The <MadCap:variable name="Primary.DriveVariant_MKD" />-C IP address can be set with the S1 rotary switch <MadCap:xref href="MKD_07_23_Rotary Switches.htm">(➜ # 1)</MadCap:xref>. </p>
+        <p><MadCap:variable name="Primary.WorkBenchName" /> looks for IP address in the subnet to detect devices in the LAN and start communication. All connected devices must have static IP addresses. Refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for more information.</p>
+        <p class="Bold">
+            <MadCap:keyword term="Address:EtherCAT" />EtherCAT Node Address</p>
+        <p>The EtherCAT node address is assigned automatically by the EtherCAT master. Refer to <MadCap:variable name="Primary.WorkBenchName" /> Online Help and EtherCAT manual for more information.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><a name="System"></a>System Setup</h2>
+        <p>Simple access to the system can be achieved by connecting a laptop or Service PC to the <MadCap:variable name="Primary.DriveVariant_MKD" />-C service port X18 with a standard Ethernet Patch cable. All drives that are connected to the <MadCap:variable name="Primary.DriveVariant_MKD" />-C can be accessed via X18. </p>
+        <p>The <MadCap:variable name="Primary.DriveVariant_MKD" />-C forwards the Ethernet packets to all connected drives and returns the response packets. Every connected axis has a unique MAC address and can be viewed as standalone Ethernet device (client).</p>
+        <p class="Bold">Example Auto-IP system</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD_auto-IP_address_setting1.png" style="height: auto;width: 430px;" />
+        </p>
+        <p>Refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for more information.</p>
+    </body>
+</html>

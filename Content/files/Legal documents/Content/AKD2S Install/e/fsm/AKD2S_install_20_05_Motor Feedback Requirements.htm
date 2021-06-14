@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="600" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety2,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Motor feedback<MadCap:keyword term="Feedback Requirements (FS)" /> requirements </h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/e/in-process.flsnp" />
+        </p>
+        <p style="color: #ff0000;font-weight: bold;font-size: 12pt;" MadCap:conditions="Default.BetaVersionOnly">content required</p>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">
+                            <a name="WI-2762">
+                            </a>Encoder and motor housing shall have a positive fit against each other or an adhesive shall be used between both housings. The fitting shall be over dimensioned by a factor of 20 to all breakaway torque values. The fatigue strength of the mechanical connection between the encoder shaft and the motor shaft must be shown to have a shaft breakage fault exclusion in accordance with IEC61800-5-2.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">HIPERFACE DSL – Initial safety setup</h2>
+        <p>During commissioning, the HIPERFACE-DSL encoder intended for safe feedback usage must be programmed by the SMM with a unique encoder index. This creates a strong connection between the physical encoder and the SMM to ensure, that the SMM communicates to the correct encoder even after a restart.</p>
+        <p>When a new HIPERFACE-DSL is connected to the drive and is configured as a safe feedback, the SMM will enter an I/O failure waiting for the user to acknowledge this I/O failure (using a safe input or FSoE). When the user acknowledges the error, the SMM will write a unique encoder index into the physical encoder.</p>
+        <p class="Bold">Process:</p>
+        <ul>
+            <li class="ListNumbered"> Setup the ability to acknowledge the I/O failure using FsoE or safe input by using safety parameters. <span style="color: #ff0000; font-weight: bold;" MadCap:conditions="Default.BetaVersionOnly">REINHOLD: How&#160;do I&#160;set the ability?</span></li>
+            <li class="ListNumbered"> Connect a new HIPERFACE-DSL and configure it as a safe feedback.<span style="color: #ff0000; font-weight: bold;" MadCap:conditions="Default.BetaVersionOnly">REINHOLD: How&#160;do I&#160;configure it as safe feedback?</span></li>
+            <li class="ListNumbered"> Boot the drive.</li>
+            <li class="ListNumbered"> Acknowledge the I/O failure.</li>
+            <li class="ListNumbered"> HIPERFACE-DSL is now ready to operate as a safe feedback.</li>
+        </ul>
+        <p>
+            <span style="color: #ff0000; font-weight: bold;" MadCap:conditions="Default.BetaVersionOnly">REINHOLD: What happens, if the DSL is programmed and the drive needs to be exchanged? Same procedure?</span>
+        </p>
+    </body>
+</html>

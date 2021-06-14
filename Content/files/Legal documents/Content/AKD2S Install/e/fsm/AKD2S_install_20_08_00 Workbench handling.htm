@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="926" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Workbench Safety Function Setup<a name="WI-2761"></a></h1>
+        <p>In general, three steps need to be done to activate a safety configuration within the SMM:</p>
+        <ul>
+            <li class="ListNumbered">Configuration of the safety parameters.</li>
+            <li class="ListNumbered">Download the safety parameters <MadCap:xref href="AKD2S_install_20_08_03 Safety Parameter Download.htm">(➜ # 1)</MadCap:xref> to the drive through:<br />- Workbench (Telnet): persistent, or<br />- EtherCAT (FoE): persistent, or<br />- EtherCAT (FSoE) : non persistent.</li>
+            <li class="ListNumbered">Validation of the safety parametrization by the user.</li>
+        </ul>
+        <p>The diagram shows a possible scenario:</p>
+        <p>
+            <img src="png/SMM_safety-setup.png" style="width: 500px;height: auto;" />
+        </p>
+        <p>The safety parameter configuration can be easily done through <MadCap:variable name="Primary.CompanyName" /><MadCap:variable name="Primary.WorkBenchName" />. The  safety parameter configuration, download and validation are completely integrated.</p>
+        <p> <MadCap:variable name="Primary.WorkBenchName" /> performs a consistency check which helps  to identify contrary configurations. If the configuration passes the consistency check, <MadCap:variable name="Primary.WorkBenchName" /> creates a safety parameter file. This file can be download to the drive through <MadCap:variable name="Primary.WorkBenchName" /> or can be exported. Once the safety parameters are configured, downloaded and validated through <MadCap:variable name="Primary.WorkBenchName" />, the safety configuration will be persistent and no new configuration will be necessary after power cycle.</p>
+        <p class="Bold">Preconditions</p>
+        <ul>
+            <li class="ListBullet"><MadCap:variable name="Primary.DriveName_AKD2G" /> Service port X20 <MadCap:conditionalText MadCap:conditions="Primary.exclude from language project"><MadCap:xref class="XrefSee" href="../AKD2S_install_09_20_00_Service interface.htm">(➜ # 1)</MadCap:xref></MadCap:conditionalText> is connected by using Ethernet cable to the computer or to a network switch.</li>
+            <li class="ListBullet">Auxiliary voltage is connected to <MadCap:variable name="Primary.DriveName_AKD2G" /> X10 and switched on.</li>
+            <li class="ListBullet"><MadCap:variable name="Primary.WorkBenchName" /> setup software is installed.</li>
+        </ul>
+    </body>
+</html>

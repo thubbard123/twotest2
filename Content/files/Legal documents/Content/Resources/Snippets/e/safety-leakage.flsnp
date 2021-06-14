@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="79" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p class="Bold">Leakage Current!</p>
+        <p>Since the leakage current to PE is more than 3.5 mA, in compliance with IEC61800-5-1 the PE connection must either be doubled or a connecting cable with a cross-section &gt;10 mm² must be used. Deviating measures according to regional standards might be possible.</p>
+    </body>
+</html>

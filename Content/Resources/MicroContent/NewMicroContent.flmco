@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MicroContentSet Comment="Default micro content set." MadCap:onlyLocalStylesheets="True" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Properties>
+        <Styles>
+            <File>../Stylesheets/micro content.css</File>
+        </Styles>
+    </Properties>
+    <MicroContent id="columns">
+        <MicroContentPhrase>columns</MicroContentPhrase>
+        <MicroContentResponse href="../../micro content/3.htm#microcontent1" />
+    </MicroContent>
+    <MicroContent id="pieta">
+        <MicroContentPhrase>pieta</MicroContentPhrase>
+        <MicroContentResponse href="../../micro content/1.htm#microcontent1" />
+    </MicroContent>
+    <MicroContent id="rothko">
+        <MicroContentPhrase>rothko</MicroContentPhrase>
+        <MicroContentResponse href="../../micro content/2.htm#microcontent1" />
+    </MicroContent>
+</MicroContentSet>

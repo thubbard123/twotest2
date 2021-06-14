@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="New Book 1"
+    IsTest="true"
+    TestRetries="0"
+    TestPassScore="75"
+    TestFailPage="/Content/notpass.htm"
+    TestPassPage="/Content/pass.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/style class/1.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/style class/4.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

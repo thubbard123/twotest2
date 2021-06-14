@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  ShowMadCapBacklink="false"
+  GlossaryTermConversion="marked"
+  RandomizeAnswers="true"
+  LimitTestSequenceRetries="true"
+  TestSequenceRetries="1"
+  GenerateScormPackage="true"
+  GenerateXApiPackage="true"
+  CourseName="art history"
+  CourseDescription="western art history"
+  CourseId="https://cloud.scorm.com/tc/KUPZ8AMEZ2"
+  LmsStandard="xAPI (TinCan)"
+  Skin="/Project/Skins/HTML5 - Side Navigation.flskn"
+  ContentInclusionType="Toc"
+  CourseTrackingType="Use Test Result"
+  MasterToc="/Project/TOCs/class.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Destinations></Destinations>
+</CatapultTarget>

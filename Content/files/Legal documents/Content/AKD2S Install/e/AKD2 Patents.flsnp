@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="153" MadCap:lastWidth="641">
+    <head>
+    </head>
+    <body>
+        <p class="left" style="font-weight: bold;">Current patents</p>
+        <MadCap:snippetBlock src="../AKD2G-patents.flsnp" />
+        <p class="left" MadCap:conditions="Default.Exclude from Fieldbus" style="font-size: 9pt;">Patents referring to fieldbus functions are listed in the matching fieldbus manual.</p>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="170" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table>
+            <col style="width: 125px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <MadCap:snippetBlock src="01danger.flsnp" />
+                    </td>
+                    <td>
+                        <p class="TableWarningText" style="font-weight: bold;">Lethal Voltage!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="TableWarningText">There is a danger of serious personal injury or death by electrical shock. Lethal danger exists at live parts of the device. </p>
+        <ul class="left1">
+            <li class="ListBullet">Built-in protection measures such as insulation or shielding may not be removed.</li>
+            <li class="ListBullet">Work on the electrical installation may only be performed by trained and qualified personnel, in compliance with the regulations for safety at work, and only with switched off mains supply, and secured against restart.</li>
+            <li class="ListBullet">In normal operation, the cabinet door must be closed and the device must not be touched.</li>
+        </ul>
+    </body>
+</html>

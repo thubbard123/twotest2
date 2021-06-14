@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="235" MadCap:lastWidth="641" xml:lang="en-us" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/Technicaldata_full.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="left" style="font-weight: bold;">Hardware Revision (HR)</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../TableStyles/Technicaldata_full.css');" class="TableStyle-Technicaldata_full" cellspacing="0">
+            <col class="TableStyle-Technicaldata_full-Column-Column1" style="width: 59px;" MadCap:conditions="">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2" style="width: 57px;">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2" style="width: 42px;">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2" style="width: 43px;">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2" style="width: 80px;">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2" style="width: 58px;">
+            </col>
+            <col class="TableStyle-Technicaldata_full-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-Technicaldata_full-Head-Header1">
+                    <th class="TableStyle-Technicaldata_full-HeadE-Column1-Header1" style="text-align: center;">AKD-<br />B/P-NA</th>
+                    <th class="TableStyle-Technicaldata_full-HeadF-Column2-Header1">AKD-<br />B/P-NB</th>
+                    <th class="TableStyle-Technicaldata_full-HeadF-Column2-Header1">AKD-M<br /></th>
+                    <th class="TableStyle-Technicaldata_full-HeadF-Column2-Header1">AKD-T-IC</th>
+                    <th class="TableStyle-Technicaldata_full-HeadF-Column2-Header1">Firmware/ Workbench</th>
+                    <th class="TableStyle-Technicaldata_full-HeadF-Column2-Header1">KAS IDE</th>
+                    <th class="TableStyle-Technicaldata_full-HeadD-Column2-Header1" style="text-align: left;">Remarks</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Technicaldata_full-Body-Body1" MadCap:conditions="Default.Exclude from Safety Guide">
+                <td style="text-align: center;" class="TableStyle-Technicaldata_full-BodyE-Column1-Body1">A</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 1.3</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td style="text-align: left;" class="TableStyle-Technicaldata_full-BodyD-Column2-Body1">Start revision, export control</td>
+            </tr>
+            <tr class="TableStyle-Technicaldata_full-Body-Body1" MadCap:conditions="Default.Exclude from Safety Guide">
+                <td style="text-align: center;" class="TableStyle-Technicaldata_full-BodyE-Column1-Body1">C</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td style="" class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 1.5</td>
+                <td style="" class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">-</td>
+                <td style="text-align: left;" class="TableStyle-Technicaldata_full-BodyD-Column2-Body1">STO qualified, PROFINET RT released, export control</td>
+            </tr>
+            <tr class="TableStyle-Technicaldata_full-Body-Body1" MadCap:conditions="Default.Exclude from Safety Guide">
+                <td style="text-align: center;" class="TableStyle-Technicaldata_full-BodyE-Column1-Body1">-</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">D</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">DB</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">DA</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 1.6</td>
+                <td style="" class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 2.5</td>
+                <td style="text-align: left;" class="TableStyle-Technicaldata_full-BodyD-Column2-Body1">Control board revision 9, <MadCap:variable name="Primary.DriveVariant_PDMM" /> Start revision, <MadCap:variable name="Primary.DriveVariant_BASIC" />-IC Start revision, export control</td>
+            </tr>
+            <tr class="TableStyle-Technicaldata_full-Body-Body1">
+                <td style="text-align: center;" class="TableStyle-Technicaldata_full-BodyE-Column1-Body1">D</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">E</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">EB</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">EA</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 1.13</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1">from 2.9</td>
+                <td style="text-align: left;" class="TableStyle-Technicaldata_full-BodyD-Column2-Body1">HR for export classification tracebility purposes, listed for UL508C, no export classification</td>
+            </tr>
+            <tr class="TableStyle-Technicaldata_full-Body-Body1">
+                <td style="text-align: center;color: #000000;" class="TableStyle-Technicaldata_full-BodyE-Column1-Body1">F</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1" style="color: #000000;">F</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1" style="color: #000000;">FB</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1" style="color: #000000;">FA</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1" style="color: #000000;">from 1.13</td>
+                <td class="TableStyle-Technicaldata_full-BodyF-Column2-Body1" style="color: #000000;">from 2.9</td>
+                <td style="text-align: left;color: #000000;" class="TableStyle-Technicaldata_full-BodyD-Column2-Body1">Listed for UL61800-5-1, no export classification, STO input current reduction</td>
+            </tr>
+        </table>
+    </body>
+</html>

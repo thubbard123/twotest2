@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="907" MadCap:lastWidth="641" class="" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Motor interface" /><a name="InterfaceMotoranschluss"></a>Motor Power, Brake and Feedback connection</h1>
+        <p>The <MadCap:variable name="Primary.DriveName_AKD2G" /> drive is able to protect the connected motor from overloading, if the parameters are set correctly and the thermal protection sensor is connected and supervised. With <MadCap:variable name="Primary.CompanyName" /> motors the valid data are automatically set by the <MadCap:variable name="Primary.WorkBenchName" /> motor database. Refer to parameter AXIS#.MOTOR.RTYPE for supported thermal sensors.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The dynamic voltage rise can lead to a reduction in the motor operating life and, on unsuitable motors, to flashovers in the motor winding.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="ListBullet">Only install motors with insulation class F (acc. to IEC60085) or above. </li>
+            <li class="ListBullet">Only install cables that meet the requirements <MadCap:xref class="XrefSee" href="AKD2S_install_09_03_Wiring.htm#Leiterquerschnitte">(➜ # 1)</MadCap:xref>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Motor connectivity, some examples</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/AKD_invisible.css');" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col class="TableStyle-AKD_invisible-Column-Column1" style="width: 316px;" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyE-Column1-Body1" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <img src="../../Resources/Images/AKD2/e/A0613-22a.png" style="width: 300px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <ul class="left1">
+                            <li class="ListBullet">Axis 1: single cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_00_Motor Single.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: SFD3 or DSL</li>
+                            <li class="ListBullet">Axis 2: dual cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_00_Motor Single.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: EnDAT, HIPERFACE, Resolver etc. by using SFA</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyE-Column1-Body1" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <img src="../../Resources/Images/AKD2/e/A0613-22b.png" style="width: 300px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <ul class="left1">
+                            <li class="ListBullet">Axis 1: dual cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_02_00_Motor dual.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: Resolver, SFD, EnDAT, HIPERFACE, BiSS, SinCos, ComCoder, Hall, SmartAbs etc. by using X23</li>
+                            <li class="ListBulletIndent">position feedback:<br />- X21: Step/Direction <br />- X22: Step/Direction or incremental encoder</li>
+                            <li class="ListBullet">Axis 2: single cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_00_Motor Single.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: SFD3 or DSL</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyE-Column1-Body1" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <img src="../../Resources/Images/AKD2/e/A0613-22c.png" style="width: 300px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <ul class="left1">
+                            <li class="ListBullet">Axis 1: dual cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_02_00_Motor dual.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: EnDAT, HIPERFACE, Resolver etc. by using SFA</li>
+                            <li class="ListBulletIndent">position feedback:Resolver, SFD, EnDAT, HIPERFACE, BiSS, SinCos, ComCoder, Hall, SmartAbs etc. by using X23</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyE-Column1-Body1" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <img src="../../Resources/Images/AKD2/e/A0613-22d.png" style="width: 300px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <ul class="left1">
+                            <li class="ListBullet">Axis 1: dual cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_02_00_Motor dual.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: Resolver, SFD, EnDAT, HIPERFACE, BiSS, SinCos, ComCoder, Hall, SmartAbs etc. by using X23</li>
+                            <li class="ListBulletIndent">position feedback:<br />- X21: Step/Direction <br />- X22: Step/Direction or incremental encoder</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_invisible-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <img src="../../Resources/Images/AKD2/e/A0613-41.png" style="height: auto;width: 300px;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 3px;">
+                        <ul class="left1">
+                            <li class="ListBullet">Axis 1: single cable connection <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_00_Motor Single.htm">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">commutation feedback: SFD3 or DSL</li>
+                            <li class="ListBulletIndent">position feedback: SFD3 or DSL or SFA at X5</li>
+                            <li class="ListBulletIndent">secondary brake by using X4</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

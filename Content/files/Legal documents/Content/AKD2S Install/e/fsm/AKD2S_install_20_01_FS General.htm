@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="16" MadCap:lastHeight="914" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">General notes</h1>
+        <p><a name="FS1-13849-12"></a>Resulting Functional Safety classification (SIL and/or PL level) is calculated across the drive system. The drive system usually consists of </p>
+        <ul>
+            <li class="ListBullet">motion controller (e.g. AKC/KAS), </li>
+            <li class="ListBullet">safety controller (e.g. KSM),</li>
+            <li class="ListBullet">servo drives (AKD2G) and servo motors (e.g. <MadCap:variable name="Primary.DriveVariant_AKM2G" />),</li>
+            <li class="ListBullet">motor brakes, feedback systems,</li>
+            <li class="ListBullet">cables to connect drive and motor,</li>
+            <li class="ListBullet">sensors/actors.</li>
+        </ul>
+        <p>The safety properties listed in this chapter can be reached with <MadCap:variable name="Primary.CompanyName" /> components.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">The user must ensure the compliance of the application with all relevant directives and local electrical code. The user is responsible for implementation and validation of the drive system and safety system. </p>
+                        <p class="TableContentLeft">Only properly qualified personnel are permitted to perform such tasks as installation, setup and verification/validation.</p>
+                        <ul class="left1">
+                            <li class="ListBullet">Mechanical installation: only by qualified personnel with mechanical expertise according to IEC 60417-6183.</li>
+                            <li class="ListBullet">Electrical installation: only by qualified personnel with electrotechnical expertise according to IEC 60417-6182.</li>
+                            <li class="ListBullet"><a name="WI-2806"></a>Parameterizing Functional Safety: only by trained personnel with expertise appropriate to&#160;the complexity and safety integrity level of the drive system.</li>
+                            <li class="ListBullet"><a name="WI-593"></a>Verification/Validation: only by trained personnel after any changes to the installation. The expertise of the personnel must be&#160;appropriate to&#160;the complexity and safety integrity level of the drive system.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Obsolete">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft" style="color: #ff0000;font-weight: normal;"><a name="WI-849"></a>WI-849: The safety manual shall instruct the engineer to ensure the authenticity of the software binary (for example by downloading the data via https) and the integrity of his PC.</p>
+                        <p class="TableContentLeft" style="color: #ff0000; font-weight: normal;">!Please deliver content!</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft" style="font-weight: normal;"><b>Safe State:</b> The safe state is always to remove the motor torque on all axes, to apply the brake(s), to de-energize all the safe digital outputs and to set the safe fieldbus connection to safe state (if applicable).</p>
+                        <p class="TableContentLeft"><b>Fail-safe:</b> I/O failure and internal failure (such as problems detected on the drive or on the safety system itself) lead to safe state.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_warnings.css');width: 640px;" class="TableStyle-82079_warnings" cellspacing="1">
+            <col class="TableStyle-82079_warnings-Column-Column1" style="width: 108px;" />
+            <col class="TableStyle-82079_warnings-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_warnings-Body-Body2">
+                    <td class="TableStyle-82079_warnings-BodyB-Column1-Body2">
+                        <img src="../../../Resources/Images/Symbols/n/warning_r_electricity.png" MadCap:mediastyle="@media print { height: 15mm;width: auto; }" style="width: auto;height: 17mm;" />
+                    </td>
+                    <td class="TableStyle-82079_warnings-BodyA-Column2-Body2">
+                        <table>
+                            <col style="width: 125px;" />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <MadCap:snippetBlock src="../../../Resources/Snippets/e/01caution.flsnp" />
+                                    </td>
+                                    <td>
+                                        <p class="TableWarningText" style="font-weight: bold;">High electrical voltage!</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="TableWarningText"><a name="WI-2174"></a>Risk of electrical shock! The safety functions do not provide an electrical separation from the power output. If manual access to the motor or drive power terminals is necessary, </p>
+                        <ul class="left1">
+                            <li class="ListBullet">disconnect the drive from mains supply, </li>
+                            <li class="ListBullet">consider the discharging time of the DC-Bus link,</li>
+                            <li class="ListBullet">ensure the cabinet is safely disconnected and protected against unintended switch-on (for instance, with a lock-out and warning signs).</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

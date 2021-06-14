@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD,Default.BetaVersionOnly" MadCap:lastBlockDepth="8" MadCap:lastHeight="869" MadCap:lastWidth="641">
+    <head>
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 name="optionAS" MadCap:autonum="1 &#160;&#160;">Technical Data<a name="13849-2-FS2"></a></h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><a name="Safe2"></a>Safe digital inputs</h2>
+        <p><a name="WI-194"></a>The drive supports 4 safe digital inputs. The safe inputs are configurable for single channel or dual channel, for axis1 or for axis2 or for both axes. The safety function mapped to the inputs can be configured to "permanent high" or "permanent low".</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_invisible.css');width: 530px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 260px;">
+            </col>
+            <col class="TableStyle-82079_invisible-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Reference ground is DGND</li>
+                            <li class="ListBullet">Galvanic isolation for 60 VDC</li>
+                            <li class="ListBullet">Activation delay about 5 µs</li>
+                            <li class="ListBullet">De-activation delay about 500 µs</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Use 24 VDC ±15% PELV power supply <a name="WI-761-FS2"></a></li>
+                            <li class="ListBullet">High level &gt; 15 VDC, &gt; 2 mA</li>
+                            <li class="ListBullet">Low level &lt; 5 VDC, &lt; 1 mA</li>
+                            <li class="ListBullet">OSSD testpulses required <MadCap:xref class="XrefSee" href="../AKD2S_install_20_06_OSSD.htm">(➜ # 1)</MadCap:xref></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Pinout</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 35px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 38px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 126px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" colspan="2">
+                        <p class="TableHeaderCenter">Conn./Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td style="font-weight: normal;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">X21</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">+24 V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">+24 VDC for digital I/O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td style="font-weight: normal;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">X21</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DGND</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Ground for digital I/O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">X21</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">A11</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SIN1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example SS1 channel A axes 1&amp;2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">X21</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">B11</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SIN2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example SS1 channel B axes 1&amp;2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">X22</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">A12</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SIN3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example STO channel A axis 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">X22</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">B12</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">SIN4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example STO channel B axis 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Input parameters (setting see <MadCap:xref href="../AKD2S_install_20_08_02 Safety Parameterization.htm" class="RefGuideXRefNoPage">"Safety Parameterization" (➜ # 1)</MadCap:xref>)</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 117px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 129px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 229px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SINDUALx.EN.htm">SAFEPARAM.<br />SINDUAL1.EN</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Dual safe input 1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">associates safe inputs SIN1 and SIN2 to dual channel input 1 for an axis.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">enabled</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SINDUALx.EN.htm">SAFEPARAM.<br />SINDUAL2.EN</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Dual safe input 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">associates safe inputs SIN3 and SIN4 to dual channel input 2 for an axis.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">enabled</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.IOFAILUREACKSOURCE.htm">SAFE.IOERROR-<br />ACKSOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Failure acknowledgement via I/O	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">	Specifies the safe digital input, which can be associated for the acknowledgement of the IO failures.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">off</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">SAFEPARAM.<br />SIN.DISTINCT-<br />PULSE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"> Digital input distinct test pulse monitoring</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">	Specifies, if the safe digital input monitoring for distinct test pulses is enabled	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">enabled</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">For safety parameter description refer to the <i>Parameters Reference Guide</i> <MadCap:xref class="XrefSee" href="../Keywords/FS_Keywords.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If dual channel mode is selected, the drive supervises whether the two inputs are in a different state for longer than 100&#160;ms. If they are different for more than 100 ms, a fault reaction is triggered (see specific safety function for details).</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">If you configure the safe inputs to accept non-distinct test pulses then you should make a fault exclusion on the input wiring or provide other justification that input wiring faults cannot be dangerous such as cable segregation or individual shielding.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1" MadCap:conditions="Default.Exclude from AKD2_Safety1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The used Safety Controller must be compatible to OSSD (Output Switching Signal Device) according to IEC 61496-1. OSSD requirements <MadCap:xref class="XrefSee" href="../AKD2S_install_20_06_OSSD.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><a name="Safe"></a>Safe digital outputs</h2>
+        <p><a name="WI-195"></a>The drive supports 2 redundant or 4 single safe digital outputs, in order to signal the safety condition of the drive to an external safety PLC or activate external devices  (for example an SDB Modul) . </p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 281px;">
+            </col>
+            <col class="TableStyle-82079_invisible-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Reference ground is DGND (X21/B4)</li>
+                            <li class="ListBullet">Galvanic isolation for 24 VDC from PE</li>
+                            <li class="ListBullet">Use PELV power supply </li>
+                            <li class="ListBullet">Activation delay depends on safety function</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">High Level 172 mA</li>
+                            <li class="ListBullet">Low level &lt; 5 VDC, &lt; 1 mA</li>
+                            <li class="ListBullet">Emits OSSD testpulses according to IEC 61496-1 <MadCap:xref class="XrefSee" href="../AKD2S_install_20_06_OSSD.htm#Test">(➜ # 1)</MadCap:xref></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">If an inductive load (relay or similar) is used, a freewheeling diode must be added to the load. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Pinout</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 40px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 124px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X21</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SOUT1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example STO status of axis 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SOUT2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable, for example STO status of axis 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B9</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SOUT3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Configurable</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter" style="font-weight: normal;">B10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">SOUT4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Configurable</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Output parameters (setting see <MadCap:xref href="../AKD2S_install_20_08_02 Safety Parameterization.htm" class="RefGuideXRefNoPage">"Safety Parameterization" (➜ # 1)</MadCap:xref>)</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 153px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 120px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 190px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SOUTDUALx.EN.htm">SAFEPARAM.<br />SOUTDUAL#.EN</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Dual safe output</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">associates two safe outputs to a dual channel output for axis #.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">disabled</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SOUTDUALx.SOURCE.htm">SAFEPARAM.<br />SOUTDUAL#.SOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Source selection of safe dual output</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Selects the state of a safety function, which is provided for a safe dual output 1/2.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">off</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SOUTx.SOURCE.htm">SAFEPARAM.<br />SOUT#.SOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Source selection of safe digital output</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Selects the state of a safety function, which is provided for SOUT1 to 4.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">off</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">For safety parameter description refer to the <i>Parameters Reference Guide</i> <MadCap:xref class="XrefSee" href="../Keywords/FS_Keywords.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Factory Default Settings<MadCap:keyword term="Factury Default Setting" /></h2>
+        <p><b>NOTICE</b>: The drive is ready to operate with pre-configured STO function.</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');border-left-style: solid;border-left-width: 2px;border-left-color: #696969;border-right-style: solid;border-right-width: 2px;border-right-color: #696969;border-top-style: solid;border-top-width: 2px;border-top-color: #696969;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 95px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 203px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Item</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1" style="color: #000000;">
+                        <p class="TableContentLeft">Parameter</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="color: #000000;">
+                        <p class="TableContentLeft">Factory default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SafeID</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFE/SAFE.ID.htm">SAFE.ID</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">Rotary switches: "01" (S1 = 0, S2 = 1). </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FSoE Address</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.CONNECTIONID.htm">AXIS#.SAFE.FSOE.<br />CONNECTIONID</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">Axis 1: 101 (SafeID*100+1)<br />Axis 2: 102 (SafeID*100+2)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SIN1, 2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 2px;border-right-color: #696969;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" rowspan="2">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.STO/AXISx.SAFEPARAM.STO.SAFEINPUT.htm">AXIS#.SAFEPARAM.<br />STO.SAFEINPUT</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">Axis 1: STO</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SIN3, 4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">Axis 2: STO (dual axis drives only)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SOUT1, 2, 4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SOUTx.SOURCE.htm">SAFEPARAM.SOUT#.SOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">0xFF (On)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SOUT3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SOUTx.SOURCE.htm">SAFEPARAM.SOUT#.SOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">0x00 (Off)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Password</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft"> “SafeMotionMonitor<b>xyz</b>” <br />“xyz” = last three digits of drive serial number</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

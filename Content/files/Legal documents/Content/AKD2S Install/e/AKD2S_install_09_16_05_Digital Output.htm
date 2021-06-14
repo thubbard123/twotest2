@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="472" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">Digital Outputs<MadCap:keyword term="Outputs:Digital" /><a name="DigitalOut"></a></h1>
+        <p>The drive provides 4 <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">safe </MadCap:conditionalText>digital outputs on X21. <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">These outputs can be used as safe outputs <MadCap:xref class="XrefSee" href="fsm/AKD2S_install_20_00_Functional Safety.htm">(➜ # 1)</MadCap:xref>. </MadCap:conditionalText>For more information refer to the setup software.</p>
+        <p>Dual axis drives and drives with built-in option IO or DX offer additional 4 digital outputs and 2 programmable Input/Outputs. If X23 is built-in and not used for feedback or EEO function, then it offers 4 additional programmable Input/Outputs.</p>
+        <p>The relay output can be used as fault or ready to operate signal.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Maximum distance for unshielded I/O lines is 3 m inside the cabinet. If the I/O cable leaves the cabinet, it must be EMC shielded.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Choose the required action in the setup software. Messages from pre-programmed actions. A list of actions is included in the <MadCap:variable name="Primary.WorkBenchName" />. If an output is programmed, it must be saved to the drive.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Digital-Out<a name="_Toc226791156"><![CDATA[ ]]></a><MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3">1</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">5</MadCap:conditionalText> to 6</h2>
+        <p>These outputs are programmable with the setup software. By default, all outputs are off.</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">The outputs can switch +5 V to +30 V</li>
+            <li class="ListBullet">All digital outputs are floating</li>
+            <li class="ListBullet">High side, output current max.100 mA</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p class="right">
+            <img src="../../Resources/Images/AKD2/e/A0611-14.png" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" style="width: 540px;height: auto;" />
+            <img src="../../Resources/Images/AKD2/e/A0611-43.png" MadCap:conditions="Default.Exclude from AKD2_Safety1" style="width: 540px;height: auto;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Digital-Out 7 and 8</h2>
+        <p>These outputs are programmable with <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable>. By default, all outputs are not programmed (off).</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">The outputs can switch +5 V to +30 V</li>
+            <li class="ListBullet">Galvanic isolation for 24 VDC from PE</li>
+            <li class="ListBullet">The two channels are isolated from one another and not referred to a common potential</li>
+            <li class="ListBullet">Output current max.100 mA</li>
+            <li class="ListBullet">Can be wired as sinking or sourcing (see examples below)</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p class="Bold">Wiring examples</p>
+        <p class="right">
+            <img src="../../Resources/Images/AKD2/e/A0611-12.png" style="width: 551px;height: auto;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 name="_Toc226791154" MadCap:autonum="1.3 &#160;&#160;">Digital-In/Out 1 and 2</h2>
+        <p>Pins X22/A20-A21 (Digital-In/Out 1) and X22/B20-B21 (Digital-In/Out 2) can be used as either inputs or outputs. For programming refer to <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <p class="Bold">Technical characteristics if configured as output</p>
+        <ul>
+            <li class="ListBullet">RS485, reference common line is AGND</li>
+            <li class="ListBullet">Selectable DC terminationfor differential or single ended output, no wire break detection</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-34.png" style="height: auto;width: 490px;" />
+        </p>
+        <h2 name="_Toc226791154" MadCap:autonum="1.4 &#160;&#160;">Digital-In/Out 3 to 6</h2>
+        <p>X23 can be used for digital I/O. The channels can be defined as inputs or outputs. For programming refer to <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <p class="Bold">Technical characteristics if configured as output</p>
+        <ul>
+            <li class="ListBullet">RS485, reference common line is 0V</li>
+            <li class="ListBullet">No wire break detection</li>
+            <li class="ListBullet">Digital IN/OUT 3/4: Selectable DC termination for differential or single ended output</li>
+            <li class="ListBullet">Digital IN/OUT 5/6: AC termination for single ended output</li>
+            <li class="ListBullet">Update rate: 250 µs</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-51.png" style="height: auto;width: 470px;" />
+        </p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">Digital-Out 9, Relay contacts<MadCap:keyword term="Relay;Outputs:Relay" /><a name="BTB/RTO"></a><a name="_Toc226791157"></a></h2>
+        <p>Digital-Out 9 is programmable with the setup software (for more information refer to <MadCap:variable name="Primary.WorkBenchName" />). <br />By default, the output function is defined as ready to operate output by action parameter.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">If an inductive load (relay or similar) is used, a freewheeling diode must be added to the load. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Relay output, max. 30 VDC or 42 VAC, 1 A</li>
+            <li class="ListBullet">Galvanic isolation for 24 VDC from PE</li>
+            <li class="ListBullet">Time to close: max. 10 ms</li>
+            <li class="ListBullet">Time to open: max. 10 ms</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-13.png" style="height: auto;width: 530px;" />
+        </p>
+    </body>
+</html>

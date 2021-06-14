@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="717" MadCap:lastWidth="641">
+    <head>
+        <link href="../Resources/TableStyles/AKD_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="width: 640px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/AKD_Standard_Table.css');" class="TableStyle-AKD_Standard_Table" cellspacing="0">
+            <col class="TableStyle-AKD_Standard_Table-Column-Column1" style="width: 315px;" />
+            <col class="TableStyle-AKD_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-AKD_Standard_Table-Head-Header1">
+                    <th class="TableStyle-AKD_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">English</p>
+                    </th>
+                    <th class="TableStyle-AKD_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Français</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Integral solid state short circuit protection does not provide branch circuit protection. Branch circuit protection must be provided in accordance with the National Electrical Code and any additional local codes. </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet"> Une protection de court-circuit à semi-conducteur intégrale ne fournit pas de protection de la dérivation. Il convient de garantir une protection de la dérivation conforme au NEC et aux réglementations locales en vigueur.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">This product is suitable for use on a circuit capable of delivering not more than 65 kA rms symmetrical(when protected by class J fuses or circuit breakers).<br /></li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Ce produit est conçu pour une utilisation sur un circuit capable de fournir maximum 65&#160;kArms symétriques (s'il dispose de fus-ibles classe J ou disjoncteurs).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Use recommended class J fuses or circuit breaker with SCCR rating not less than 10&#160;kA, 30&#160;A maximum .</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Utilisez fusibles de classe J ou disjoncteurs recommandés ayant une SCCR d'au moins 10&#160;kA, 30&#160;A maximum .</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Suitable for motor group installation on a circuit <br />capable of delivering not more than 65 kA rms symmetrical.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Convient pour une installation de groupe moteur sur un circuit capable de délivrer pas plus de 65&#160;kArms symétriques.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">These drives provide solid state motor overload protection at 125% of the rated FLA current. The drive overload trip point should not be set to less than 10% above the motor rated current: <br /><span style="font-size: 8pt;">AXIS#.IL.FOLDFTHRESHU ≥ 1.1 * AXIS#.MOTOR.ICONT.</span></li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Ces variateurs offrent une protection contre les sur-<br />charges de moteur à semi-conducteur à 125 % du courant FLA nominal. Le point de déclenchement en surcharge du variateur ne doit pas être réglé à moins de 10% au dessus du courant nominal du moteur: <br /><span style="font-size: 8pt;">AXIS#.IL.FOLDFTHRESHU ≥ 1,1 * AXIS#.MOTOR.ICONT.</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">These devices are intended to be used in a pollution degree 2 environment and must be placed in an enclosure with min. size of 16 x 16 x 10 inches</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet"> Ces appareils sont prévus pour une utilisation dans un environnement de pollution de niveau 2 et doivent être placés dans une enceinte avec min. taille de <br />406 x 406 x 254 mm</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Surrounding air temperature 40°C. <br />Refer to chapter "Ambient Conditions", for other temperature ratings.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">La température de l'air ambiant 40 °C. <br />Voir chapitre "Ambient Conditions", pour connaître les autres températures.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Use minimum 75°C copper wire.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Utilisez un fil en cuivre 75 °C minimum. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyE-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Connector X3 torque requirements: <br />- screw terminals, tightening torque 4.4 to 5.3 inlbs<br />- locking screw, tightening torque 4.4 inlbs</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyD-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">Exigences de couple du connecteur X3:<br />-  bornes à vis, couple de serrage 0,5 à 0,6 Nm<br />- vis de blocage, couple de serrage 0,5 Nm</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-AKD_Standard_Table-Body-Body1">
+                    <td class="TableStyle-AKD_Standard_Table-BodyB-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet"><b>CAUTION Risk of Electrical Shock!</b> Capacitors can have dangerous voltages present up to five minutes after switching off the supply power. For increased safety, measure the voltage in the DC bus link and wait until the voltage is below 50&#160;V.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-AKD_Standard_Table-BodyA-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet"><b>ATTENTION: Risque de choc électrique!</b> Des tensions dangereuses peuvent persister dans les condensateurs jusqu'à cinq minutes après la mise hors tension. Pour plus de sécurité, mesurez la tension dans la liaison de bus CC et attendez qu'elle soit inférieure à 50&#160;V.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

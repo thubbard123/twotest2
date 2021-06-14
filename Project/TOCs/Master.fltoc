@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="test"
+    IsTest="true"
+    RandomizeAnswers="true"
+    TestRetries="1"
+    TestPassScore="75"
+    LimitTestRetries="true"
+    StartSection="false"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    TestFailPage="/Content/notpass.htm"
+    TestPassPage="/Content/pass.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/tsubfolder/1.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

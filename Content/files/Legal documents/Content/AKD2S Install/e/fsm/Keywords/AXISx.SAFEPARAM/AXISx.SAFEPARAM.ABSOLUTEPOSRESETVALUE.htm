@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety2,Default.Exclude from AKD">
+    <head>
+        <link href="../../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>AXIS#.SAFEPARAM.ABSOLUTEPOSRESETVALUE</h1>
+        <h2>Description</h2>
+        <p>Indicates the safe homing position. This is only usable when a safe encoder is configured in the safety parameters and when the absolute position support is enabled (see <a href="AXISx.SAFEPARAM.ABSOLUTEPOSEN.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSEN</a>). This value must be within the range defined by the encoder multi-turn bits and the parameter <a href="AXISx.SAFEPARAM.ABSOLUTEPOSRANGE.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSRANGE</a>. The value must be entered in user units.</p>
+        <p MadCap:conditions="Primary.exclude from legal project">&#160;</p>
+        <p MadCap:conditions="Primary.exclude from legal project">
+            <img src="../png/Safety Param_AXIS.SAFE.POSRESETVALUE.png" style="mc-thumbnail: popup;mc-thumbnail-max-height: auto;mc-thumbnail-max-width: 400px;" MadCap:mediastyle="@media print { width: 100%;height: auto; }" />
+        </p>
+        <h2>Context</h2>
+        <p>For safe encoder details refer to <MadCap:xref href="../../AKD2S_install_20_05_Motor Feedback Requirements.htm" class="RefGuideXRefNoPage">Motor feedback requirements </MadCap:xref>.</p>
+        <p MadCap:conditions="Primary.exclude from legal project">Related safety parameters:</p>
+        <ul MadCap:conditions="Primary.exclude from legal project">
+            <li><![CDATA[
+                ]]><a href="AXISx.SAFEPARAM.ABSOLUTEPOSEN.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSEN</a><![CDATA[
+            ]]></li>
+            <li><a href="../AXISx.SAFE/AXISx.SAFE.ABSOLUTEPOSVALID.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSVALID</a>
+            </li>
+            <li><a href="AXISx.SAFEPARAM.ABSOLUTEPOSRANGE.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSRANGE</a>
+            </li>
+            <li><a href="AXISx.SAFEPARAM.ABSOLUTEPOSRESETSOURCE.htm">AXIS#.SAFEPARAM.ABSOLUTEPOSRESETSOURCE</a>
+            </li>
+        </ul>
+        <h2>Versions</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 86px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 292px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Action</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Version</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Implemented</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">2-04-00-000</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Implemented in SMM revision v0.56</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>General Information</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/AKD_technicaldata.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 200px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 275px;" />
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Read/Write</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Units</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">User units defined in the safety parameters</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Range</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Depends on the range and user units</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Default Value</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">0 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Data Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Stored in Non Volatile Memory</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

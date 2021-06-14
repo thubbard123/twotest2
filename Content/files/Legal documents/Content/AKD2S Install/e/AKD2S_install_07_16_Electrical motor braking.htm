@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="930" MadCap:lastWidth="641" class="" MadCap:searchable="True">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Electrical Motor Brakin<MadCap:keyword term="Regen circuit;Dynamic Drive Braking;Regeneration Braking" />g</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Drive Dynamic Braking</h2>
+        <p>Drive Dynamic braking is a method to slow down a servo system by dissipating the mechanical energy driven by the motor back EMF. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Drive dynamic braking is not functional safe. <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1"> Safe dynamic braking (SDB) requires an external SDB module</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="Default.Exclude from Safety Guide"><MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1"> <MadCap:xref class="XrefSee" href="fsm/fs2/AKD2S_install_22_08_00_SDB.htm">(➜ # 1)</MadCap:xref>.</MadCap:conditionalText></MadCap:conditionalText></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p> The <MadCap:variable name="Primary.DriveName_AKD2G" /> has a built in advanced drive dynamic braking mode which operates fully in hardware. When activated, the drive powers the motor terminals with voltages to maximize the stopping force per amount of motor current. This advanced method forces all of the dynamic braking current to be stopping current and insures the fastest stopping per ampere of motor terminal current. </p>
+        <ul>
+            <li class="ListBullet">When current is not being limited, the mechanical energy is being dissipated in the motor winding resistance.</li>
+            <li class="ListBullet"> When current is being limited, energy is returned to the drive bus capacitors. </li>
+            <li class="ListBullet">The drive also limits the maximum dynamic braking motor terminal current by using the <i>AXIS#.DBILIMIT</i> parameter to insure that the drive, motor, and customer load do not see excessive currents/forces. </li>
+        </ul>
+        <p>Whether and how the <MadCap:variable name="Primary.DriveName_AKD2G" /> uses dynamic drive braking depends on (<i>AXIS#.DISMODE</i>). </p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Regeneration breaking</h2>
+        <p>When the amount of returned energy from the motor builds the bus capacitor voltage up enough the drive activates the regenerative braking circuit to start dumping the returned energy in the regen resistor (also called regenerative resistor or brake resistor). <MadCap:conditionalText MadCap:conditions="Default.Exclude from Safety Guide">All <MadCap:variable name="Primary.DriveName_AKD2G" /> offer internal resistor plus the ability to connect an external resistor depending on the application requirements. </MadCap:conditionalText></p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">External regen resistors are described in the regional <i>Accessories Manual</i>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 MadCap:autonum="1.2.1 ">Functional description</h3>
+        <p class="Bold">1. Individual drives, not coupled through the DC bus link circuit (+DC, -DC)</p>
+        <p>When the energy fed back from the motor has an average or peak power that exceeds the preset level for the brake power rating, the drive generates the warning "W2010 Regen Energy Critical”. If the power exceeds the set fault level, the regenerative circuit will switch off and the drive will disable.</p>
+        <p class="Bold">2. Several drives coupled through the DC bus link (+DC, -DC)</p>
+        <p>Using the built-in regenerative circuit, several drives of the same series can be operated from a common DC-bus link <MadCap:xref class="XrefSee" href="AKD2S_install_09_12_06_DC bus link.htm">(➜ # 1)</MadCap:xref>, without any additional measures. 90% of the combined power of all the coupled drives is always available for peak and continuous power. If the power of the drive with the lowest switch-off threshold (resulting from tolerances) exceeds the set fault level, the regenerative circuit will switch off on that drive.</p>
+        <p><b>Switch-off on over voltage</b>: With the regenerative circuit switched off, the returned energy is not dissipated and therefore the DC-bus link level increases. The drive reports an over-voltage fault if the DC-bus voltage threshold is exceeded. When this happens, the drive power stage is immediately disabled and the load coasts to a stop with the fault message “F2006 Bus Over voltage". <br />The ready to operate contact (terminals X21/B5-B6) is opened <MadCap:xref class="XrefSee" href="AKD2S_install_09_16_05_Digital Output.htm#BTB/RTO">(➜ # 1)</MadCap:xref>.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Observe the regeneration time (some minutes) after full load with peak brake power.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h3 MadCap:autonum="1.2.2 ">Technical data for <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V<MadCap:keyword term="DC Bus Capacitance" /></h3>
+        <p>Technical data for the regenerative circuit depends on the drive type and the mains voltage. Supply voltages, capacitance, and switch-on voltages are all nominal values.</p>
+        <p class="Bold" MadCap:conditions="Default.Obsolete"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V03 to <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 97px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col style="width: 98px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th colspan="3" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Brake circuit</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeaderCenter">AC Supply</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Rated data</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Units</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeaderCenter">120V / 240V</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="9">
+                    <p class="TableContentLeft">6Vxxy<br />all types</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Regen start voltage at rated supply voltage</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">380</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Overvoltage limit</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">420</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Maximum regenerative duty cycle</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">%</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">35*</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Internal regen resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p colspan="3" class="TableContentCenter">15</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous power, internal resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">W</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">100</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, internal resistor (0.5s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">3 / 9</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">External regen resistor (recommended 15 Ω)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">&gt;10</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous brake power, external resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">3</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, external (1s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">5 / 14</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="2">
+                    <p class="TableContentLeft">6V03S, 6V06S</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (±20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">6 / 23</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">1640</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="2">
+                    <p class="TableContentLeft">6V12S, 6V03D, 6V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete">, 6V06H</MadCap:conditionalText></p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (± 20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">9 / 35</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">2460</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold" MadCap:conditions="Default.Obsolete"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V24</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0" MadCap:conditions="Default.Obsolete">
+            <col style="width: 97px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col style="width: 98px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th colspan="3" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Brake circuit</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeaderCenter">AC Supply</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Rated data</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Units</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeaderCenter">120V / 240V</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="11">
+                    <p class="TableContentLeft">6V24S<MadCap:conditionalText MadCap:conditions="Default.Obsolete">, 6V12D</MadCap:conditionalText></p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Regen start voltage at rated supply voltage</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">380</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Overvoltage limit</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">420</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Maximum regenerative duty cycle</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">%</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="text-align: center;color: #000000;">
+                    <p class="TableContentCenter">35*</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Internal regen resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p colspan="3" class="TableContentCenter">15</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous power, internal resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">W</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">100</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, internal resistor (0.5s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">3 / 9</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">External regen resistor (recommended 15 Ω)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">&gt;10</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous brake power, external resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">3</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, external (1s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">5 / 14</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (±20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">tbd / tbd</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">tbd</p>
+                </td>
+            </tr>
+        </table>
+        <p>* depends on connected regen resistor power.</p>
+        <p class="pagebreak" MadCap:conditions="Default.BetaVersionOnly,Default.ToBeReviewed">&#160;</p>
+        <h3 MadCap:autonum="1.2.3 ">Technical data for <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V</h3>
+        <p>Technical data for the regenerative circuit depends on the drive type and the mains voltage. Supply voltages, capacitance, and switch-on voltages are all nominal values.</p>
+        <p class="Bold" MadCap:conditions="Default.ToBeReviewed,Default.BetaVersionOnly"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V03 to <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 97px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col style="width: 38px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 67px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th colspan="3" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Brake circuit</p>
+                    </th>
+                    <th colspan="2" class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderCenter">AC Supply</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Rated data</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Units</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">240V</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter"> 400V/480V</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="9">
+                    <p class="TableContentLeft">7V03S ,7V06S, 7V12S, 7V03D, 7V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete">, 7V06H</MadCap:conditionalText></p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Regen start voltage at rated supply voltage</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">380</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">633 / 760</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Overvoltage limit</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">420</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">840</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Maximum regenerative duty cycle</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">%</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p colspan="3" class="TableContentCenter">35*</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Internal regen resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p colspan="3" class="TableContentCenter">33</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous power, internal resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">W</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p class="TableContentCenter">100</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, internal resistor (0.5s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">4</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">17</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">External regen resistor (recommended 33 Ω)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p class="TableContentCenter">&gt;25</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous brake power, external resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">2</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">6</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, external (1s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">6</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">24</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="2">
+                    <p class="TableContentLeft">7V03S, 7V06S</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (±20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">3</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">30 / 18</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p class="TableContentCenter">235</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="2">
+                    <p class="TableContentLeft">7V12S, 7V03D, 7V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete">, 7V06H</MadCap:conditionalText></p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (±20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">6</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">50 / 35</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2">
+                    <p class="TableContentCenter">470</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold" MadCap:conditions="Default.ToBeReviewed,Default.BetaVersionOnly"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V24<br /></p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0" MadCap:conditions="Default.ToBeReviewed,Default.BetaVersionOnly">
+            <col style="width: 97px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 32px;" />
+            <col style="width: 38px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 67px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th colspan="3" class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Brake circuit</p>
+                    </th>
+                    <th colspan="2" class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderCenter">AC Supply</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Rated data</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Units</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">240V</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter"> 400V/480V</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;" rowspan="11">
+                    <p class="TableContentLeft">7V24S</p>
+                    <p class="TableContentLeft">&#160;</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Regen start voltage at rated supply voltage</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">380</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">633 / 760</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Overvoltage limit</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">420</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">840</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Maximum regenerative duty cycle</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">%</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2" style="color: #ff0000;">
+                    <p colspan="3" class="TableContentCenter">35*</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Internal regen resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2" style="color: #ff0000;">
+                    <p colspan="3" class="TableContentCenter">23</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous power, internal resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">W</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2" style="color: #ff0000;">
+                    <p class="TableContentCenter">200</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, internal resistor (0.5s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">6</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">25</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">External regen resistor (recommended 33 Ω)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">Ω</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2" style="color: #ff0000;">
+                    <p class="TableContentCenter">&gt;10</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Continuous brake power, external resistor</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">3</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">10</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">Peak brake power, external (1s)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">kW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">15</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">55</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">Absorption energy in capacitors (±20%)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Ws</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">14</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                    <p class="TableContentCenter">130 / 60</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Capacitance</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">µF</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" colspan="2" style="color: #ff0000;">
+                    <p class="TableContentCenter">1020</p>
+                </td>
+            </tr>
+        </table>
+        <p>* depends on connected regen resistor power.<br /></p>
+    </body>
+</html>

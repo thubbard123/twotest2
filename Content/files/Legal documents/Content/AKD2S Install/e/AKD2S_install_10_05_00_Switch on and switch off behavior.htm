@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="834" MadCap:lastWidth="641" class="">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Switch-On and Switch-Off Behavior<MadCap:keyword term="Switch-on, switch-off behavior"></MadCap:keyword></h1>
+        <p>This chapter describes the switch-on and switch-off behavior of the <MadCap:variable name="Primary.DriveName_AKD2G" /> with STO. </p>
+        <p>&#160;</p>
+        <p class="Bold">Behavior of “holding brake” function</p>
+        <p>Drives with an enabled holding brake function have a special timing for switching on and off the output stage <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. Events that remove the AXIS#.ACTIVE signal trigger the holding brake to apply. As with all electronic circuits, the general rule applies that there is a possibility of the internal holding brake module failing. </p>
+        <p>If the drive detects the motor to be at zero velocity (as configured by AXIS#.ZEROT and AXIS#.ZEROV) or timeout occurs during a stop procedure, the brake is applied. Set parameter AXIS#.MOTOR.BRAKEIMM to 1 with vertical axes, to apply the motor holding brake <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref> immediately after faults or Hardware Disable.</p>
+        <p>&#160;</p>
+        <p class="Bold">Behavior when undervoltage condition is present</p>
+        <p>The behavior in an undervoltage condition depends on the VBUS.UVMODE setting.</p>
+        <table style="border-left-width: ;border-right-width: ;border-top-width: ;border-bottom-width: ;caption-side: top;border-left-style: solid;border-left-color: #000000;border-right-style: solid;border-right-color: #000000;border-top-style: solid;border-top-color: #000000;border-bottom-style: solid;border-bottom-color: #000000;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 111px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentLeft">VBUS.UVMODE</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">DC Bus Undervoltage Mode. <MadCap:conditionalText MadCap:conditions="Primary.exclude from language project">Consult the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for configuring the parameter.</MadCap:conditionalText></p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentLeft">0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">The drive will report a F2007 undervoltage fault any time an undervoltage condition occurs.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentLeft">1 (default)</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">The drive will report a warning W2007 if not enabled. The drive will report a fault if the drive is enabled when the condition occurs, or an attempt is made to enable while an under voltage condition occurs.</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p class="Bold">Functional Safety</p>
+        <p>The drive can be <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">braked down using SS1 and SDB and </MadCap:conditionalText>secured to standstill with <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">SBC and </MadCap:conditionalText>STO. Even when power is being supplied, the drive shaft is protected against unintentional restart. The chapter “Functional Safety” describes how to use the safety functions <MadCap:xref class="XrefSee" href="fsm/AKD2S_install_20_01_FS General.htm">(➜ # 1)</MadCap:xref>.</p>
+        <ul>
+            <li class="ListBullet" MadCap:conditions="Default.Exclude from AKD2_Safety1"> Functional Safety can be ensured with configured SBC <MadCap:xref href="fsm/fs2/AKD2S_install_22_06_00_SBC.htm">(➜ # 1)</MadCap:xref> only.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Exclude from AKD2_Safety1">For SIL 3 a second (external) motor brake for an axis is required. For single axis drives this brake can be connected to X4 <MadCap:xref href="AKD2S_install_09_13_01_01_Brake connector X4.htm">(➜ # 1)</MadCap:xref>. For dual axis drives the additional brake must be controlled from another source (e.g. from the other axis or externally from a safety controller). The brakes can be mapped to an axis with <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable>.</li>
+            <li class="ListBullet" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3">Functional safety, e.g. with hanging load (vertical axes), requires an additional brake, controlled for example from the second axis or externally from a safety controller. The brakes can be mapped to an axis with <MadCap:variable name="Primary.WorkBenchName" />.</li>
+            <li class="ListBullet">The Hardware Enable does not initiate a controlled stop but switches off the power stage immediately. </li>
+            <li class="ListBullet">Set parameter AXIS#.MOTOR.BRAKEIMM to 1 with vertical axes, to apply the brake immediately after faults or Hardware Disable.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:conditions="Default.Not in KAS,Default.Exclude from MKD" MadCap:lastBlockDepth="6" MadCap:lastHeight="554" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO" MadCap:autonum="1 &#160;&#160;">Digital Inputs (X7/X8<MadCap:conditionalText MadCap:conditions="Default.Obsolete">/X9</MadCap:conditionalText>)<MadCap:keyword term="Digital inputs:all Variants;Inputs:Digital all Variants" /><a name="DigitalIn"></a></h1>
+        <p>The drive provides 8 digital inputs <MadCap:xref href="AKD_single_09_16_00_I-O Connection.htm">(➜ # 1)</MadCap:xref>. These can be used to initiate pre-programmed functions that are stored in the drive. A list of these pre-programmed functions is included in the <MadCap:variable name="Primary.WorkBenchName" />. Digital Input 8 is not programmable but is fixed to the ENABLE function. If an input is programmed, it must be saved to the drive.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Depending on the selected function, the inputs are high or low active. Digital input filter can be set in <MadCap:variable name="Primary.WorkBenchName" /> to change sensitivity of the inputs<MadCap:conditionalText MadCap:conditions="Primary.Print"> (see Online Help)</MadCap:conditionalText>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The inputs can be used with switched +24 V (sink type) or switched GND (source type). See diagrams below for typical examples of digital input wiring.</p>
+        <h2 MadCap:conditions="Primary.Online" MadCap:autonum="1.1 &#160;&#160;">Digital Input Filters</h2>
+        <p MadCap:conditions="Primary.Online">There are four filter options available on all digital inputs whether 24 V or RS485 signal format. It is expected that the firmware will choose the correct default values. Users should have the ability to change the filter:</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0" MadCap:conditions="Primary.Online">
+            <col style="width: 93px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 122px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 115px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 115px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1" MadCap:conditions="Primary.Online">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Unfiltered	</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Fast	</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Default	</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Slow</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Primary.Online">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Minimum input pulse width</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">40 ns	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">	10.24 µs<br />+/- 0.64 µs</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">	163 µs<br />+/-10.24 µs	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">2.62 ms<br />+/- 0.16384 ms</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Primary.Online">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Typical input to use on</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">	RS485 inputs, <br />fast optos <br />In1 and In2	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"> Fast optos <br />In1 and In2	</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Slow optos<br />In3 to In7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="Primary.Online" MadCap:autonum="1.2 &#160;&#160;">Wiring Diagrams X7/X8</h2>
+        <p class="Bold"> X7/X8 Digital Input Wiring Diagram (Sink type connection, example)</p>
+        <p class="right">
+            <img src="../../Resources/Images/AKD Install/e/A0561-30.png" style="height: auto;width: 520px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold"> X7/X8 Digital Input Wiring Diagram (Source type connection, example)</p>
+        <p class="right">
+            <img src="../../Resources/Images/AKD Install/e/A0561-40.png" style="height: auto;width: 520px;" />
+        </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="_Toc226791153"></a>Digital Inputs 1 and 2<MadCap:keyword term="Inputs:Programmable" /></h2>
+        <p>These inputs (X7/9 and X7/10) are particularly fast and are therefore suitable for position latch functions<MadCap:conditionalText MadCap:conditions="Default.Exclude from Install">, for example <MadCap:xref href="../../UsersManual/Position Capture.htm">"Using Position Capture" (➜ p. 1)</MadCap:xref></MadCap:conditionalText>. They can also be used as 24 V inputs for electronic gearing <MadCap:xref href="AKD_single_09_15_00_Electronic Gearing_Master Slave.htm#Electron" MadCap:conditions="Default.Exclude from WorkBench">=&gt; p. 1</MadCap:xref>.</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM7</li>
+            <li class="ListBullet">Sink or Source type sensors possible</li>
+            <li class="ListBullet">High: 3.5 to 30 V/2 to 15 mA , Low: -2 to +2 V/&lt;15 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+            <li class="ListBullet">High accuracy latch: motor feedback position or interpolated time is latched or captured within 2 µs of input signal transition (with digital input filter set to 40 ns)</li>
+            <li class="ListBullet">The <MadCap:variable name="Primary.DriveName" /> capture engine is polled every 62.5 µs (16 kHz) by the firmware</li>
+            <li class="ListBullet" MadCap:conditions="Default.Exclude from Emerson">For <MadCap:variable name="Primary.KAS_Name" /> applications (example: <MadCap:variable name="Primary.DriveVariant_PDMM" />), the latch position information is updated in the Ethercat PDO. The typical update time into the <MadCap:variable name="Primary.KAS_Name" /> project is two Ethercat cycles ( with each cycle being 250 µs, 500 µs, 1000 µs, or 2000 µs)</li>
+        </ul>
+        <p class="pagebreak">&#160;</p>
+        <h2 name="_Toc226791154" MadCap:autonum="1.4 &#160;&#160;">Digital Inputs 3 to 7</h2>
+        <p>These inputs are programmable with the setup software. By default,all inputs are not programmed (off). For more information refer to the setup software. Choose the function you require in <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM7 or DCOM8</li>
+            <li class="ListBullet">Sink or Source type sensors possible</li>
+            <li class="ListBullet">High: 3.5 to 30 V/2 to 8 mA , Low: -2 to +2 V/&lt;8 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+            <li MadCap:conditions="Default.Exclude from Install" class="ListBullet">The task update rate for individual Input mode functions can be found here <MadCap:xref href="../../CommandParamRefGuide/DIN/DINx.MODE.htm">"DIN1.MODE TO DIN7.MODE" (➜ p. 1)</MadCap:xref></li>
+        </ul>
+        <h2 name="Enable" MadCap:autonum="1.5 &#160;&#160;">Digital Input 8 (ENABLE)<a name="_Toc226791155"><MadCap:keyword term="ENABLE;Inputs:Enable" /></a></h2>
+        <p>Digital Input 8 (terminal X8/4) is set to Enable function. </p>
+        <p class="Bold">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM8</li>
+            <li class="ListBullet">Sink or Source type wiring is possible</li>
+            <li class="ListBullet">High: 3.5 to 30 V/2 to 8 mA , Low: -2 to +2 V/&lt;8 mA</li>
+            <li class="ListBullet">Update rate: direct connection to hardware (FPGA)</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The Hardware Enable input and the Software Enable signal (via fieldbus or <MadCap:variable name="Primary.WorkBenchName" />) are serial, that means wiring of Hardware Enable is mandatory.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The output stage of the drive is enabled by applying the ENABLE signal (Terminal X8/4, active high). Enable is possible only if input STO has a 24 V signal <MadCap:xref href="AKD_single_07_17_STO Safe Torque Off.htm" MadCap:conditions="Default.Exclude from WorkBench">(➜ # 1)</MadCap:xref>. In the disabled state (low signal) the connected motor has no torque.</p>
+        <p>A software enable by means of the setup software is also required (AND link), although this can also be permanently enabled with <MadCap:variable name="Primary.WorkBenchName" />.</p>
+        <h2 MadCap:conditions="Default.Obsolete" MadCap:autonum="1.6 &#160;&#160;"><a name="Digital-"></a>Digital-In/Out 9 to 11</h2>
+        <p MadCap:conditions="Default.Obsolete">X9 can be used for digital I/O. The channels can be defined as inputs. Choose the function you require in <MadCap:variable name="Primary.WorkBenchName" />. For more information refer to the setup software online help.</p>
+        <p class="Bold" MadCap:conditions="Default.Obsolete">Technical characteristics</p>
+        <ul>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">RS-485, reference common is DCOM9</li>
+            <li class="ListBullet" MadCap:conditions="Default.Obsolete">Maximum signal input frequency: 3MHz</li>
+        </ul>
+        <p class="Bold" MadCap:conditions="Default.Obsolete">X9 Wiring Diagram</p>
+        <p MadCap:conditions="Default.Obsolete">
+            <img src="../../Resources/Images/AKD Install/e/A0561-79.png" style="height: auto;width: 530px;" />
+        </p>
+    </body>
+</html>

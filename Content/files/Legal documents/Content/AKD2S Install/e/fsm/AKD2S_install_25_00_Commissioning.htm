@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="927" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Commissioning<MadCap:keyword term="Commissioning" /><a name="FS23-61508-32h"></a></h1>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The safety features of the <MadCap:variable name="Primary.DriveName_AKD2G" /> only fulfill their purpose and can only function properly when the machine was developed according to ISO 12100, ISO 13849 and EN 62061. Depending on the use case further standards may apply. <br />The machine manufacturer is responsible for proper and safe commissioning. Violating the according standards can result in potential unsafe condition or dangerous behavior of the machine. Only properly qualified and trained personnel are permitted to perform the following tasks.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><a name="First"></a>First time commissioning</h2>
+        <ul>
+            <li class="ListBullet" style="font-weight: bold;">Actions prior to commissioning:</li>
+            <li class="ListBulletIndent">A risk assessment must be carried out, covering all risks originating the machine.</li>
+            <li class="ListBulletIndent">Safety functions for risk reduction require sufficient definition such as functionality, PLr / SILCL, reaction times and so on. Analyze your machine accordingly.</li>
+            <li class="ListBulletIndent">	The safety functions must be specified (components, SIL/PL, PFHd, category, TM, CCF measures, proof test intervals like SBT, MTTFd, DC, combinations of functions etc.)</li>
+            <li class="ListBulletIndent">Take precautionary measures against foreseeable misuse or manipulation bypassing the safety functions.</li>
+            <li class="ListBulletIndent">It must be calculated and analyzed, whether the specified safety chain is sufficient to reach the required PLr / SILCL.</li>
+            <li class="ListBulletIndent">A commissioning plan must be set up, that specifies all actions of the verification and validation.</li>
+            <li class="ListBulletIndent">Take quality assurance measures for all steps such as reviews, FMEAs, independent personnel and four-eyes principle.</li>
+            <li class="ListBullet" style="font-weight: bold;">Actions during commissioning:</li>
+            <li class="ListBulletIndent">Verify that the hardware configuration is set up as specified (components, architecture, wiring, CCF measures etc.).</li>
+            <li class="ListBulletIndent">Verify that the software configuration is done according to the specification. Suitable measures can be reviews, black-box tests, simulations and function tests. Make sure that only the required functions are configured.</li>
+            <li class="ListBulletIndent">Verify if the safety functions get executed as expected and whether the configuration is suitable for the application. Suitable measures are function tests and fault injection tests (error condition tests).</li>
+            <li class="ListBulletIndent">Validate the machine <MadCap:xref href="AKD2S_install_25_00_00_Validation.htm">(➜ # 1):</MadCap:xref> Test the final product with all safety functions and in all operation modes and states. <br />Validate that the safety functions do not interfere with other functions or each other in an undesired way. If used, check if all instances are assigned to the right use cases. Pay special attention to the correct use of safety function muting.</li>
+            <li class="ListBulletIndent">Make sure all safety functions and all possible situations are covered by the validation process. </li>
+            <li class="ListBulletIndent">Document all actions and decisions according to the requirements of the <br />standards <MadCap:xref href="AKD2S_install_25_00_00_Validation.htm#Safe">(➜ # 1)</MadCap:xref>.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet" style="font-weight: bold;">Actions after commissioning:</li>
+            <li class="ListBulletIndent">Document and validate all information relevant to the end user in a suitable way. This includes capabilities and limits of the safety functions as well as maintenance instructions.</li>
+            <li class="ListBulletIndent">Change default passwords and store them inaccessible to unqualified or unauthorized personnel. Protect the hardware from unwanted or unauthorized modifications.</li>
+        </ul>
+        <p>For detailed information refer to the applying standards.</p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">
+            <br />
+        </p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Recommissioning</h2>
+        <ul>
+            <li class="ListBullet">Recommissioning after disassembling and reassembling or after drive replacement:</li>
+            <li class="ListBulletIndent">Verify the correct reassembling according to the original specification.</li>
+            <li class="ListBulletIndent">Verify that the correct safe parameter package was uploaded to the right drive.</li>
+            <li class="ListBulletIndent">Check all components and wiring for correct installation and for signs of damage.</li>
+            <li class="ListBulletIndent">Carry out function tests and fault injection tests again.</li>
+            <li class="ListBulletIndent">Validate all functions and combinations of functions again.</li>
+            <li class="ListBullet">Recommissioning after long standstill:</li>
+            <li class="ListBulletIndent">Check all components for their TM and signs of damage or inacceptable wear. Components that have exceeded their TM or show signs of damage need replacement.</li>
+            <li class="ListBullet">Recommissioning after modification:</li>
+            <li class="ListBulletIndent">	Any modification to a safety function requires a complete reevaluation and revalidation</li>
+            <li class="ListBulletIndent">according to <MadCap:xref href="#First" class="XrefParagraph">(➜ # 1, First time commissioning)</MadCap:xref>.</li>
+            <li class="ListBulletIndent">Alternative: Set up a modification process by carrying out an analysis to identify all possible influences on safety. Reverify the affected aspects and revalidate the machine.</li>
+            <li class="ListBulletIndent">Update your documentation and end user information accordingly.</li>
+        </ul>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Modifying safety functions could void certifications and approvals from notified bodies. Contact your notified body for further information.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Only properly qualified and trained personnel are permitted to perform these tasks.</p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="Funktion"></a>Diagnostic Testing</h2>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">For SIL3 test pulses on the digital inputs are required (OSSD, <MadCap:xref class="XrefSee" href="AKD2S_install_20_06_OSSD.htm">(➜ # 1)</MadCap:xref>). </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a name="FS2-13849-13"></a>To achieve the safety/performance level, the safe switching of the pulse inhibitor (STO) and the brake voltage (SBC) must be tested periodically :</p>
+        <ul>
+            <li class="ListBullet">at the start of a system,</li>
+            <li class="ListBullet">at the restart after triggering a protective device,</li>
+            <li class="ListBullet">SIL 2 / PLd category 3: one test per year,</li>
+            <li class="ListBullet">SIL 3 / PLe category 3: one test per three months,</li>
+            <li class="ListBullet">SIL 3 / PLe category 4: one test per day.</li>
+        </ul>
+        <p>The STO inputs are switched in turns according to a defined test sequence (see example below) . The switching state of the pulse inhibitor is available at the mapped STO status outputs of the <MadCap:variable name="Primary.DriveName" /> and must be analyzed to achieve a sufficient <MadCap:keyword term="Diagnostic Cover Ratio" />diagnostic cover ratio:</p>
+        <ul>
+            <li class="ListBullet">Diagnostic with external not safe controller, test with dynamic sequence:</li>
+            <li class="ListBulletIndent">test cycle: with each device start, minimum once per day.</li>
+            <li class="ListBulletIndent">diagnostic cover ratio: 60 %</li>
+            <li class="ListBullet">Diagnostic with external safe controller, test with dynamic sequence.</li>
+            <li class="ListBulletIndent">test cycle: with each device start, minimum once per day.</li>
+            <li class="ListBulletIndent">diagnostic cover ratio: 90 %</li>
+        </ul>
+        <p>The test sequence for the functional test of the safe pulse inhibitor must be performed as shown in the following time diagram, example for axis 1. </p>
+        <p>
+            <img src="png/A0613-10.png" style="width: 505px;height: auto;">
+            </img>
+        </p>
+        <p style="font-size: 9pt;">Legend:<br />FAULT: relay output, 1=ready to operate<br />SIN1: digital input, 1st switch-off path, axis 1, SIN2: digital input, 2nd switch-off path, axis 1<br />SOUT1: digital output, switching state of 1st pulse inhibitor, axis 1<br />SOUT2: digital output, switching state of 2nd pulse inhibitor, axis 1<br />T1 … T5: Test sequence, Start: Start of test sequence, End: End of test sequence</p>
+    </body>
+</html>

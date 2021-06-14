@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="944" MadCap:lastWidth="641" class="">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Switch-off behavior</h1>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The drive’s 24 V supply must remain constant. STO disables the power stage immediately. Configured Digital Inputs and fieldbus commands can be used to perform controlled stops.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Switch-off behavior using the AXIS#.DIS command</h2>
+        <p>The enable/disable button in <MadCap:variable name="Primary.WorkBenchName" /> issues a <i>AXIS#.DIS</i> command internally to the drive. <MadCap:conditionalText MadCap:conditions="Primary.Print">See <i><MadCap:variable name="Primary.WorkBenchName" /> Online Help</i>for configuring inputs and software commands.</MadCap:conditionalText> Sometimes this enable signal is called "Software Enable" (SW-Enable).</p>
+        <table style="border-left-width: ;border-right-width: ;border-top-width: ;border-bottom-width: ;caption-side: top;border-left-style: solid;border-left-color: #000000;border-right-style: solid;border-right-color: #000000;border-top-style: solid;border-top-color: #000000;border-bottom-style: solid;border-bottom-color: #000000;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 71px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentCenter">AXIS#.<br />DISMODE</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">
+                        <i>AXIS#.DISMODE</i> controls the behavior of the <i>AXIS#.DIS</i> command issued through <MadCap:variable name="Primary.WorkBenchName" />, or terminal, or fieldbus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentCenter">0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">Disable axis immediately, if the drive detects the motor to be at zero velocity <i>AXIS#.ZEROV</i> or timeout occurs brake is applied. Category 0 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                    <p class="TableContentCenter">2</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentLeft">Use controlled stop to disable drive, if the drive detects the motor to be at zero velocity <i>AXIS#.ZEROV</i> or timeout occurs brake is applied. Category 1 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-14.png" style="width: 512px;height: auto;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. </p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Switch-off behavior using a digital input (controlled stop)</h2>
+        <p> This is a category 1 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.<br />A digital input can be configured to bring the motor to a controlled stop and then disable the drive and apply the holding brake.(if present).<MadCap:conditionalText MadCap:conditions="Primary.Print"> See the <i><MadCap:variable name="Primary.WorkBenchName" /> Online Help</i> for information on configuring Digital Inputs.</MadCap:conditionalText></p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-15.png" style="width: 460px;height: auto;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Switch-off behavior using STO input (uncontrolled stop)</h2>
+        <p>This is a category 0 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.<br />The STO input disables the power stage immediately. </p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-16.png" style="height: auto;width: 470px;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. Set parameter AXIS#.MOTOR. BRAKEIMM to 1 with vertical axes, to apply the motor holding brake immediately after STO.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Switch-off behavior in the event of a fault</h2>
+        <p>The behavior of the drive always depends on the fault type and the setting of a number of different parameters (AXIS#.DISMODE, VBUS.UVFTHRESH, AXIS#.ZEROV, and others<MadCap:conditionalText MadCap:conditions="Primary.exclude from language project">; see the <i><MadCap:variable name="Primary.WorkBenchName" /> Online Help</i> for more details</MadCap:conditionalText>). <MadCap:conditionalText MadCap:conditions="Primary.exclude from language project">See the <i>Drive Fault and Warning Messages and Remedies</i> section of the <i><MadCap:variable name="Primary.WorkBenchName" /> User Manual</i></MadCap:conditionalText><MadCap:xref href="../../AKD2G User Manual/Drive FaultsandWarningsTable.htm" class="XrefSee" MadCap:conditions="Primary.exclude from legal project">(see "Faults and Messages")</MadCap:xref> for a table describing the specific behavior of each fault. The next pages show examples for the possible fault behaviors. The fault relay output (DOUT9) switches the main contactor (Emergency Off circuit).</p>
+        <p class="Bold">Switch-off behavior for faults that cause an immediate power stage disable</p>
+        <p>This is a category 0 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-17.png" style="width: 470px;height: auto;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. Set parameter AXIS#.MOTOR. BRAKEIMM to 1 with vertical axes, to apply the motor holding brake immediately after faults.</p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold">Switch-off behavior for faults that cause dynamic braking</p>
+        <p>This is a category 2 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-18.png" style="width: 470px;height: auto;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. </p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold">Switch-off behavior for faults that cause a controlled stop</p>
+        <p>This is a category 2 stop according to IEC 60204 <MadCap:xref class="XrefSee" href="AKD2S_install_03_03_Stop Functions.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0613-19.png" style="width: 470px;height: auto;" />
+        </p>
+        <p> If the drive detects the motor to be at zero velocity (AXIS#.ZEROV) or timeout occurs (AXIS#.ZEROT), the motor brake is applied <MadCap:xref class="XrefSee" href="AKD2S_install_09_13_01_Motor holding brake.htm">(➜ # 1)</MadCap:xref>. </p>
+    </body>
+</html>

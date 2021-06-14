@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="96" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p class="Bold">Reinforced Insulation</p>
+        <p>Thermal sensors, motor holding brakes and feedback systems built into the connected motor must have reinforced insulation (according to IEC61800-5-1) against system components with power voltage, according to the required application test voltage. All <MadCap:variable name="Primary.CompanyName" /> components meet these requirements.</p>
+    </body>
+</html>

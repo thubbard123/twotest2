@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="98" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="Bold">High noise pollution!</p>
+        <table style="width: 100%;mc-table-style: url('../../TableStyles/AKD_invisible.css');" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col style="width: 111px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1">
+                        <img src="../../Images/Symbols/n/mandatory_ear_muffs.png" style="height: 15mm;width: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Fans generate noise of up to 90 dBA when operating at maximum load. This can lead to damage to the hearing. Keep the cabinet doors closed during operation. Use ear protection if the control cabinet has to be opened during normal operation. The operator must provide ear protection and monitor its use depending on the daily noise exposure level determined.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="703" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Operation<MadCap:keyword term="Operation (FS)" /></h1>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">After the initial commissioning and validation, it must be ensured the initial state is permanently retained. Modification of any kind are prohibited without a proper modification process.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In case of a fault reaction occurring (STO-, SS1-<MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety2"> or SS2-</MadCap:conditionalText>Active without being activated on purpose) the drive should not be restarted before:</p>
+        <ul>
+            <li class="ListBullet">the cause of the fault reaction is investigated and found;</li>
+            <li class="ListBullet">the reason of the fault reaction is removed/resolved;</li>
+            <li class="ListBullet">safe operation of the application is ensured.</li>
+        </ul>
+        <p>Every occurring incident must be documented.</p>
+        <p>If the investigation of the fault reaction results in the discovery of a potential hazard or risk the application shall not return to normal operation before proper risk reduction is achieved.</p>
+        <p>In order to maintain functional safety, safety chains containing elements that cannot be tested regularly or without activation during normal operation, need to be periodically proof tested at least:</p>
+        <ul>
+            <li class="ListBullet">once per year for SIL 2, PL d / Cat. 3;</li>
+            <li class="ListBullet">once every three months for SIL 3, PL e / Cat. 3;</li>
+            <li class="ListBullet">once every day for SIL 3, PL e / Cat. 4.</li>
+        </ul>
+        <p>See IEC 61800-5-2 and ISO 13849 for further information.</p>
+        <p>In addition, proof tests for brakes need to be carried independently (see SBT <MadCap:xref href="fs2/AKD2S_install_22_07_00_SBT.htm">(➜ # 1)</MadCap:xref>).</p>
+        <p>The drive itself does not require any maintenance (see Maintenance/Cleaning <MadCap:xref href="../../../Resources/Common/e/Maintenance Cleaning.htm">(➜ # 1)</MadCap:xref>).</p>
+        <p>Replacement is only necessary in case of a defect or if the max. service life of the device TM is exceeded (see Field replacement <MadCap:xref href="AKD2S_install_26_02_00_Field Replacement.htm">(➜ # 1)</MadCap:xref>).</p>
+        <p>Wear parts of safety chains such as relays, brakes or SDB modules, need to be swapped at the end of their lifetime as well as damaged or defect auxiliary equipment.</p>
+        <p>The replacement of any parts of the safety chain does not allow any changes or modifications to the safety characteristics or functionality of a safety chain. A revalidation of the safety functions is necessary after working on any safety related equipment. In case of a modification a risk reevaluation and modification process needs to be carried out before retuning the drive to normal operation.</p>
+        <p>Every maintenance activity must be documented.</p>
+        <p>Periodic audits have to be carried out and documented in order to ensure the functional safety of the machine. Check the drives information display for faults and warnings regularly.</p>
+    </body>
+</html>

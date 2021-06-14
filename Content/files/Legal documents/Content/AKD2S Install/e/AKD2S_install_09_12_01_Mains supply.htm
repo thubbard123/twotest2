@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="8" MadCap:lastHeight="912" MadCap:lastWidth="641" MadCap:conditionTagExpression="">
+    <head>
+        <link href="../../Resources/TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Mains power supply connector X3<MadCap:keyword term="Mains supply, interface" /></h1>
+        <p>Drives in the <MadCap:variable name="Primary.DriveName_AKD2G" /> series can be supplied as follows:</p>
+        <p class="Bold"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V </p>
+        <ul>
+            <li class="ListBullet">1, 2 or 3 phase industrial AC supply networks (TN-S or TT, see <a href="https://www.kollmorgen.com/en-us/developer-network/network-types/">KDN</a>): <br />120 V or 240 VAC nominal. </li>
+            <li class="ListBullet">DC supply networks: 17 VDC to 370 VDC.</li>
+        </ul>
+        <p class="Bold"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V </p>
+        <ul>
+            <li class="ListBullet">3 phase industrial AC supply networks (TN-S or TT, see <a href="https://www.kollmorgen.com/en-us/developer-network/network-types/">KDN</a>): <br />240 V, 400 V or 480 VAC nominal.</li>
+            <li class="ListBullet">DC supply networks: 34 VDC to 740 VDC.</li>
+        </ul>
+        <p class="ListBullet">For connection to corner grounded delta supply networks contact <MadCap:variable name="Primary.CompanyName" /> customer support.</p>
+        <p class="ListBullet">Periodic overvoltages between phases (L1, L2, L3) and the PE/housing of the drive must not exceed 1000 V peak. In accordance with IEC 61800, voltage spikes (&lt; 50 µs) between phases must not exceed 1000 V. Voltage spikes (&lt;&#160;50 µs) between a phase and the PE/housing must not exceed 2000 V.</p>
+        <p class="ListBullet">&#160;</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 178px;" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/AKD2/n/akd2-x3-FS1.png" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" style="width: 160px;height: auto;" />
+                        <img src="../../Resources/Images/AKD2/n/akd2-x3.png" MadCap:conditions="Default.Exclude from AKD2_Safety1" style="width: 160px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet">8 pin, pitch 7.62 mm</li>
+                            <li class="ListBullet">optional T version</li>
+                            <li class="ListBullet">Wiring example:</li>
+                            <li class="ListBulletIndent">1 phase AC supply <MadCap:xref class="XrefSee" href="#One">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">2 phase AC supply <MadCap:xref class="XrefSee" href="#Two">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">3 phase AC supply <MadCap:xref class="XrefSee" href="#Three">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBulletIndent">DC supply <MadCap:xref class="XrefSee" href="#DC">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBullet"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V requires external EMC filter for use in industrial environment, product category C.</li>
+                            <li class="ListBullet">Mating connector data <MadCap:xref class="XrefSee" href="AKD2S_install_09_03_Wiring.htm#Connecto">(➜ # 1)</MadCap:xref></li>
+                            <li class="ListBullet">Fusing with different system structures <MadCap:xref href="#Fusing" class="XrefSee">(➜ # 1)</MadCap:xref> ff</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 31px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Pin</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Label</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">1~ Supply</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">2~Supply</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">3~ Supply</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">DC Supply</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Protective earth</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Protective earth</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Protective earth</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">Protective earth</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">R</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">L1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Phase L1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Phase L1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Phase L1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">+ DC</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">S</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">L2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">n.c.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">n.c.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">Phase L2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentCenter">n.c.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">T</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">L3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">Neutral N</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">Phase L2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">Phase L3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentCenter">- DC</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For DC supply: observe notes <MadCap:xref href="#DC">(➜ # 1)</MadCap:xref>.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><a name="Wiring"></a>Wiring examples mains power supply</h2>
+        <p class="Bold"><a name="One"></a>One phase AC mains (<MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V)</p>
+        <ul>
+            <li class="ListBullet">Directly to one phase supply network with neutral line.</li>
+            <li class="ListBullet">Activate single phase supply (VBUS.THREEPHASE = 0).</li>
+            <li class="ListBullet">Set VBUS.ACNOMINAL to desired nominal AC line voltage for lines other than nominal rated VAC.</li>
+            <li class="ListBullet">For complete information refer to <MadCap:variable name="Primary.WorkBenchName" /> online help, <MadCap:variable name="Primary.Model No prefix_AKD2G" /> User Manual, section Power Setting.</li>
+            <li class="ListBullet">AC line filtering to be provided by the user. Use filter type FN2090, refer to the <i>Accessories Manual</i> for more information. Use shielded cable between filter and drive.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-21.png" style="width: 530px;height: auto;" />
+        </p>
+        <p>&#160;</p>
+        <p class="Bold"><a name="Two"></a>Two phases AC mains (<MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V)</p>
+        <ul>
+            <li class="ListBullet">Directly to two-phase supply network without neutral line.</li>
+            <li class="ListBullet">Activate single phase supply (VBUS.THREEPHASE = 0).</li>
+            <li class="ListBullet">Set VBUS.ACNOMINAL to desired nominal AC line voltage for lines other than nominal rated VAC.</li>
+            <li class="ListBullet">For complete information refer to <MadCap:variable name="Primary.WorkBenchName" /> online help, <MadCap:variable name="Primary.Model No prefix_AKD2G" /> User Manual, section Power Setting.</li>
+            <li class="ListBullet">AC line filtering to be provided by the user. Use filter type FN2090, refer to the <i>Accessories Manual</i> for more information. Use shielded cable between filter and drive.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-22.png" style="height: auto;width: 530px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold"><a name="Three"></a>Three phases AC mains (all <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-)</p>
+        <ul>
+            <li class="ListBullet">Directly to 3-phase supply network.</li>
+            <li class="ListBullet">Activate 3-phase supply (VBUS.THREEPHASE = 1).</li>
+            <li class="ListBullet">Set VBUS.ACNOMINAL to desired nominal AC line voltage for lines other than nominal rated VAC.</li>
+            <li class="ListBullet">For complete information refer to <MadCap:variable name="Primary.WorkBenchName" /> online help, <MadCap:variable name="Primary.Model No prefix_AKD2G" /> User Manual, section Power Setting.</li>
+            <li class="ListBullet">AC line filtering to be provided by the user. Refer to the <i>Accessories Manual</i> for more filter description. Use shielded cable between filter and drive.</li>
+            <li class="ListBulletIndent"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V:<br />Motor cable &lt; 10 m: use filter FN 3288 in industrial environment, category C2.<br />Motor cable ≥ 10 m: use filter FN 3288 in industrial environment, category C3.</li>
+            <li class="ListBulletIndent"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V:<br />Motor cable &lt; 10 m: no filter, in industrial environment, category C3.<br />Motor cable &lt; 10 m: use filter FN 3288 in industrial environment, category C2.<br />Motor cable ≥ 10 m: use filter FN 3288 in industrial environment, category C2.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-19.png" style="height: auto;width: 530px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold"><a name="DC"></a>DC Supply (all <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-)</p>
+        <ul>
+            <li class="ListBullet">Activate DC supply (VBUS.DCOPERATION = 1) and set VBUS.DCNOMINAL.</li>
+            <li class="ListBullet">Any DC supply filtering for <MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V to be provided by the user.</li>
+        </ul>
+        <p style="text-decoration: underline;">DC Supply to mains lines R/T (L1/L3)</p>
+        <p>DC power source is connected to the drive AC line inputs. This wiring provides soft start of the energy storage capacitors inside the drive and the AC rectifier diodes prevents motor regeneration energy from returning to the dc power source. That is, by powering the drive from the AC line input connections, the drive’s energy absorption and energy dissipation mechanisms can work normally.</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-20.png" style="height: auto;width: 490px;">
+            </img>
+        </p>
+        <p style="text-decoration: underline;">DC Supply to DC Bus lines X3/7-8</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/AKD_invisible.css');" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col class="TableStyle-AKD_invisible-Column-Column1" style="width: 30mm;" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">When wiring DC power supply to the drive DC Bus terminals X3 pins 7 and 8, the user is responsible for current and power management using additional external devices. For more information refer to <a href="https://www.kollmorgen.com/en-us/developer-network/akd2g-low-voltage-dc-operation/" target="_blank">KDN (AKD2G Low Voltage DC Operation)</a>.</p>
+                        <p class="TableContentLeft" style="font-weight: bold;">User resposibility:</p>
+                        <ul class="left1">
+                            <li class="ListBullet">The power supply system design must ensure inrush current protection by limiting input current during power up.</li>
+                            <li class="ListBullet">Provide a means to safely absorb energy from the motor when slowing down/regenerating. If the DC power source is a battery energy absorption should just work.</li>
+                            <li class="ListBullet">DC supply polarity must be properly wired. Improper polarity of DC power will damage the drive and void warranty.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../Resources/Images/AKD2/e/A0611-63.png" style="height: auto;width: 490px;" />
+        </p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><a name="Fusing"></a>
+            <MadCap:keyword term="Fusing:Mains supply" />Fusing</h2>
+        <p class="Bold">Fuse types</p>
+        <ul>
+            <li class="ListBullet">UL fuses: Class J, 600 VAC 200 kA (SCCR rating), time-delay. The fuse must be UL and CSA listed, UL recognized is not sufficient. Alternate fuses and breakers to Class J must have similar or better Ip and I²T performance per UL 508A SB4.2 at the necessary SCCR rating.</li>
+            <li class="ListBullet">CE fuses: types gS or gG, 400 V/500 V, time-delay</li>
+            <li class="ListBullet">Fuse holders: Combined with the standard fuse blocks, finger safe fuse holders must be used according to IEC 60529.</li>
+            <li class="ListBullet">Automatic circuit breakers: max. rating is 30 A, observe SCCR rating</li>
+            <li class="ListBullet">Group installation fusing: max. rating of fuses or breakers for group installation is 30 A</li>
+        </ul>
+        <p class="Bold">AC supply, single drives, line fusing</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/n/A0613-24.png" style="width: 429px;height: 256px;" />
+        </p>
+        <ul>
+            <li class="ListBullet">F1, F2, F3: depends on sum of current and cabinet requirements.</li>
+            <li class="ListBullet">Filters for special EMC requirements only <MadCap:xref class="XrefSee" href="AKD2S_install_11_02_Approvals CE.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListBullet">FN1, FN2, FN3 maximum rating: 30 A.</li>
+            <li class="ListBullet">FN1, FN2, FN3 recommended rating see table below:</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 143px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 134px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 124px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 121px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Drive <br></br>Model</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">FN1, FN2, FN3: Ampere rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Example class J<br />Eaton</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Example class J<br></br>Ferraz Shawmut</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V03S</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ10SP/DFJ10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT10/HSJ10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V03D</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ10SP/DFJ10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT10/HSJ10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06H</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ15SP/DFJ15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT15/HSJ15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V24S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12M</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">30 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">LPJ30SP/DFJ30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">AJT30/HSJ30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V03S</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ10SP/DFJ10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT10/HSJ10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V03D</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ10SP/DFJ10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT10/HSJ10</p>
+                    </td>
+                </tr>
+                <tr style="height: 15px;" class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06H</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">LPJ15SP/DFJ15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">AJT15/HSJ15</p>
+                    </td>
+                </tr>
+                <tr style="height: 15px;" class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.ToBeReviewed,Default.BetaVersionOnly">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V24S<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12D<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12M</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">30 A (<MadCap:annotation MadCap:createDate="2020-02-13T09:27:55.5673435+01:00" MadCap:creator="Reinhold.Hess" MadCap:initials="RE" MadCap:comment="7V24" MadCap:editor="Reinhold.Hess" MadCap:editDate="2020-02-26T07:49:43.7604982+01:00">Time</MadCap:annotation>-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">LPJ30SP/DFJ30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">AJT30/HSJ30</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold">AC supply, group of drives, line fusing</p>
+        <p style="color: #ff0000;">
+            <img src="../../Resources/Images/AKD2/n/A0613-26.png" style="width: 429px;height: 291px;" />
+        </p>
+        <ul>
+            <li class="ListBullet">F1, F2, F3: depends on sum of current and cabinet requirements.</li>
+            <li class="ListBullet">Filters for special EMC requirements only <MadCap:xref class="XrefSee" href="AKD2S_install_11_02_Approvals CE.htm">(➜ # 1)</MadCap:xref>. </li>
+            <li class="ListBullet">FN1, FN2, FN3 maximum rating: fuse size for group installation is limited to 30 A max. </li>
+            <li class="ListBullet">FN1, FN2, FN3 rating should be 1.25 * sum current.</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 143px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 134px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 124px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 121px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Group sum current</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">FN1, FN2, FN3:<br></br>Ampere rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Example class J<br />Eaton</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Example class J<br></br>Ferraz Shawmut</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">6 A to 30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">30 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">LPJ30SP/DFJ30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">AJT30/HJ30</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="Bold">AC supply, single drives, automatic circuit breakers</p>
+        <p style="color: #ff0000;">
+            <img src="../../Resources/Images/AKD2/n/A0613-27.png" style="width: 370px;height: 290px;" />
+        </p>
+        <ul style="color: #ff0000;">
+            <li class="ListBullet">F1, F2, F3: depends on sum of current and cabinet requirements.</li>
+            <li class="ListBullet">Filters for special EMC requirements only <MadCap:xref class="XrefSee" href="AKD2S_install_11_02_Approvals CE.htm">(➜ # 1)</MadCap:xref>. </li>
+            <li class="ListBullet">FN maximum rating: 30 A </li>
+            <li class="ListBullet">FN recommended rating and regional approvals see table below:</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 122px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 110px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Drive Model</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Ampere <br />rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">SCCR <br />rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Example UL <br />Eaton or ABB</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Example CE <br />Siemens</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">35 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SU203M-K30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51954EC310</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V3x...7V12x</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:annotation MadCap:createDate="2020-06-17T10:23:35.3492286+02:00" MadCap:creator="Reinhold.Hess" MadCap:initials="RE" MadCap:comment="HV Automaten?" MadCap:editor="Reinhold.Hess" MadCap:editDate="2020-06-17T10:23:40.9509437+02:00">65 </MadCap:annotation>kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FDC3015L</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51956EC310</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.BetaVersionOnly,Default.ToBeReviewed,Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V24x</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #ff0000;">
+                            <MadCap:annotation MadCap:createDate="2020-02-13T09:30:23.3954693+01:00" MadCap:creator="Reinhold.Hess" MadCap:initials="RE" MadCap:comment="7V24" MadCap:editor="Reinhold.Hess" MadCap:editDate="2020-02-26T07:49:24.0373628+01:00">tbd</MadCap:annotation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">65 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #ff0000;">tbd</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #ff0000;">tbd</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold">AC supply, group of drives, automatic circuit breakers</p>
+        <p>
+            <img src="../../Resources/Images/AKD2/n/A0613-32.png" style="width: 429px;height: 330px;" />
+        </p>
+        <ul style="color: #ff0000;">
+            <li class="ListBullet">F1, F2, F3: depends on sum of current and cabinet requirements.</li>
+            <li class="ListBullet">Filters for special EMC requirements only <MadCap:xref class="XrefSee" href="AKD2S_install_11_02_Approvals CE.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListBullet">FN maximum rating: circuit breaker size for group installation is limited to 30 A max. </li>
+            <li class="ListBullet">FN rating should be 1.25 * sum current.</li>
+            <li class="ListBullet">FN recommended rating and regional approvals see table below:</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 143px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 110px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Group sum current</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Ampere <br />rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">SCCR <br />rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Example UL <br />Eaton or ABB</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Example CE<br />Siemens</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;font-weight: bold;" colspan="5">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">6 A to 9A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SU203M-K15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51954EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">12 A to 15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">20 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SU203M-K20</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51204EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">18 A to 24 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SU203M-K30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51304EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">27 A to 36 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SU203M-K30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51304EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #000000;font-weight: bold;" colspan="5">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-<MadCap:annotation MadCap:createDate="2020-06-17T10:23:55.7717336+02:00" MadCap:creator="Reinhold.Hess" MadCap:initials="RE" MadCap:comment="HV Automaten?" MadCap:editor="Reinhold.Hess" MadCap:editDate="2020-06-17T10:23:56.3995698+02:00">7V</MadCap:annotation></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">6 A to 9A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">100 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FDC3015L</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51956EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">12 A to 15 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">20 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">100 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FDC3020L</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51206EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">18 A to 24 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">100 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FDC3030L</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">3VA51306EC310A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">27 A to 36 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">30 A</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">100 kA</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">FDC3030L</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">3VA51306EC310A</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold">DC supply, single drives, line fusing</p>
+        <p style="color: #ff0000;">
+            <img src="../../Resources/Images/AKD2/n/A0613-25.png" style="width: 427px;height: 255px;" />
+        </p>
+        <ul>
+            <li class="ListBullet">F1, F2, F3: depends on sum of current and cabinet requirements.</li>
+            <li class="ListBullet">Filters for special EMC requirements only <MadCap:xref class="XrefSee" href="AKD2S_install_11_02_Approvals CE.htm">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListBullet">FN1, FN2 maximum rating 30 A</li>
+            <li class="ListBullet">FN1, FN2 recommended rating see table below:</li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 198px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 163px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 124px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col style="width: 124px;" class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Drive Model</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Ampere rating</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Example UL<br />Eaton</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Example CE </p>
+                        <p class="TableHeaderLeft"> Mersen</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V03S</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DFJ-10</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP6M10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V03D</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DFJ-15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP6M15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V06H</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">DFJ-15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP6M15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.Obsolete">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V24S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-6V12M</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">30 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">DFJ-30</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">HP6M30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V03S</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FWP-10B</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP10M10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V03D</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">10 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FWP-10B</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP10M10</p>
+                    </td>
+                </tr>
+                <tr style="height: 15px;" class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12S<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06D<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V06H</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">15 A (Time-Delay)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">FWP-15B</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">HP10M15</p>
+                    </td>
+                </tr>
+                <tr style="height: 15px;" class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="Default.ToBeReviewed,Default.BetaVersionOnly">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V24S<MadCap:conditionalText MadCap:conditions="Default.Obsolete"><br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12D<br /><MadCap:variable name="Primary.Model No prefix_AKD2G" />xx-7V12M</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">30 A (Time-<MadCap:annotation MadCap:createDate="2020-02-13T09:32:02.6601509+01:00" MadCap:creator="Reinhold.Hess" MadCap:initials="RE" MadCap:comment="7V24" MadCap:editor="Reinhold.Hess" MadCap:editDate="2020-02-26T07:49:07.7800873+01:00">Delay</MadCap:annotation>)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">FWP-30B</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft">HP10M30</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

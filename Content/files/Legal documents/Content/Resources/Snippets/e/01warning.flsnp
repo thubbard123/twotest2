@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="55" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../../TableStyles/ansi_panel.css');margin-left: auto;margin-right: auto;width: 123px;" class="TableStyle-ansi_panel" cellspacing="1" MadCap:conditions="Primary.exclude from language project,Default.Exclude from Install,Default.Exclude from AKD Accessories,Default.Exclude from Fieldbus,Default.Exclude from Sxyz Accessories,Default.Exclude from WorkBench">
+            <col class="TableStyle-ansi_panel-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-ansi_panel-Body-panel">
+                    <td class="TableStyle-ansi_panel-BodyA-Column1-panel" style="text-align: center;">
+                        <p class="TableWarningTitel" style="text-align: center;">WARNING</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center;" class="TableContentCenter">
+            <img src="../../Images/Symbols/e/1warning.png" style="height: auto;width: 123px;" MadCap:conditions="Default.Exclude from Safety Guide,Default.Exclude from&#160;Datasheet" />
+        </p>
+    </body>
+</html>

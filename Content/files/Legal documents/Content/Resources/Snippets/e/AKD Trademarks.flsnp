@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.exclude from Lingo" MadCap:lastBlockDepth="4" MadCap:lastHeight="269.5" MadCap:lastWidth="641">
+    <head>
+    </head>
+    <body>
+        <p class="left" style="font-weight: bold;">Trademarks</p>
+        <ul class="left1">
+            <li MadCap:conditions="Default.Exclude from Sxyz,Default.Exclude from Sxyz Accessories" class="ListBullet" style="font-size: 9pt;">AKD is a registered trademark of Kollmorgen Corporation.</li>
+            <li MadCap:conditions="Default.Exclude from Sxyz,Default.Exclude from Sxyz Accessories,Default.Exclude from AKD,Default.Exclude from AKD-decentral,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">SafeMotion is a registered trademark of Kollmorgen Corporation.</li>
+            <li MadCap:conditions="Default.Exclude from Sxyz,Default.Exclude from Sxyz Accessories,Default.Exclude from AKD,Default.Exclude from AKD-decentral,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">SMM  is a registered trademark of Kollmorgen Corporation.</li>
+            <li MadCap:conditions="Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">EnDat is a registered trademark of Dr. Johannes Heidenhain GmbH.</li>
+            <li MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">EtherCAT is a registered trademark and patented technology, licensed by Beckhoff Automation GmbH, Germany.</li>
+            <li MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD,Default.Exclude from AKD-decentral,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">EtherCAT and Safety over EtherCAT are registered trademarks and patented technologies, licensed by Beckhoff Automation GmbH, Germany.</li>
+            <li MadCap:conditions="Default.Exclude from AKD-decentral,Default.Exclude from Sxyz Accessories,Default.Exclude from Sxyz,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">EtherNet/IP is a registered trademark of ODVA, Inc.</li>
+            <li MadCap:conditions="Default.Exclude from AKD-decentral,Default.Exclude from Sxyz Accessories,Default.Exclude from Sxyz,Default.Exclude from AKD2,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">EtherNet/IP Communication Stack: copyright (c) 2009, Rockwell Automation.</li>
+            <li MadCap:conditions="Default.Exclude from Sxyz,Default.Exclude from Sxyz Accessories,Default.Exclude from AKD-decentral,Default.Exclude from MKD" class="ListBullet" style="font-size: 9pt;">MODBUS  is a registered trademark of  SCHNEIDER ELECTRIC USA, INC..</li>
+            <li MadCap:conditions="Default.Exclude from AKD-decentral,Default.Exclude from AKD2,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">sercos<sup>®</sup> is a registered trademark of sercos<sup>®</sup> international e.V.</li>
+            <li MadCap:conditions="Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">HIPERFACE is a registered trademark of Max Stegmann GmbH.</li>
+            <li MadCap:conditions="Default.Exclude from AKD-decentral,Default.Exclude from Sxyz,Default.Exclude from Sxyz Accessories,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">PROFINET is a registered trademark of PROFIBUS and PROFINET International (PI).</li>
+            <li MadCap:conditions="Default.Exclude from AKD-decentral,Default.Exclude from Sxyz Accessories,Default.Exclude from Sxyz,Default.Exclude from AKD,Default.Exclude from AKD2,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">SIMATIC is a registered trademark of SIEMENS AG.</li>
+            <li MadCap:conditions="Default.Exclude from AKD,Default.Exclude from AKD PDMM,Default.Exclude from AKD2,Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3,Default.Exclude from CANopen,Default.Exclude from EtherCAT,Default.Exclude from Fieldbus,Default.Exclude from PCMM,Default.Exclude from&#160;Datasheet,Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">SpeedTec is a registered trademark of TE Connectivity Industrial GmbH.</li>
+            <li MadCap:conditions="Default.Exclude from Modbus" class="ListBullet" style="font-size: 9pt;">Windows is a registered trademark of Microsoft Corporation.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  ShowMadCapBacklink="true"
+  GlossaryTermConversion="marked"
+  GenerateScormPackage="true"
+  GenerateXApiPackage="false"
+  PercentageComplete="100"
+  LmsStandard="xAPI (TinCan)"
+  CourseName="delete this"
+  CourseDescription="delete this"
+  CourseId="http://deletethis"
+  CourseType="http://delete"
+  MasterToc="/Project/TOCs/inline.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true"
+    OutputFormat="docx" />
+</CatapultTarget>

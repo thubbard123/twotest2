@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="7" MadCap:lastHeight="768" MadCap:lastWidth="641" MadCap:conditions="Default.Exclude from Emerson">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <a name="EtherCAT">
+            </a>
+            <MadCap:keyword term="EtherCAT" />EtherCAT®<MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1"> and Safety over EtherCAT®</MadCap:conditionalText></h1>
+        <p>
+            <MadCap:variable name="Primary.DriveName_AKD2G" /> drives (connectivity option <b>E</b>) can be connected as slaves to the EtherCAT® network (CoE) by using RJ45 connectors X11 (out port) and X12 (in port). The communication status is indicated by the built-in connector LEDs.</p>
+        <table class="TableStyle-82079_Standard_Table" style="width: 530px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" cellspacing="0">
+            <col style="width: 49pt;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 50pt;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 58px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Conn.</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Name</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Function</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 2px;border-right-color: #696969;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                        <img src="../../Resources/Images/AKD2/n/akd2-x11x12-ethercat-FS1.png" style="width: 100px;height: auto;" MadCap:conditions="Default.Exclude from AKD2_Safety2,Default.Exclude from AKD2_Safety3" />
+                        <img src="../../Resources/Images/AKD2/n/akd2-x11x12-ethercat.png" style="height: auto;width: 100px;" MadCap:conditions="Default.Exclude from AKD2_Safety1" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">X11 „Out“</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">„ERR“ </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Returns potentials communication failures:</p>
+                        <p class="TableContentLeft">Off = No Error<br />Blinking = Invalid configuration<br />Single Flash = Local error <br />Double Flash = Process data watchdog </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">&#160;X11 „Out”</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Link/<br />Activity</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">On/Blinking: Physical link/Data Traffic on. <br />Static off: No link.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">X12 „In“</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">„RUN“</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Returns the device state:</p>
+                        <p class="TableContentLeft">Off = INIT<br />Blinking = PRE-OPERATIONAL<br />Single Flash = SAFE-OPERATIONAL<br />On = OPERATIONAL<br />Flickering = Initialization or BOOTSTRAP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">&#160;X12 „In”</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Link/<br />Activity</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">On/Blinking: Physical link/Data Traffic on. <br />Static off: No link.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">
+            <a name="WI-3632">
+            </a>Bus topology example (EtherCAT®)</p>
+        <p>We suggest to use <MadCap:variable name="Primary.CompanyName" /> ENCP cables.<MadCap:conditionalText MadCap:conditions="Primary.exclude from language project"> For more possible system solutions refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help.</MadCap:conditionalText></p>
+        <p>
+            <img src="../../Resources/Images/AKD2/n/akd2-single_ecat-topology.png" style="width: 410px;height: auto;" />
+        </p>
+        <p class="Bold">Communication profile</p>
+        <p>For EtherCAT® communication profile description refer to the manual "<i>AKD2G EtherCAT® </i><i> Communication</i>". <MadCap:conditionalText MadCap:conditions="Default.Exclude from AKD2_Safety1">Notes to FSoE also see <MadCap:xref href="fsm/AKD2S_install_24_00_00_FSoE.htm">(➜ # 1)</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Exclude from AKD2_Safety1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>SAFE.VALIDATEPARAM</h1>
+        <h2>Description</h2>
+        <p>Validates the safety parameters. Safety parameters must first be downloaded to the device.</p>
+        <p>Format is: SAFE.VALIDATE &lt;user_name&gt; &lt;password&gt; &lt;date_and_time&gt; &lt;safe_id&gt;</p>
+        <p>All parameters are mandatory. The drive will return an error if:</p>
+        <ul>
+            <li class="ListBullet">Not enough parameters are provided</li>
+            <li class="ListBullet">Too many parameters are provided
+</li>
+            <li class="ListBullet">At least one of the parameter is out of range.</li>
+        </ul>
+        <p>Note that the user_name and the password strings cannot contain any spaces.</p>
+        <ul>
+            <li class="ListBullet">&lt;user_name&gt;: String of 8 bytes max</li>
+            <li class="ListBullet">
+&lt;password&gt;: String of 8 bytes min and 25 bytes max
+</li>
+            <li class="ListBullet">&lt;date_and_time&gt;: In the format defined by the RFC3339. The date must be in the UTC time zone.</li>
+        </ul>
+        <h2>Code</h2><pre xml:space="preserve">--&gt; SAFE.VALIDATE john john_password 2019-02-22T10:58:30Z 16</pre>
+        <h2>Context</h2>
+        <p>For more information refer to <MadCap:xref href="../../AKD2S_install_25_00_00_Validation.htm" class="RefGuideXRefNoPage">➜ Validation</MadCap:xref> and <MadCap:xref href="../../AKD2S_install_20_08_03 Safety Parameter Download.htm" class="RefGuideXRefNoPage">➜ Safety Parameter Download</MadCap:xref>.</p>
+        <p MadCap:conditions="Primary.exclude from legal project">Related safety parameters:</p>
+        <ul MadCap:conditions="Primary.exclude from legal project">
+            <li><a href="SAFE.CFGERROR.htm">SAFE.CFGERROR</a>
+            </li>
+            <li><a href="SAFE.CHANGEPASSWORD.htm">SAFE.CHANGEPASSWORD</a>
+            </li>
+            <li><a href="SAFE.CLEARSAFEID.htm">SAFE.CLEARSAFEID</a>
+            </li>
+            <li><a href="SAFE.CRC.htm">SAFE.CRC</a>
+            </li>
+            <li><a href="SAFE.DEVICECRC.htm">SAFE.DEVICECRC</a>
+            </li>
+            <li><a href="SAFE.ERROR.htm">SAFE.ERROR</a>
+            </li>
+            <li><a href="SAFE.INVALIDATEPARAMS.htm">SAFE.INVALIDATEPARAMS</a>
+            </li>
+            <li><a href="SAFE.MONITORx.AXIS.htm">SAFE.MONITOR#.AXIS</a>
+            </li>
+            <li><a href="SAFE.MONITORx.DATA.htm">SAFE.MONITOR#.DATA</a>
+            </li>
+            <li><a href="SAFE.MONITORx.INSTANCE.htm">SAFE.MONITOR#.INSTANCE</a>
+            </li>
+            <li><a href="SAFE.MONITORx.SOURCE.htm">SAFE.MONITOR#.SOURCE</a>
+            </li>
+            <li><a href="SAFE.STATE.htm">SAFE.STATE</a>
+            </li>
+            <li><a href="SAFE.SWITCH.htm">SAFE.SWITCH</a>
+            </li>
+            <li><a href="SAFE.VALIDATIONLOG.htm">SAFE.VALIDATIONLOG</a>
+            </li>
+            <li><a href="SAFE.VERIFYFW.htm">SAFE.VERIFYFW</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.IOFAILUREACKSOURCE.htm">SAFEPARAM.IOFAILUREACKSOURCE</a>
+            </li>
+            <li><a href="../SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">SAFEPARAM.SAFEFIELDBUS.ACTIVATION</a>
+            </li>
+        </ul>
+        <h2>Versions</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/82079_Standard_Table.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 89px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 250px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Action</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Version</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Implemented</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">02-00-00-000</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Implemented in SMM revision v0.32</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>General Information</h2>
+        <table style="mc-table-style-original: url('mczip:/C:/Users/daniel.mcleod/Desktop/A/AKD Documentation english_source/Review Packages/In/AKD2G/HWTEMP.fltrev/Content/Resources/TableStyles/AKD_technicaldata.css');mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 80px;">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Command</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Units</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Range</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Default Value</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Data Type</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Stored in Non Volatile Memory</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="Primary.exclude from legal project">Fieldbus Information</h2>
+        <p MadCap:conditions="Primary.exclude from legal project">All the validation fields must be filled in the following object.
+Note password entry must be written at the end. This will trigger the validation of the safety parameters.</p>
+        <table class="TableStyle-82079_Standard_Table" cellspacing="0" style="width: 640px;mc-table-style: url('../../../../../Resources/TableStyles/82079_Standard_Table.css');" MadCap:conditions="Primary.exclude from legal project">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 147px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 32px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 43px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Fieldbus</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Safety parameters validation - </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Index</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Sub-Index</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Data Type</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Float Scale</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Units</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Access</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">PDO Mappable</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="4">
+                    <p class="TableContentLeft">EtherCAT COE and CANopen</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft"> username</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x37C0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x1</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STRING</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">RW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">date and time</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x37C0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x2</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STRING</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">RW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft"> SafeID</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x37C0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x3</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STRING</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">RW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft"> password</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x37C0</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">0x4</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STRING</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">RW</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">-</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="16" MadCap:lastHeight="877" MadCap:lastWidth="647" MadCap:conditions="Default.Exclude from MKD">
+    <head>
+        <link href="../../Resources/TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Stop Function" />Stop / <MadCap:keyword term="Emergency Stop Function" />Emergency Stop / <MadCap:keyword term="Emergency Off" />Emergency Off</h1>
+        <p>The control functions Stop, Emergency Stop and Emergency Off are defined by IEC 60204. Notes for safety aspects of these functions can be found in ISO 13849 and IEC 62061.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The parameter DRV.DISMODE must be set to 2 to implement the different stop categories.<MadCap:conditionalText MadCap:conditions="Primary.Print"> Consult the <i><MadCap:variable name="Primary.WorkBenchName" /> Online Help</i> for configuring the parameter.</MadCap:conditionalText> <![CDATA[ ]]></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_warnings.css');width: 640px;" class="TableStyle-82079_warnings" cellspacing="1">
+            <col class="TableStyle-82079_warnings-Column-Column1" />
+            <col class="TableStyle-82079_warnings-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_warnings-Body-Body2">
+                    <td class="TableStyle-82079_warnings-BodyB-Column1-Body2">
+                        <img src="../../Resources/Images/Symbols/n/warning_r_suspended_loads.png" MadCap:mediastyle="@media print { height: 15mm;width: auto; }" style="width: auto;height: 17mm;" />
+                    </td>
+                    <td class="TableStyle-82079_warnings-BodyA-Column2-Body2">
+                        <table>
+                            <col style="width: 125px;" />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <MadCap:snippetBlock src="../../Resources/Snippets/e/01warning.flsnp" />
+                                    </td>
+                                    <td>
+                                        <p class="TableWarningText" style="font-weight: bold;">No functional safety!</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="TableWarningText">Serious injury could result when the load is not properly blocked. With vertical load the load could fall. </p>
+                        <ul class="left1">
+                            <li class="ListBulletWarning">Functional safety, e.g. with hanging load (vertical axes), requires an additional mechanical brake which must be safely operated, for example by a safety control.</li>
+                            <li class="ListBulletWarning">Set parameter MOTOR.BRAKEIMM to 1 with vertical axes, to apply the motor holding brake <MadCap:xref href="AKD_single_09_13_02_Motor holding brake.htm" MadCap:conditions="Default.Exclude from WorkBench">➜ p. 1</MadCap:xref> immediately after faults or Hardware Disable.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Stop</h2>
+        <p>The stop function shuts down the machine in normal operation. The stop function is defined by IEC 60204.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The Stop Category must be determined by a risk evaluation of the machine.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Stop function must have priority over assigned start functions. The following stop categories are defined:</p>
+        <p class="Bold">Stop Category 0</p>
+        <p>Shut-down by immediate switching-off the energy supply to the drive machinery (this is an uncontrolled shut-down). With the approved safety function STO <MadCap:xref href="AKD_single_07_17_STO Safe Torque Off.htm" MadCap:conditions="Default.Exclude from WorkBench">➜ p. 1</MadCap:xref> the drive can be stopped using its internal electronics (IEC 62061 SIL2).</p>
+        <p class="Bold">Stop Category 1</p>
+        <p>A controlled shut-down, whereby the energy supply to the drive machinery is maintained to perform the shut-down, and the energy supply is only interrupted when the shut-down has been completed.</p>
+        <p class="Bold">Stop Category 2</p>
+        <p>A controlled shut-down, whereby the energy supply to the drive machinery is maintained.</p>
+        <p>&#160;</p>
+        <p>Stop Category 0 and Stop Category 1 stops must be operable independently of the operating mode, whereby a Category 0 stop must have priority. </p>
+        <p>If necessary, provision must be made for the connection of protective devices and lock-outs. If applicable, the stop function must signal its status to the control logic. A reset of the stop function must not create a hazardous situation.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Emergency Stop</h2>
+        <p>The Emergency Stop function is used for the fastest possible shutdown of the machine in a dangerous situation. The Emergency Stop function is defined by IEC 60204. Principles of emergency stop devices and functional aspects are defined in ISO 13850.</p>
+        <p>The Emergency Stop function will be triggered by the manual actions of a single person. It must be fully functional and available at all times. The user must understand instantly how to operate this mechanism (without consulting references or instructions).</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The Stop Category for the Emergency Stop must be determined by a risk evaluation of the machine.<br /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In addition to the requirements for stop, the Emergency Stop must fulfil the following requirements:</p>
+        <ul>
+            <li class="ListBullet">Emergency Stop must have priority over all other functions and controls in all operating modes.</li>
+            <li class="ListBullet">The energy supply to any drive machinery that could cause dangerous situations must be switched off as fast as possible, without causing any further hazards ( Stop Category 0) or must be controlled in such a way, that any movement that causes danger, is stopped as fast as possible (Stop Category 1).</li>
+            <li class="ListBullet">The reset must not initiate a restart.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Emergency Off</h2>
+        <p>The Emergency Off function is used to switch-off the electrical power supply of the machine. This is done to prevent users from any risk from electrical energy (for example electrical impact). Functional aspects for Emergency Off are defined in IEC 60364-5-53.</p>
+        <p>The Emergency Off function will be triggered by the manual actions of a single person.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_notes.css');width: 640px;" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The result of a risk evaluation of the machine determines the necessity for an Emergency Off function.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Emergency Off is done by switching off the supply energy by electro-mechanical switching devices. This results in a category 0 stop. If this stop category is not possible in the application, then the Emergency Off function must be replaced by other measures (for example by protection against direct touching).</p>
+    </body>
+</html>

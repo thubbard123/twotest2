@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety3,Default.Exclude from AKD,Default.BetaVersionOnly" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="928" MadCap:lastWidth="641">
+    <head>
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">SS1-t (Safe Stop 1)<MadCap:keyword term="SS1" /></h1>
+        <p>SS1-t (time controlled) description for drive option Functional Safety 2.</p>
+        <p MadCap:conditions="Primary.exclude from legal project">
+            <img src="../png/SS1-t-FS2-diag.png" style="height: auto;width: 500px;" />
+        </p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Description</h2>
+        <p>With the time based function "Safe Stop 1" (SS1-t) the drive is stopped by a controlled braking with the configured emergency brake ramp. </p>
+        <p>When the time t_SS1 (<a href="../Keywords/AXISx.SAFEPARAM.SS1/AXISx.SAFEPARAM.SS1_x.TIMETOSTO.htm">AXIS#.SAFEPARAM.SS1_#.TIMETOSTO</a>) is elapsed, STO is activated.</p>
+        <p>SS1 function corresponds to a controlled braking according to IEC 60204-1, stop category 1. </p>
+        <p>The controlled braking is no functional safe process. The STO function which is activated when time t_SS1 is elapsed, is a safe function.</p>
+        <h3 MadCap:autonum="1.1.1 ">Number of instances</h3>
+        <p>Three instances per axis. </p>
+        <h3 MadCap:autonum="1.1.2 ">Function Input/Output variables</h3>
+        <p style="color: #ff0000;">
+            <img src="../png/SS1-t-FS2-var.png" style="width: 478px;height: 101px;" />
+        </p>
+        <p class="Bold">Inputs</p>
+        <ul>
+            <li class="ListBullet"><b>SS1 Activate</b> can be triggered from </li>
+            <li class="ListBulletIndent">FSoE , or </li>
+            <li class="ListBulletIndent">I/O failure (instance 1 only), or </li>
+            <li class="ListBulletIndent">safe digital inputs (must be mapped).</li>
+            <li class="ListBullet"><b>STO Activate</b> is triggered from SS1.</li>
+            <li class="ListBullet"><b>STO Restart Acknowledge</b> is used for manual restart (see STO <MadCap:xref href="AKD2S_install_22_04_00_STO.htm" class="XrefSee">(➜ # 1)</MadCap:xref>). <br />The signal can be triggered from </li>
+            <li class="ListBulletIndent">FSoE, or </li>
+            <li class="ListBulletIndent">safe digital inputs (must be mapped).</li>
+        </ul>
+        <p class="Bold">Outputs</p>
+        <ul>
+            <li class="ListBullet"><b>SS1 Active</b>, logical status of the SS1 function</li>
+            <li class="ListBullet"><b>SS1 State</b>, logical status of the digital SS1 inputs (not mappable to SOUT)</li>
+            <li class="ListBullet"><b>STO Active</b>, logical status of the STO function</li>
+            <li class="ListBullet"><b>STO Restart Request</b> is used for manual restart (see STO <MadCap:xref href="AKD2S_install_22_04_00_STO.htm" class="XrefSee">(➜ # 1)</MadCap:xref>). The signal can be evaluated by using FSoE or safe digital outputs (must be mapped).</li>
+        </ul>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h3 MadCap:autonum="1.1.3 ">Activation </h3>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The safety function can be mapped with <MadCap:variable name="Primary.WorkBenchName" /> or by using FSoE to the safe digital inputs or other functions.</p>
+                        <p class="TableContentLeft">If SS1_2 or SS1_3 is set to “Not Used”, the corresponding FSoE activation bit is ignored even if <a href="../Keywords/SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">SAFEFIELDBUS.ACTIVATION</a> is 1.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Activation by FSoE</p>
+        <p>For drive profile overview refer to <MadCap:xref class="XrefSee" href="../AKD2S_install_24_00_00_FSoE.htm">(➜ # 1)</MadCap:xref>. For setup and handling refer to the <i><MadCap:variable name="Primary.DriveName_AKD2G" /> EtherCAT Manual</i>.</p>
+        <p class="Bold">Activation by safe digital inputs</p>
+        <p> Technical data of the safe inputs <MadCap:xref class="XrefSee" href="AKD2S_install_22_02_00_Technical Data.htm">(➜ # 1)</MadCap:xref>.
+If activation by safe digital inputs is required, then the digital SS1 inputs can be connected </p>
+        <ul>
+            <li class="ListBullet">to transistor outputs of a safety control, or </li>
+            <li class="ListBullet">to relay outputs of a safety control, or </li>
+            <li class="ListBullet">to an emergency stop switch.</li>
+        </ul>
+        <p> If an SS1 input goes open-circuit or 0&#160;V, then motor ramps down for the configured time T. After a delay or triggered by a safe input the SBC, SBD and STO functions become active if configured. </p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Review the enclosure and wiring instructions <MadCap:xref class="XrefSee" href="../AKD2S_install_20_04_Enclosure_Wiring.htm">(➜ # 1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold"><a name="example"></a>Example: SS1, dual channel, 2 axes, SIL3 PLe, Safety Control, electronic outputs, automatic restart, <a href="../Keywords/SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">DISTINCTPULSE</a> must be deactivated.</p>
+        <p style="font-style: italic;color: #ff0000;">
+            <img src="../png/A0611-59.png" style="width: 468px;height: 192px;" />
+        </p>
+        <p class="Bold">Example: SS1, dual channel, 2 axes, SIL3 PLe, Safety Control, relay contacts, automatic restart, <a href="../Keywords/SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">DISTINCTPULSE</a> must be deactivated. </p>
+        <p style="font-style: italic;color: #ff0000;">
+            <img src="../png/A0611-57.png" style="width: 478px;height: 214px;" />
+        </p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft" style="color: #000000;">Safety level must be evaluated referring to B10d value of the relay contacts.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <p class="Bold">Example: SS1, dual channel, 2 axes, SIL3 PLe, Emergency Stop, automatic restart, <a href="../Keywords/SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">DISTINCTPULSE</a> must be deactivated. </p>
+        <p style="font-style: italic;color: #ff0000;">
+            <img src="../png/A0611-58.png" style="width: 359px;height: 170px;" />
+        </p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft" style="color: #000000;">Safety level must be evaluated referring to B10d value of the emergency stop contacts.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Example: SS1 dual channel input, one axis, SIL3 PLe, Emergency Stop, manual restart, <a href="../Keywords/SAFEPARAM/SAFEPARAM.SIN.DISTINCTPULSE.htm">DISTINCTPULSE</a> must be deactivated. </p>
+        <p>
+            <img src="../png/A0611-60.png" style="width: 501px;height: auto;">
+            </img>
+        </p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1" style="color: #ff0000;">
+                        <p class="TableContentLeft" style="color: #000000;">Safety level must be evaluated referring to B10d value of the emergency stop contacts.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 MadCap:autonum="1.1.4 ">Restart</h3>
+        <p>Restart can be set as "automatic restart" or "manual restart" (STO Restart Mode, <a href="../Keywords/AXISx.SAFEPARAM.STO/AXISx.SAFEPARAM.STO.RESTARTACKMODE.htm">AXIS#.SAFEPARAM.STO.RESTARTACKMODE</a>). </p>
+        <ul>
+            <li class="ListBullet">With manual restart a restart request signal will be send to the safety control, when STO is deactivated. The axis waits for the restart acknowledge and axis enable to restart.<br /></li>
+            <li class="ListBullet">With automatic restart the axis restarts when STO is deactivated and axis is enabled.</li>
+        </ul>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h3 MadCap:autonum="1.1.5 ">Timing</h3>
+        <p style="font-weight: bold;">Timing for activation by safe digital inputs</p>
+        <p style="text-decoration: none;font-weight: normal;">Example for axis 1. SIN1/2 := SINDUAL1 set to SS1 function. Automatic Restart. No SBC.</p>
+        <p>
+            <img src="../png/A0611-64.png" style="width: auto;height: 530px;" />
+        </p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Timing</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">max</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 channel A enabled (0 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t1 to t2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&lt;10 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 response time</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 activate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 channel B enabled (0 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t1 to t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">100 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Accepted delay between dual channel edges</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 not active</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t2 to t4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">configurable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">t_SS1: Time window for deceleration (time to STO)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 channel A disabled (+24 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">t6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SS1 channel B disabled (+24 V)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">t5 to t6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">100 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Accepted delay between dual channel edges</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Notes:</p>
+        <ul>
+            <li class="ListBullet">After SS1 was activated, it finalizes even when the request (SS1_Activate) is reset before STO is activated.</li>
+            <li class="ListBullet">The additional time for the optionally closing of the brakes is not included in this diagram.</li>
+        </ul>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Related Parameters</h2>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 170px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 175px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">SS1 Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SS1/AXISx.SAFEPARAM.SS1_x.FUNCTIONACTIVATION.htm">FUNCTIONACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">SS1 Ready for Activation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Inst. 1: 1 (Ready)<br />Inst. 2: 0 (Never)<br />Inst. 3: 0 (Never)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SS1/AXISx.SAFEPARAM.SS1_x.TIMETOSTO.htm">TIMETOSTO</a> (t_SS1)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SS1 Maximum Time until STO starts</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Inst. 1: 2 ms<br />Inst. 2: 2 ms<br />Inst. 3: 2 ms</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SS1_x/AXISx.SAFE.SS1_x.DEC.htm">DEC</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft" style="color: #000000;">SS1 Deceleration</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">9999.946 rpm/s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SS1_x/AXISx.SAFE.SS1_x.MODE.htm">MODE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft" style="color: #000000;">SS1 Mode</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">0 (Drive driven)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SS1/AXISx.SAFEPARAM.SS1_x.SAFEINPUT.htm">SAFEINPUT</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">SS1 Safe Trigger Input</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">Inst. 1: 0 (Not used)<br />Inst. 2: 0 (Not used)<br />Inst. 3: 0 (Not used)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SS1_x/AXISx.SAFE.SS1_x.ACTIVE.htm">ACTIVE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #000000;">
+                        <p class="TableContentLeft">SS1 Active (output)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SS1_x/AXISx.SAFE.SS1_x.INTERNALSTATE.htm">INTERNALSTATE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">SS1 State (output)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">-</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 170px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 175px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">STO Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.STO/AXISx.SAFEPARAM.STO.FUNCTIONACTIVATION.htm">FUNCTIONACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">STO Ready for Activation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Inst. 1: 1 (Ready)<br />Inst. 2: 0 (Not used)<br />Inst. 3: 0 (Not used)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.STO/AXISx.SAFEPARAM.STO.RESTARTACKMODE.htm">RESTARTACKMODE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">STO Restart Behavior</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Automatic</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.STO/AXISx.SAFEPARAM.STO.RESTARTACKSOURCE.htm">RESTARTACKSOURCE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">STO Restart Source</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Off</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 170px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 175px;" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">FSoE Parameter</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SS1/AXISx.SAFEPARAM.SS1_x.FSOE.htm">FSOE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">SS1 Ready for Activation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Inst. 1: 0 (Not used)<br />Inst. 2: 0 (Not used)<br />Inst. 3: 0 (Not used)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">ACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Activation of SafeFieldbus</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Setup in Workbench</h2>
+        <p>Select the drive and open the Safety Parameterization view <MadCap:xref class="XrefSee" href="../AKD2S_install_20_08_02 Safety Parameterization.htm">(➜ # 1)</MadCap:xref>. </p>
+        <p>Choose the axis (1), select category (2), SS1-t function (3) and instance number (4).</p>
+        <p>
+            <img src="../png/FS2-select.png" style="width: 530px;height: auto;">
+            </img>
+        </p>
+        <p>The safety parameters are displayed and can be configured. </p>
+        <p class="right">
+            <img src="../png/SS1-t-FS2-View.png" style="width: 530px;height: auto;" />
+        </p>
+        <p>If one dual input (e.g. SIN1/SIN2) shall activate SS1-t for both axis 1 and axis 2, then set the Activation parameter for both axes to the identical input (e.g. Safe Dual Input 1).</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Fault Reaction/ Failure Messages</h2>
+        <p>If dual channel mode is selected, the drive supervises if the two inputs are in a different state for more than 100 ms. If the two inputs are in different state for more than 100 ms, an I/O failure activates SS1_1 and then the axis is switched off by STO.</p>
+        <p>An I/O failure warning is messaged when the drive is disabled or a fault when the drive is enabled and <a href="../Keywords/AXISx.SAFE.STO/AXISx.SAFE.STO.REPORTFAULT.htm">AXIS#.SAFE.STO.REPORTFAULT</a> is set to 1.</p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">Safety State/ Status signals</h2>
+        <p>The signal <a href="../Keywords/AXISx.SAFE.SS1_x/AXISx.SAFE.SS1_x.INTERNALSTATE.htm">AXIS#.SAFE.SS1#.INTERNALSTATE</a> can be monitored by safe digital outputs with OSSD pulses <MadCap:xref class="XrefSee" href="../AKD2S_install_20_06_OSSD.htm">(➜ # 1)</MadCap:xref>. The status signal must be mapped to the safe digital output. Two outputs can be combined to a dual channel output. For parameter description refer to <MadCap:xref class="XrefSee" href="../Keywords/FS_Keywords.htm#Safe">(➜ # 1)</MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.6 &#160;&#160;">Safety Properties</h2>
+        <p>Refer to <MadCap:xref href="AKD2S_install_22_03_00_Safety Properties Overview.htm" class="XrefParagraph">(➜ # 1, Safety properties overview)</MadCap:xref>.</p>
+    </body>
+</html>

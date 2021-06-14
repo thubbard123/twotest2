@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD,Default.BetaVersionOnly" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="949" MadCap:lastWidth="641">
+    <head>
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">SBT (Safe Brake Test)<MadCap:keyword term="SBT" /><a name="61508-32i"></a><a name="WI-528"></a></h1>
+        <p><b>S</b>afe <b>B</b>rake <b>T</b>est description for drive option Functional Safety 2 or 3.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Description</h2>
+        <p>The function SBT (Safe Brake Test) can be used for testing the brakes connected to X1, X2 or X4 of the <MadCap:variable name="Primary.DriveName_AKD2G" />. SBT is carried out by applying a configured torque against the closed brake and supervising the axis motion. The test is successful if the axis motion does not exceed a parameterized tolerance. If the axis motion exceeds the tolerance, the test is failed and therefore the safety functions using the brake are lost. After a failed brake test, safe brake operation cannot be assumed anymore. Brake replacement or service will be necessary.</p>
+        <ul>
+            <li class="ListBullet">SBT is a diagnostic function for holding brakes. In order to operate brakes (SBC) that are part of a safety function (PLd / SIL2 or higher), frequent tests with SBT are required.</li>
+            <li class="ListBullet">SBT must be triggered regularly by the end customer.</li>
+            <li class="ListBullet">SBT considers the derating factor for brakes used in safety functions.</li>
+            <li class="ListBullet">During SBT, 130% of the max. possible application torque will be applied to the brake. Additional forces caused by vertical loads will be taken into account automatically.</li>
+            <li class="ListBullet">Brake slippage will be detected with a resolution up to 1°.</li>
+            <li class="ListBullet">Two brakes can be assigned to one axis. Each brake can be configured with an independent slippage tolerance.</li>
+            <li class="ListBullet">SBT is only functional if SBC is used as well.</li>
+            <li class="ListBullet">SBT does not cause wear out to the brakes.</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.1 ">Important Notes</h3>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <ul class="left1">
+                            <li class="ListBullet"><a name="WI-268"></a>The user (end customer) is responsible for the execution of the SBT.</li>
+                            <li class="ListBullet">For correct operation of SBT, the axis must be free to move when the drive releases the brake or releases both brakes as appropriate; if the machine has further motors and/or brakes mechanically coupled to the same axis, then these further devices must be placed in states where they do not impede motion before SBT is carried out. In this case only one brake shall be tested at a time. Each brake must be tested independently.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">A brake test must be executed</p>
+        <ul>
+            <li class="ListBullet">at least every 8 hours,</li>
+            <li class="ListBullet">at the start of a machine or at the transition to operation mode using the brake,</li>
+            <li class="ListBullet">after long standstill of the machine,</li>
+            <li class="ListBullet">after drive reboot,</li>
+            <li class="ListBullet">after brake service or replacement.</li>
+        </ul>
+        <p>Depending on the target SIL / PL of the safety function that is performed by the brakes, it can be necessary to carry out SBT more often. In high safety demand applications (SIL3 / PLe, DC = high), it can be necessary to execute SBT every time prior to demand. For example if access to a dangerous area is prohibited by a safety interlock, SBT must be executed successfully before access can be granted.</p>
+        <p class="Bold">Preconditions in order to start a brake test:</p>
+        <ul>
+            <li class="ListBullet">the motor is at standstill, the tested brake is released.</li>
+            <li class="ListBullet">the drive is enabled, STO is not active,</li>
+        </ul>
+        <p>It is up to the machine manufacturer to determine the SIL / PL reached by SBC + SBT according to the configuration and parameterization.</p>
+        <p class="pagebreak">&#160;</p>
+        <h3 MadCap:autonum="1.1.2 ">Function Input/Output variables</h3>
+        <p>
+            <img src="../png/SBT-FS2-var.png" style="width: 290px;height: auto;" />
+        </p>
+        <p class="Bold">Inputs</p>
+        <ul>
+            <li class="ListBullet">SBT Activate: can be triggered by</li>
+            <li class="ListBulletIndent">EtherCAT</li>
+            <li class="ListBulletIndent">CANopen</li>
+            <li class="ListBulletIndent">Digital input (must be mapped)</li>
+            <li class="ListBulletIndent">WorkBench</li>
+        </ul>
+        <p class="Bold">Outputs</p>
+        <ul>
+            <li class="ListBullet">SBA State: logical status providing information on SBT. Can be mapped to a safe output and retrieved through FSoE status word.<br />0 = SBT execution necessary or failed in last attempt.<br />1 = SBT was executed successful within the parameterized period</li>
+            <li class="ListBullet">SBT State: status information on the actual brake condition<br />0 = OK / No Fault<br />1 = Fault<br />2 = Not Tested<br />3 = Running</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.3 ">Activation</h3>
+        <ul>
+            <li class="ListBullet">By non safe fieldbus: EtherCAT or CANopen SDO</li>
+            <li class="ListBullet">By a non safe digital input (DIGITAL-IN1 to DIGITAL-IN12, <MadCap:xref href="../../AKD2S_install_09_16_04_Digital Input.htm">(➜ # 1)</MadCap:xref>).</li>
+            <li class="ListBullet">By Workbench</li>
+        </ul>
+        <p class="pagebreak">&#160;</p>
+        <h3 MadCap:autonum="1.1.4 ">Timing</h3>
+        <p>
+            <img src="../png/A0611-66.png" style="width: 530px;height: auto;" />
+        </p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 113px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">Timing</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentCenter">max</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Remarks</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;color: #ff0000;">
+                        <p class="TableContentCenter" style="color: #000000;">t0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;color: #ff0000;">
+                        <p class="TableContentCenter" style="color: #000000;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;color: #ff0000;">
+                        <p class="TableContentLeft" style="color: #000000;">Start</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="color: #ff0000;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">SBT Activates</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t1 to t2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">&gt;200 ms</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Measuring actual application load on motor</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t2 to t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">See Brake datasheet</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Brake engaging</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">&#160;</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Brake is applied, Position monitoring active, drive switched to torque mode internally</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t3 to t4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1/3 * (t4 to t5)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Start to apply 130% torque on the brake</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t4 to t5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">configurable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Torque duration</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t2 to t4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">1/3 * (t4 to t5)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Stop to apply 130% torque on the brake</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t5 to t6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">See Brake datasheet</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Release brake</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">t6 to t0</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentCenter">configurable</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p class="TableContentLeft">Maximum time interval between tests</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Related Parameters</h2>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 99px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">SBT Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SBT/AXISx.SAFEPARAM.SBT.TORQUEDURATION.htm">TORQUEDURATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Torque Duration</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">500 ms</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SBT/AXISx.SAFEPARAM.SBT.FUNCTIONACTIVATION.htm">FUNCTIONACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Function Activation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SBT/AXISx.SAFE.SBT.ERROR.htm">ERROR</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Brake Test Error</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SBT/AXISx.SAFEPARAM.SBT.MAXAPPLOAD.htm">MAXAPPLOAD</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Max. Application Load</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">1000 mA</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SBT/AXISx.SAFEPARAM.SBT.MAXMOTIONBRAKEx.htm">MAXMOTIONBRAKE#</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Maximum Motion #st Attached Brake</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">300 arcmin</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SBT/AXISx.SAFE.SBT.MOVE.htm">MOVE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Start Brake Test</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFEPARAM.SBT/AXISx.SAFEPARAM.SBT.MAXTIMEINTERVAL.htm">MAXTIMEINTERVAL</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Max. Time Interval</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">480 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SBT/AXISx.SAFE.SBT.SBA.ACTIVE.htm">ACTIVE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">Safe Brake Acknowledge State</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/AXISx.SAFE.SBT/AXISx.SAFE.SBT.STATE.htm">STATE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">SBT state of the axis</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 99px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Brake Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableContentLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/BRAKEx.SAFE/BRAKEx.SAFE.SBT.ELAPSED.htm">ELAPSED</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">Elapsed time since the last successful SBT</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/BRAKEx.SAFE/BRAKEx.SAFE.SBT.STATE.htm">STATE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">SBT state of the brake</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft" style="color: #000000;">-</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Primary.Online">&#160;</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 180px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 245px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">FSoE Parameter</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentLeft">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft"><a href="../Keywords/SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">ACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">SafeFieldbusActivation</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="Setup"></a>Setup in Workbench</h2>
+        <p>Select Safety Parameterization view <MadCap:xref class="XrefSee" href="../AKD2S_install_20_08_00 Workbench handling.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p>Choose the axis (1), select category (2), SBT function (3). The instance number (4) is not applicable for SBT.</p>
+        <p>
+            <img src="../png/FS2-select.png" style="height: auto;width: 530px;">
+            </img>
+        </p>
+        <p>The safety parameters are displayed and can be configured. </p>
+        <p class="right">
+            <img src="../png/SBT-FS2-View.png" style="width: 530px;height: auto;">
+            </img>
+        </p>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;"><a name="Fault"></a>Fault Reaction/ Failure Messages</h2>
+        <p>If not all the preconditions are fulfilled and SBT is requested, the SBT diagnostics will show a Brake Test Error:</p>
+        <p>
+            <img src="../png/SBT-FS2-failed.png" style="height: auto;width: 525px;" />
+        </p>
+        <p>After a brake fails SBT, the axis where the brake is attached to will not be operational anymore. SBA will remain 0 and the Safety Diagnostics will show a ”Brake Slippage Occurred”:</p>
+        <p>
+            <img src="../png/SBT-Brake Slippage Occured.png" style="height: auto;width: 525px;" />
+        </p>
+        <p>When brake slippage is detected during the brake test, a controlled stop will be executed immediately. The drive remains enabled.</p>
+        <h2 MadCap:autonum="1.5 &#160;&#160;">Safety State/ Status signals</h2>
+        <p>Status of each axis and the assigned brakes can be observed in the SBT diagnostics view.</p>
+        <p>
+            <img src="../png/SBT-FS2-status.png" style="height: auto;width: 525px;" />
+        </p>
+        <p>The view gives information about:</p>
+        <ul>
+            <li class="ListBullet">Status, whether the test is running or not</li>
+            <li class="ListBullet">Test result (Not tested, Failed, Passed)</li>
+            <li class="ListBullet">Timings till next and in in-between test</li>
+            <li class="ListBullet">Status information in the test: if errors occurred</li>
+        </ul>
+        <p class="pagebreak" MadCap:conditions="Primary.exclude from language project">&#160;</p>
+        <p>If a brake test is not executed within the parameterized time interval, the Safe Brake Test Diagnostics will inform that the Test validity is expired.</p>
+        <p>
+            <img src="../png/SBT-FS2-time.png" style="width: 530px;height: auto;" />
+        </p>
+        <p>The warning 9008 “Brake Test Time Overflow” will be issued alongside STO.</p>
+        <p>
+            <img src="../png/SBT-FS2-fault.png" style="width: 530px;height: auto;" />
+        </p>
+    </body>
+</html>

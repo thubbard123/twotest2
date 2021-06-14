@@ -1,0 +1,1 @@
+dir *.htm > htm.txt

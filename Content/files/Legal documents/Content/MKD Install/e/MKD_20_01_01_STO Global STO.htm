@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="9" MadCap:lastHeight="765" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="optionAS" MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="STO;Inputs:STO;Safe Torque Off (STO);Global STO" />Global Safe Torque Off (Strings 2 or 3)</h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;"><a name="top"></a>General information (global STO)</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The global STO function uses the following devices: <MadCap:variable name="Primary.DriveVariant_MKD" />-C, AKD-N without option "DS" or "DT", <MadCap:variable name="Primary.CompanyName" /> hybrid connection string cable.<a name="srs59"></a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>There is one STO input and one STO-Status output for every DC Power string. </p>
+        <p>The string STO input release the power output stage of all AKD-N (without option DS/DT) connected to the string as long as a 24 V signal is applied to this input. If the STO-Enable goes open-circuit, then power will no longer be supplied to the connected motors, and the drives will lose all torque and coast to a stop.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">In case of using AKD-N with option "DS" or "DT" (local STO input), the global STO signal will have no influence to these specific drives.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">In case of using more than 8 AKD-N with Hardware Revison A or B in one string, you must connect a signal buffer to the STO signal.</p>
+                        <ul class="left1">
+                            <li class="ListBullet">Hardware Revision A or B: maximum 8 AKD-N</li>
+                            <li class="ListBullet">Hardware Revision A or B with signal buffer: maximum 14 AKD-N</li>
+                            <li class="ListBullet">Hardware Revision C: maximum 14 AKD-N</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 &#160;&#160;"><a name="Technica"></a>Technical data and connection (global STO)<a name="srs31_32"></a></h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The global STO inputs are not compatible with IEC 61131-2. Connector X16 ensures requirements of pollution level 3 according to IEC 60664-1.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="caption-side: top;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 141px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">STO String X inputs</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">ON: 18 VDC to 30 VDC, <MadCap:variable name="Primary.DriveName" />-C with one AKD-N 80 mA, <br />every additional AKD-N + 25 mA</li>
+                        <li class="ListBullet">OFF: 0 VDC to 12 VDC, &lt; 50 mA</li>
+                        <li class="ListBullet">Immunity 60 VDC</li>
+                        <li class="ListBullet">Galvanic isolation for 250 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentLeft">STO-Status outputs</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <ul class="left1">
+                        <li class="ListBullet">As per IEC61131-2 type 1</li>
+                        <li class="ListBullet">Max. 30 VDC, 100 mA</li>
+                        <li class="ListBullet">Galvanic isolation for 250 VDC</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">STO 24 VDC supply</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <ul class="left1">
+                        <li class="ListBullet">PELV acc. to EN 60204-1</li>
+                        <li class="ListBullet">Output 24 VDC +/-10%</li>
+                        <li class="ListBullet">Maximum 4.2 A with 42 drive axes</li>
+                        <li class="ListBullet">Do not use for power stand by functionality</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold">Pinout connector STO signals</p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tr class="TableStyle-82079_invisible-Body-Body1">
+                <td style="" class="TableStyle-82079_invisible-BodyE-Column1-Body1">
+                    <img src="../../Resources/Images/MKD/n/MKD-x15A_B-X16A_B.png" style="height: auto;width: 140px;" />
+                    <br />
+                </td>
+                <td class="TableStyle-82079_invisible-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: none;border-bottom-width: 2px;border-bottom-color: #696969;">
+                    <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 20px;" />
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 110px;" />
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 20px;" />
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 110px;" />
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 20px;" />
+                        <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 110px;" />
+                        <thead>
+                            <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                                <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">X15<br />A</p>
+                                </td>
+                                <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">Outputs</p>
+                                </td>
+                                <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">X16<br /> A</p>
+                                </td>
+                                <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">Inputs<br />String 2</p>
+                                </td>
+                                <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                                    <p class="TableHeaderCenter">X16<br /> B</p>
+                                </td>
+                                <td class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                                    <p class="TableHeaderCenter">Inputs<br />String 3</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">1</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">Relay +</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">1</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO +24 V</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">1</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO +24 V</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">2</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">Relay -</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">2</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO String 2+</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">2</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="2" style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO String 3+</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">3</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO-Status 2+</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">3</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">3</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">4</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO-Status 2-</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">4</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO String 2-</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter" style="font-weight: normal;">4</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" rowspan="2" style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO String 3-</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">5</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO-Status 3+</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">5</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">5</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">6</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO-Status 3-</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">6</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO GND</p>
+                            </td>
+                            <td style="font-weight: normal;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;" class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                                <p class="TableContentCenter">6</p>
+                            </td>
+                            <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #696969;">
+                                <p class="TableContentCenter">STO GND</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <p class="Bold"><a name="Wiring"></a>Wiring diagram STO Signals, example</p>
+        <p>Environment notes and wiring requirements: <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm#stoWiring">(➜ # 1)</MadCap:xref>. </p>
+        <p class="right">
+            <img src="../../Resources/Images/MKD/e/MKD-C_STO-InOut_X16.png" style="width: 573px;height: auto;">
+            </img>
+        </p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;"><a name="stoControl"></a>Application example (global STO)<a name="srs51"></a> <a name="srs46"></a></h2>
+        <p>The sample application below shows door guarding and emergency stop, controlled by a safety control to switch the global STO inputs of an <MadCap:variable name="Primary.DriveVariant_MKD" />-C device to SIL2, PLd. Both drive strings are switched independently.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.CompanyName" /> KSM modules cannot be used.<br />Environment notes and wiring requirements: <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm#stoWiring">(➜ # 1)</MadCap:xref>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="right">
+            <img src="../../Resources/Images/MKD/e/MKD-C_STO_global_example.png" style="height: auto;width: 540px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;"><a name="Function"></a>Functional description (global STO)</h2>
+        <p> There is one STO input and one STO-Status output for each string. The string STO input releases the power output stage of all AKD-N (without option "DS" or "DT") connected to the string as long as a 24 VDC signal is applied to this input. When STO function is engaged during operation by separating STO from 24 V, the drives (without option DS/DT) connected to the string slow down without control.</p>
+        <p>When the global STO function (Safe Torque Off) is not needed, then the inputs STO inputs must be connected directly to +24 VDC. The function is then bypassed and cannot be used in the machinery safety concept.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">In case of using an AKD-N with option "DS" or "DT" (local STO input) in the string, then the string STO signal will have no influence to this specific drive. The local STO-Status of this drive nevertheless is monitored in the string STO-Status.<a name="srs61"></a><br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The string STO-Status output at the <MadCap:variable name="Primary.DriveVariant_MKD" />-C is a logical OR of all STO-Status of the AKD-N drives connected to that respective string. <br />STO-Status is high:<a name="srs58"></a><br />- during system boot (power up), or <br />- if the string STO input is 0V, or<br />- if the communication with one of the connected drives is lost, or<br />- if no drive is connected to the string, or <br />- if the local fieldbus doesn't work.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Possible states of the drives connected to the string referring to the global STO function:</p>
+        <table style="caption-side: top;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 97px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 93px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 97px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 90px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">String<br />STO</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">String<br />HW Enable</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">String<br />STO-Status</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Safety acc. to SIL2</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderCenter">AKD-N on the String can produce Torque</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">high</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">high</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">low</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+24 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">low</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="">
+                    <p class="TableContentCenter">no</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="">
+                    <p class="TableContentCenter">yes</p>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">Use the following functional sequence when the STO function is used:<br />1. Brake the drives in a controlled manner (speed setpoint = 0 V).<br />2. When drives speed = 0 rpm, disable the string (enable = 0 V).<br />3. If a suspended load is present, block the drive mechanically.<br />4. Activate the STO function.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p class="TableContentLeft">It is not possible to perform a controlled brake if the STO is off. If controlled braking prior to the use of the STO function is necessary, the drive must be braked first and the STO input must be separated from +24 V time-delayed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">When wiring the STO circuits within a enclosure, the cables and the enclosure must meet the requirements of IEC 60204-1. If you are wiring leads outside the specified enclosure, then the cables must be laid durably and protected from outside damage. Use <MadCap:variable name="Primary.CompanyName" /> cables only.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h2 name="_Toc226791139" MadCap:autonum="1.5 &#160;&#160;">Functional test (global STO)</h2>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">You must test the safe torque off function after initial start of the drive, after each interference into the wiring of the drive, or after exchange of one or several components of the drive.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">First Method:</p>
+        <ul>
+            <li class="ListNumbered">Stop drives in the string with setpoint 0 V. Keep drives enabled. <br></br><b>DANGER: Do not enter hazardous area!</b></li>
+            <li class="ListNumbered">Activate the global STO function for example by opening protective screen of the string, where the drives are connected (voltage at STO input = 0V).</li>
+            <li class="ListNumbered">The <MadCap:variable name="Primary.DriveVariant_MKD" />-C fault contact opens, the corresponding string STO-Status message changes the voltage level, the drives lose torque and slow down to zero speed without control.</li>
+        </ul>
+        <p class="Bold">Second Method:</p>
+        <ul>
+            <li class="ListNumbered">Stop all drives in the string with setpoint 0 V, disable the string.</li>
+            <li class="ListNumbered">Activate the global STO function, for example, by opening protective screen (voltage at STO input = 0V).</li>
+            <li class="ListNumbered">The corresponding string STO-Status message changes the voltage level, the string cannot be enabled.</li>
+        </ul>
+    </body>
+</html>

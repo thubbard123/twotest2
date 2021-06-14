@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="86" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="Bold">Hot surface!</p>
+        <table style="width: 100%;mc-table-style: url('../../TableStyles/AKD_invisible.css');" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col style="width: 111px;" class="TableStyle-AKD_invisible-Column-Column1" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1">
+                        <img src="../../Images/Symbols/n/warning_r_hot.png" style="height: 15mm;width: auto;" />
+                    </td>
+                    <td class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">Drives may have hot surfaces during operation. The housing can reach temperatures above 80°C. Risk of minor burns! Measure the temperature, and wait until the housing has cooled down below 40 °C before touching it.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

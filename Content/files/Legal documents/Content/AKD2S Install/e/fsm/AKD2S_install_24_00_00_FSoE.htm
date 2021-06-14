@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="925" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/82079_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">FSoE<a name="FSoE"></a><a name="13849-2-FS2"></a></h1>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_invisible.css');width: 640px;" class="TableStyle-82079_invisible" cellspacing="0">
+            <col class="TableStyle-82079_invisible-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-82079_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-82079_invisible-Body-Body1">
+                    <td class="TableStyle-82079_invisible-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <img src="../../../Resources/Images/Logos/ec-safety.png" style="width: 200px;height: 52px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft"><MadCap:variable name="Primary.DriveName_AKD2G" /> drives (connectivity option <b>E</b>) are connected as slaves to the EtherCAT® network by using RJ45 connectors X11 (out port) and X12 (in port).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="ListBullet"> Interface details see <MadCap:xref href="../AKD2S_install_09_22_01_EtherCAT.htm">(➜ # 1)</MadCap:xref>. </li>
+            <li class="ListBullet">FSoE address setting see <MadCap:xref href="AKD2S_install_20_07_Settings.htm#FSoE">(➜ # 1)</MadCap:xref>.</li>
+            <li class="ListBullet">FSoE drive profile see <i><MadCap:variable name="Primary.DriveName_AKD2G" /> EtherCAT Manual</i>.</li>
+            <li class="ListBullet">Activation of FSoE for safety functions: <a href="Keywords/SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">SAFEPARAM.SAFEFIELDBUS.ACTIVATION</a></li>
+            <li class="ListBullet">Parameter Download through FSoE see <MadCap:xref href="AKD2S_install_20_08_03 Safety Parameter Download.htm#Download2">(➜ # 1)</MadCap:xref></li>
+        </ul>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_warnings.css');width: 640px;" class="TableStyle-82079_warnings" cellspacing="1">
+            <col style="width: 30mm;" class="TableStyle-82079_warnings-Column-Column1" />
+            <col class="TableStyle-82079_warnings-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_warnings-Body-Body2">
+                    <td class="TableStyle-82079_warnings-BodyB-Column1-Body2">
+                        <p class="TableContentLeft">
+                            <img src="../../../Resources/Images/Symbols/e/0info.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_warnings-BodyA-Column2-Body2">
+                        <p class="TableContentLeft">The FSoE safety architecture of the AKD2G is supported from TwinCAT 3 (Beckhoff).<br />For use of an FSoE master from another manufacturer, contact our customer service.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The SMM implements an FSoE slave with a single endpoint per axis. The SMM implements the FSoE drive profile and supports fixed data structures for the safe fieldbus only. If configured the software inverts the error bit of the FSoE status word at the associated safe digital output. The output is off if the error bit is set.<br />The software of the SMM responds to FSoE Messages within 2 ms after receiving the messages by using the Safe Fieldbus Interface. Examples for response time calculation depending on the safety function combination see <MadCap:xref href="fs2/AKD2S_install_22_03_00_Safety Properties Overview.htm#13849-3-FS2">(➜ # 1)</MadCap:xref>.</p>
+        <p>The SMM software receives this data in the parameter state of the FSoE Protocol:</p>
+        <ul>
+            <li class="ListBullet">The checksum of the parameters and the drive type identification. In this case the software uses this checksum to validate the parameters received by using CoE.</li>
+            <li class="ListBullet">No parameter block or a zero checksum (without other parameter).<br />In this case the software uses the parameters transmitted by using other means.</li>
+        </ul>
+        <p>The required data to create the EtherCAT Slave Information file (ESI file) are provided, including the safety parameters for the transmission by using the safe fieldbus.</p>
+        <p class="Bold">FSoE telegram frame RxPDO</p>
+        <p>Size per frame per axis 88 bits results in total 176 bits (22 Bytes) for both axes.<br />If an axis is not used, the data are transmitted anyway.</p>
+        <p class="Bold">FSoE telegram frame TxPDO</p>
+        <p>Size per frame per axis 248 bits results in total of 496 bits (62 Bytes) for both axes.<br />If an axis is not used, the data are transmitted anyway.</p>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Related parameters</h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/82079_Standard_Table.css');width: 530px;" class="TableStyle-82079_Standard_Table" cellspacing="0" MadCap:autosort="False">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 201px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 264px;" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableContentCenter">Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Activation for safety functions</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/SAFEPARAM/SAFEPARAM.SAFEFIELDBUS.ACTIVATION.htm">SAFEPARAM.SAFEFIELDBUS.ACTIVATION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Application parameter size</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.APPLPARAMLENGTH.htm">AXIS#.SAFE.FSOE.APPLPARAMLENGTH</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Comunication parameter length</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.COMMPARAMLENGTH.htm">AXIS#.SAFE.FSOE.COMMPARAMLENGTH</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Connection ID</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.CONNECTIONID.htm">AXIS#.SAFE.FSOE.CONNECTIONID</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Connection type (Slave)</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.CONNECTIONTYPE.htm">AXIS#.SAFE.FSOE.CONNECTIONTYPE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Protocol Version</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.PROTOCOLVERSION.htm">AXIS#.SAFE.FSOE.PROTOCOLVERSION</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">FSoE address</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.SAFETYADDR.htm">AXIS#.SAFE.FSOE.SAFETYADDR</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Safety-related application CRC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.SRACRC.htm">AXIS#.SAFE.FSOE.SRACRC</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Command word send by master</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.STATE.htm">AXIS#.SAFE.FSOE.STATE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft">Actual watchdog time</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentLeft"><a href="Keywords/AXISx.SAFE.FSOE/AXISx.SAFE.FSOE.WATCHDOGTIME.htm">AXIS#.SAFE.FSOE.WATCHDOGTIME</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1" style="font-size: 8pt;">
+                        <p class="TableContentCenter">100ms</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

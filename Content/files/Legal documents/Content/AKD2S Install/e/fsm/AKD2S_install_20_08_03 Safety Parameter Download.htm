@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="874" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD">
+    <head>
+        <link href="../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+        <link href="../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">Safety Parameter Download<MadCap:keyword term="Safety Parameter Download" /></h1>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">
+            <a name="Download">
+            </a>Download through <MadCap:variable name="Primary.WorkBenchName" /></h2>
+        <p>Make sure you are on the device topology “Safety”, click on your Safety Group name, and then on the "Safety Parameters" tab at the top. Highlight the package that you want to send to the drive. Click on Download. </p>
+        <p>
+            <img src="png/fs-setup-02.png" style="height: auto;width: 530px;">
+            </img>
+        </p>
+        <p>When safety parameter download to the <MadCap:variable name="Primary.DriveName_AKD2G" /> is selected, a validation and verification process starts before any parameter is written to the drive's memory. You are asked for a user name (1 to 8 characters) and a password (8 to 25 characters) to validate the package.</p>
+        <p>Default password is “SafeMotionMonitor <b>xyz</b>” ( “xyz” are the last three digits from the drive serial number, check serial numbers in the terminal with DRV.INFO, or name plate).</p>
+        <p>Click on “Download” to transmit the parameter package to the drive memory.</p>
+        <p>
+            <img src="png/fs-setup-03.png" style="height: auto;width: 530px;" />
+        </p>
+        <table style="width: 640px;mc-table-style: url('../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <p src="../../../Resources/Snippets/e/01notice.flsnp" class="TableContentLeft">
+                            <MadCap:snippetText src="../../../Resources/Snippets/e/01notice.flsnp" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">It is responsibility of the user to ensure, that the intended, matching parameter package is loaded to the drive. First enter the drive SafeID (1) manually and then click on "Verify" (2) to ensure, that the intended parameter package is in the drive. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="png/fs-setup-04.png" style="height: auto;width: 530px;" />
+        </p>
+        <p>The safety configuration will be persistent, no configuration required after power cycle.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">
+            <a name="Download2">
+            </a>Download through EtherCAT FoE</h2>
+        <p>The safety parameters file created with <MadCap:variable name="Primary.WorkBenchName" /> can be downloaded through non safe EtherCAT using FoE (file over EtherCAT). A standard EtherCAT master, which supports FoE protocol, shall set the EtherCAT communication state of the drive to “Boot” and download a valid safety parameter file via FoE. </p>
+        <p>The validation of the file needs to be done through SDO access. To perform the validation, the state of the SMM must be 5 (Parameter validation required). If not, the validation will be rejected by the system. The state of the SMM will transition from 3 (Configuration required) to 5 (Parameter validation required) after a successful download of the safety parameter file.</p>
+        <p>To validate the downloaded safety parameters, the user must write the following EtherCAT CoE objects:</p>
+        <ul class="ul_1">
+            <li class="ListNumbered">The user name (Index: 0x37C0, SubIndex: 1). <br />- User name: 1 to 8 characters</li>
+            <li class="ListNumbered">The date and time (Index: 0x37C0, SubIndex: 2). <br />- Format: YYYY-MM-DDThh:mm:ssZ<br /> Example: 2017-03-23T16:10:10Z which is 3th March, 2017, 16:10:10 UTC<br />- Date: YYYY = year, MM = month, DD = day<br />- Time: T = separator, hh = hour, mm =minute, ss =second, Z = time zone designator</li>
+            <li class="ListNumbered">The SafeID (Index: 0x37C0, SubIndex: 3).</li>
+            <li class="ListNumbered">The password (Index: 0x37C0, SubIndex: 4).<br />- Password: 8 to 25 characters</li>
+        </ul>
+        <p>Data must be written into the object dictionary. It is important to write the “Password” object last because it will trigger the validation process in the drive. </p>
+        <p>
+If the validation process fails, the safety configuration will NOT be activated, the SMM will stay in state 5 – “Parameter Validation required” and the SDO write will create an abort message.
+<br />If the validation process is successful, the SDO access will create no abort message and the SMM will transition to state 6 – “Operational”.
+</p>
+        <p>The safety configuration will be persistent, no configuration required after power cycle.</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Download through EtherCAT FSoE</h2>
+        <p>The safety parameters file created with <MadCap:variable name="Primary.WorkBenchName" /> can be downloaded through safe EtherCAT using FSoE (<b>F</b>ile <b>S</b>afe over <b>E</b>therCAT). </p>
+        <p>Usually, the FSoE master also supports SRA - “Safety related-application” parameters download. Then the safety configuration can be also sent to the drive using EtherCAT SDO access and FSoE. All safety parameters are available in the object dictionary and can be written individually using EtherCAT SDO. However, not all parameters have to be written. If a parameter is not written, then the default value (specified in the ESI file) is assumed.</p>
+        <p>The validation <b>must</b> be done through the FSoE master, which sends the SRA CRC to the <MadCap:variable name="Primary.DriveName_AKD2G" /> FSoE slaves during startup. This validation step can only be successful if the SMM was in state 3 – “Configuration required” prior to the validation process. If the drive has already a persistent safety configuration, the safety configuration must be cleared to set the SMM state to 3 – “Configuration required” (persistent safety parameters can be cleared using <MadCap:variable name="Primary.WorkBenchName" /> through the Parameters viewer <MadCap:xref href="AKD2S_install_20_08_02a Viewer.htm">(➜ # 1)</MadCap:xref>.</p>
+        <p>If the validation is successful, the SMM state will transition to state 6 – “Operational”. Otherwise, the SMM will stay in state 3 – “Configuration required”.</p>
+        <p>The safety configuration is non-persistent, that means this configuration will clear after a reboot or a reset of the FSoE connection.</p>
+    </body>
+</html>

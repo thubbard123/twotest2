@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="2053" MadCap:lastWidth="892" class="" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="InterfaceIO">Wiring of Digital Inputs (X15, X16, X24, X26)<a name="DigitalIn"></a><MadCap:keyword term="Digital inputs" /><MadCap:keyword term="Inputs:Programmable" /></h1>
+        <p>All digital inputs can be used to initiate pre-defined functions. A list of these pre-defined functions is included in the <MadCap:variable name="Primary.WorkBenchName" />. If an input is programmed, it must be saved to the device memory. For more information refer to the setup software.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">Depending on the selected function, the inputs are high or low active. The inputs can be used with switched +24 V (source type) or switched GND (sink type). Digital input filter can be set in <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable> to change sensitivity of the inputs (see Online Help).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Digital Inputs <MadCap:variable name="Primary.DriveVariant_MKD" />-C (X15B)</h2>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM</li>
+            <li class="ListBullet">Sink or Source type sensors possible</li>
+            <li class="ListBullet">High: 15 to 30 V / 2 to 15 mA , Low: -3 to +5 V / &lt;1 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+        </ul>
+        <p>Wiring diagram:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-C_Transistor-Inputs.png" style="height: auto;width: 520px;" />
+        </p>
+        <p class="Bold"> Hardware Enable<MadCap:keyword term="ENABLE;Inputs:Enable" /><MadCap:keyword term="Digital inputs;Inputs:Digital" /><a name="DigitalIn"></a></p>
+        <p>Digital Input (terminal X15B/1) is set to the Hardware Enable function by default. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The Hardware Enable and the Software Enable signal (via fieldbus or <MadCap:variable name="Primary.WorkBenchName" />) are linked serial, that means wiring of Hardware Enable is mandatory.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The output stage of all drives, which are connected to the <MadCap:variable name="Primary.DriveVariant_MKD" />-C are enabled by applying the ENABLE signal (Terminal X15B/1). Enable is possible only if the input STO-String 2 or 3 (valid for DC power strings 2 or 3) have a 24 V signal <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm" MadCap:conditions="Default.Exclude from WorkBench">(➜ # 1)</MadCap:xref> and Software Enable is set. In the disabled state the connected motors have no torque.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2>Digital Inputs <MadCap:variable name="Primary.DriveVariant_MKD" />-N (X24)</h2>
+        <p>On dual axis <MadCap:variable name="Primary.DriveVariant_MKD" />-N modules connector X24A is used for axis 1, X24B is used for axis 2. </p>
+        <p name="_Toc226791154" class="Bold">Digital Inputs 1 and 2</p>
+        <p>These inputs are particularly fast and are therefore suitable for latch functions, for example.</p>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM</li>
+            <li class="ListBullet">Sink or Source type sensors possible</li>
+            <li class="ListBullet">High: 15 to 30 V / 2 to 15 mA , Low: -3 to +5 V / &lt;1 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+            <li class="ListBullet">High accuracy latch: motor feedback position or interpolated time is latched or captured within 2 µs of input signal transition (with digital input filter set to 40 ns)</li>
+            <li class="ListBullet">The <MadCap:variable name="Primary.Model No prefix" /> capture engine is polled every 62.5 µs (16 kHz) by the firmware</li>
+        </ul>
+        <p name="_Toc226791154" class="Bold">Digital Input 3</p>
+        <p>Technical characteristics:</p>
+        <ul>
+            <li class="ListBullet">Floating, reference common line is DCOM</li>
+            <li class="ListBullet">Sink or Source type sensors possible</li>
+            <li class="ListBullet">High: 15 to 30 V / 2 to 15 mA , Low: -3 to +5 V / &lt;1 mA</li>
+            <li class="ListBullet">Update rate: firmware reads hardware input state every 250 µs</li>
+        </ul>
+        <p class="Bold">Wiring diagram:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-N_Transistor-Inputs.png" style="width: 500px;height: 400px;" />
+        </p>
+        <p style="font-size: 9pt;">* On <MadCap:variable name="Primary.DriveVariant_MKD" />-N connector X24A is used for axis 1, X24B is used for axis 2 if built-in.</p>
+        <h2>STO Enable inputs (X16, X26)</h2>
+        <p>Connector X16 on <MadCap:variable name="Primary.DriveVariant_MKD" />-C offers access to all global STO input signals of the decentral drive system powered by this <MadCap:variable name="Primary.DriveVariant_MKD" />-C . There is one STO-Enable input for each decentral DC Power string (strings 2 and 3). </p>
+        <p>Connector X26 on <MadCap:variable name="Primary.DriveVariant_MKD" />-N offers access to local STO input signals of the included axes in the <MadCap:variable name="Primary.DriveVariant_MKD" />-N module. There is one local STO-Enable input for each axis. </p>
+        <p>For description of STO interface and functionality refer to <MadCap:xref href="MKD_20_01_00_STO Safe Torque Off.htm">"Safe Torque Off " (➜ p. 1)</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.exclude from Lingo" MadCap:lastBlockDepth="4" MadCap:lastHeight="154" MadCap:lastWidth="641" xml:lang="de-de">
+    <head>
+    </head>
+    <body>
+        <ul class="left1">
+            <li>US Patent 8,154,228 (Dynamic Braking For Electric Motors)</li>
+            <li>US Patent 8,214,063 (Auto-tune of a Control System Based on Frequency Response)</li>
+            <li MadCap:conditions="Default.MKD Only">US Patent 8.566.415 (Safe Torque Off over network wiring)</li>
+            <li MadCap:conditions="Default.MKD Only">US Patent 10.374.468 (System and method for improved DC power line communication)</li>
+        </ul>
+    </body>
+</html>

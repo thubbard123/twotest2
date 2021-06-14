@@ -1,0 +1,178 @@
+/*<meta />*/
+
+body
+{
+	font-family: Arial;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ol,
+ul,
+dl
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+img
+{
+	border: none;
+	max-width: 100%;
+}
+
+a.Popup
+{
+	
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|multipleChoice.artsy
+{
+	font-family: Montserrat;
+	background-color: #fff8dc;
+	border: solid 2px #000000;
+	border-radius: 20px;
+	padding: 15px;
+}
+
+MadCap|multipleChoiceItem
+{
+	text-align: center;
+	font-weight: bold;
+	color: var(--response);
+}
+
+MadCap|question
+{
+	border-bottom: ridge 2px #d2691e;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	color: var(--question);
+}
+
+MadCap|multipleChoice#artID
+{
+	
+}
+
+#globalArtID
+{
+	color: #ff00ff;
+	font-weight: bold;
+}
+
+MadCap|correctFeedback.feedbackclass
+{
+	color: #ff8c00;
+	font-weight: bold;
+}
+
+MadCap|incorrectFeedback.feedbackclass
+{
+	color: #ff8c00;
+	font-weight: bold;
+}
+
+MadCap|question.qClass
+{
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	border-bottom: double 2px #5f9ea0;
+	color: #556b2f;
+}
+
+MadCap|multipleChoiceItem.answerClass
+{
+	text-align: center;
+	font-weight: bold;
+	color: #0000cd;
+}
+
+MadCap|submitQuestionButton.submitClass
+{
+	color: #9400d3;
+	font-weight: bold;
+}
+
+:root
+{
+	--question: #4b0082;
+	--response: #8b008b;
+	--feedback: #6a5acd;
+	--incorrect: #dc143c;
+}
+
+MadCap|incorrectFeedback
+{
+	color: var(--incorrect);
+}
+
+MadCap|correctFeedback
+{
+	color: var(--feedback);
+}
+

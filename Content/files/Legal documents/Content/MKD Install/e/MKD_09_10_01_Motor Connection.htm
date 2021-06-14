@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="15" MadCap:lastHeight="4667" MadCap:lastWidth="775" class="" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Not in KAS">
+    <head>
+        <link href="../../Resources/TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_warnings.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table_small.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="Motor interface" /><a name="InterfaceMotoranschluss"></a>
+            <MadCap:keyword term="Motor overload protection" />Motor Connection</h1>
+        <p class="Bold">Motor Power</p>
+        <p>Together with the motor supply cable and motor winding, the power output of the drive forms an oscillating circuit. Characteristics such as cable capacity, cable length, motor inductance, and frequency determine the maximum voltage in the system.</p>
+        <p>The <MadCap:variable name="Primary.DriveVariant_MKD" />-N drive is able to protect the connected motor from overloading, if the parameters are set correctly and the thermal protection sensor is connected and supervised. With <MadCap:variable name="Primary.CompanyName" /> motors the valid data are automatically set by the internal motor database. </p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <MadCap:snippetText src="../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The dynamic voltage rise can lead to a reduction in the motor operating life and, on unsuitable motors, to flash-overs in the motor winding.</p>
+                        <ul class="left1">
+                            <li class="ListBullet">Only install motors with insulation class F (acc. to IEC60085) or above. </li>
+                            <li class="ListBullet">Only install <MadCap:variable name="Primary.CompanyName" /> cables that meet the requirements: <MadCap:xref href="MKD_07_12_Cable and Wire.htm">(➜ # 1)</MadCap:xref>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Motor Brakes</p>
+        <p>A 24 V holding brake in the motor can be controlled directly by the drive. The brake works with sufficient 24 V voltage level only. Check voltage drop, measure the voltage at brake input and check brake function (brake and no brake). Maximum current for the motor brake is 1 A with <MadCap:variable name="Primary.DriveVariant_MKD" />-N 6 A axes and 1.5 A with <MadCap:variable name="Primary.DriveVariant_MKD" />-N 12/24/48A axes.</p>
+        <table style="width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_notes-Column-Column2">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;">
+                        </img>
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The stand-by power supply from <MadCap:variable name="Primary.DriveVariant_MKD"></MadCap:variable>-C limits the number of brakes in the system.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="caption-side: top;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_warnings.css');" class="TableStyle-82079_warnings" cellspacing="1">
+            <col class="TableStyle-82079_warnings-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_warnings-Column-Column2">
+            </col>
+            <tr class="TableStyle-82079_warnings-Body-Body2">
+                <td class="TableStyle-82079_warnings-BodyE-Column1-Body2">
+                    <img src="../../Resources/Images/Symbols/n/warning_r_suspended_loads.png" MadCap:mediastyle="@media print { height: 15mm;width: auto; }" style="width: auto;height: 17mm;">
+                    </img>
+                </td>
+                <td class="TableStyle-82079_warnings-BodyD-Column2-Body2">
+                    <table>
+                        <col style="width: 125px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <MadCap:snippetBlock src="../../Resources/Snippets/e/01caution.flsnp" />
+                                </td>
+                                <td>
+                                    <p class="TableWarningText" style="font-weight: bold;">Cranes, suspended load<a name="srs63"></a></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="TableWarningText">Serious injury could result when a suspended load is not properly blocked. Functional safety requires an additional, external mechanical brake, operated by a safety controller. The chapter “Brake interruption contact” describes how to use <MadCap:variable name="Primary.DriveVariant_MKD" /> contacts to realize an SBC function: <MadCap:xref href="MKD_20_02_00_SBC Safe Brake Control.htm">(➜ # 1)</MadCap:xref>.</p>
+                    <ul class="left1">
+                        <li class="ListBulletWarning">Add a safe mechanical blocking (for instance, an additional brake using the safe brake interruption: <MadCap:xref href="MKD_20_02_00_SBC Safe Brake Control.htm">(➜ # 1)</MadCap:xref>). </li>
+                        <li class="ListBulletWarning">Set parameter MOTOR.BRAKEIMM to 1 with vertical axes, to apply the motor holding brake immediately after faults or Hardware Disable.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p>The brake function must be enabled and configured with parameters using <MadCap:variable name="Primary.WorkBenchName" />, for details refer to the online help.</p>
+        <p class="Bold">Motor Feedback</p>
+        <p>Every closed servo system normally requires at least one feedback device for sending actual values from the motor to the drive. Depending on the type of feedback device used, information will be fed back to the drive using digital or analog means. </p>
+        <p><MadCap:variable name="Primary.DriveVariant_MKD" />-N supports the most common types of feedback devices. SFD3 and HIPERFACE DSL (short: DSL) are feedback systems with a dual line serial interface. These feedback systems are used for single cable connection between motor and drive. Conventional feedback systems like incremental, or sine, or BiSS, or EnDAT encoders are connected by separate feedback cables, which results in a dual cable connection to the drive.</p>
+        <p>Feedback functions are assigned with parameters in <MadCap:variable name="Primary.WorkBenchName" />, the setup software. Scaling and other settings are also performed in <MadCap:variable name="Primary.WorkBenchName" />. For a detailed description of the parameters, please refer to the <MadCap:variable name="Primary.WorkBenchName" /> online help. Refer to parameter MOTOR.RTYPE for supported thermal sensors.</p>
+        <p class="pagebreak">&#160;</p>
+        <h2>Motor single cable connection (X29, X30, X31)</h2>
+        <p>Motors with single cable connection (motor power lines, motor holding brake lines and motor feedback lines combined in one hybrid cable) have one connector on the motor end and two or three connectors on the drive end.</p>
+        <p>&#160;</p>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-N 6 A or 12 A axes</p>
+        <p class="Bold" style="font-weight: normal;">X29B and X31B are available in dual-axis modules only.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X29<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="9">
+                        <img src="../../Resources/Images/MKD/n/MKD-x29A_B-x31A_B.png" style="height: 240px;width: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">U</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase U</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase V</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">W</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Protective earth (motor housing)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake negative</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X31<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">COM+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SFD3/DSL positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">COM-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">SFD3/DSL positive</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-N 24 A or 48 A axes</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X29<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="10">
+                        <img src="../../Resources/Images/MKD/n/MKD-x29-x30-x31.png" style="width: 200px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">U</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase U</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase V</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">W</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Protective earth (motor housing)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X30<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake negative</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X31<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">7</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">COM+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">SFD3/DSL positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">8</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">COM-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">SFD3/DSL positive</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h3><a name="Motor"></a>Motor Power and Motor Brake X29, Motor Feedback X31</h3>
+        <p>Valid for <MadCap:variable name="Primary.DriveVariant_MKD" />-N axes with 6 A or 12 A.</p>
+        <p class="Bold">
+            <img src="../../Resources/Images/MKD/e/MKD-N_X29-X31_connection.png" style="width: 390px;height: auto;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Motor Power X29, Motor Brake X30, Motor Feedback X31</h3>
+        <p>Valid for <MadCap:variable name="Primary.DriveVariant_MKD" />-N axes with 24 A or 48 A.</p>
+        <p class="Bold">
+            <img src="../../Resources/Images/MKD/e/MKD-N_X29-X30-X31_connection.png" style="height: auto;width: 390px;" />
+        </p>
+        <p class="pagebreak">&#160;</p>
+        <h2>Motor dual cable connection (X29, X30, X32)</h2>
+        <p>Motors with dual cables connection (motor power lines and motor feedback lines in separate cables).</p>
+        <p>&#160;</p>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-N 6 A or 12 A axes</p>
+        <p style="font-weight: normal;">X29B and X32B are available in dual-axis modules only.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X29<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="8">
+                        <img src="../../Resources/Images/MKD/n/MKD-x29A_B-x32A_B.png" style="height: 240px;width: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">U</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase U</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase V</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">W</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Protective earth (motor housing)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">5</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">6</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake negative</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X32<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">1...15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">div</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">See <MadCap:xref href="#Primary">(➜ # 1)</MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="Bold"><MadCap:variable name="Primary.DriveVariant_MKD" />-N 24 A or 48 A axes</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X29<br /></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" rowspan="9">
+                        <img src="../../Resources/Images/MKD/n/MKD-x29-x30-x32.png" style="width: 200px;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">U</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase U</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">V</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase V</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">3</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">W</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor phase W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">4</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">PE</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Protective earth (motor housing)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X30<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">1</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR+</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake positive</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">2</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentCenter">BR-</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">Motor Brake negative</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">X32<br /></p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderCenter">Signal</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableHeaderLeft">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">1...15</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentCenter">div</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">See <MadCap:xref href="#Primary">(➜ # 1)</MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreak">&#160;</p>
+        <h3>Motor Power and Motor Brake X29</h3>
+        <p>Valid for <MadCap:variable name="Primary.DriveVariant_MKD" />-N axes with 6 A or 12 A.</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-N_X29-X32_connection.png" style="width: 400px;height: auto;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Motor Power X29, Motor Brake X30</h3>
+        <p>Valid for <MadCap:variable name="Primary.DriveVariant_MKD" />-N axes with 24 A or 48 A.</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-N_X29-x30-X32_connection.png" style="width: 395px;height: 260px;" />
+        </p>
+        <p>&#160;</p>
+        <p class="pagebreak">&#160;</p>
+        <h3><a name="Primary"></a>Motor Feedback X32</h3>
+        <p>
+            <img src="../../Resources/Images/MKD/e/MKD-N_X32_connection.png" style="height: auto;width: 530px;" />
+        </p>
+        <p>&#160;</p>
+        <p>X32B is available in dual-axis modules only.</p>
+        <table style="caption-side: top;width: 640px;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table_small.css');" class="TableStyle-82079_Standard_Table_small" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table_small-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table_small-Head-Header1">
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">X32<br /></p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">SFD<br></br></p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">BiSS<br></br>B <br></br></p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeaderCenter">BiSS<br></br>C<br></br></p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">EnDAT<br></br>2.1</p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">EnDAT<br></br>2.2</p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Sine/Cos<br />+Hall<br /></p>
+                    </th>
+                    <th style="text-align: center;" class="TableStyle-82079_Standard_Table_small-HeadD-Column1-Header1">
+                        <p class="TableHeaderCenter">Incr. Enc.<br></br>+Hall<br></br></p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">1</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;U</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;U</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">2</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;V</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">3</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">CLK-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;W</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Hall&#160;W</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">4</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">5</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">6</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">COM+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Zero+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Zero+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">7</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">COM-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">DAT-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Zero-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Zero-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">8</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Th+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">9</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">Th-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">Th-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">10</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">+5 V</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">11</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">0 V</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">12</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">A+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">13</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">A-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">A-</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">14</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B+</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">B+</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table_small-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">15</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">B-</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table_small-BodyD-Column1-Body1">
+                    <p class="TableContentCenter">B-</p>
+                </td>
+            </tr>
+        </table>
+        <p><span style="font-size: 9pt;">CLK = Clock, DAT = Data, </span>
+            <MadCap:conditionalText MadCap:conditions="Default.Obsolete"><span style="font-size: 9pt;">SEN = Sense, </span>
+            </MadCap:conditionalText><span style="font-size: 9pt;">Th = thermal control<br />BiSS Mode C interface from Renishaw (model Resolute RA26B)</span>
+        </p>
+    </body>
+</html>

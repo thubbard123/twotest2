@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="21" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+    </head>
+    <body>
+        <p>
+            <img src="../../Images/Symbols/e/0notice.png" style="width: 27mm;height: auto;" MadCap:conditions="Default.Exclude from Install,Primary.exclude from language project,Default.Exclude from AKD Accessories,Default.Exclude from Sxyz Accessories,Default.Exclude from WorkBench,Default.Exclude from Fieldbus" />
+            <img src="../../Images/Symbols/e/1notice.png" style="width: 27mm;height: auto;" MadCap:conditions="Default.Exclude from Safety Guide,Default.Exclude from&#160;Datasheet" />
+        </p>
+    </body>
+</html>

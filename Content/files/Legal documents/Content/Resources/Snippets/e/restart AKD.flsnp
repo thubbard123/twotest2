@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="151" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/ansi_panel.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table>
+            <col style="width: 125px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <MadCap:snippetBlock src="01warning.flsnp" />
+                    </td>
+                    <td>
+                        <p class="TableWarningText" style="font-weight: bold;">Automatic Restart!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="TableWarningText">Risk of death or serious injury for humans working in the machine. The drive might restart automatically after power on, voltage dip or interruption of the supply voltage, depending on the parameter setting. If parameter DRV.ENDEFAULT is set to 1,</p>
+        <ul class="left1">
+            <li class="ListBullet">then place a warning sign ("WARNING: Possible Automatic Restart" or similar) to the machine.</li>
+            <li class="ListBullet">Ensure, that power on is not possible, while humans are in a dangerous zone of the machine. </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="71" MadCap:lastWidth="641" MadCap:conditions="Primary.exclude from Lingo">
+    <head>
+        <link href="../../TableStyles/AKD_invisible.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../TableStyles/AKD_invisible.css');width: 299px;" class="TableStyle-AKD_invisible" cellspacing="0">
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <col class="TableStyle-AKD_invisible-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-AKD_invisible-Body-Body1">
+                    <td class="TableStyle-AKD_invisible-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <img src="../../Images/Symbols/n/mandatory_read.png" style="width: 72px;height: 70px;" />
+                    </td>
+                    <td style="text-align: right;vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;" class="TableStyle-AKD_invisible-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">For safe and proper use, follow these instructions. Keep for future use.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

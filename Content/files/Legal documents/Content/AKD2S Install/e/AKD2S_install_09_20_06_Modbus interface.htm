@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="6" MadCap:lastHeight="526" MadCap:lastWidth="641">
+    <head>
+        <link href="../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 name="motion-bus" MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="EtherNet:Modbus TCP Protocol" />
+            <MadCap:keyword term="Modbus" />Modbus TCP connector X20</h1>
+        <p>The drive can be connected to Modbus HMI by using RJ45 connector X20. The protocol allows reading and writing of drive and axis parameters. <br />The communication status is indicated by the built-in LED. </p>
+        <table style="caption-side: top;mc-table-style: url('../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col style="width: 69px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 51px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 84px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col style="width: 210px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Connector</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p style="font-weight: normal;" class="TableHeaderCenter">LED</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderCenter">Name</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Function</p>
+                    </td>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">X20</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">LED</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentCenter">IN port Link</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">green = active, red= not active</p>
+                </td>
+            </tr>
+        </table>
+        <p>Connect the service interface (X20) of the drive to an EtherNet interface on the Modbus HMI directly or by using a network switch, <b>while the supply to the equipment is switched off. </b>Use standard Cat. 5 EtherNet cables for connection.</p>
+        <p>Confirm that the link LED on the <MadCap:variable name="Primary.DriveName_AKD2G" /> (the green LED on the RJ45 connector) and on your HMI or switch are both illuminated. If both LEDs are illuminated, then you have a good electrical connection.</p>
+        <p>The following are required to connect an HMI to the drive:</p>
+        <ul>
+            <li class="ListBullet">The HMI must support Modbus TCP. </li>
+            <li class="ListBullet"> It must have EtherNet hardware and a driver for Modbus TCP, though the driver does not have to be made specifically for the <MadCap:variable name="Primary.DriveName_AKD2G" /> family. </li>
+        </ul>
+        <p>The subnet mask of the <MadCap:variable name="Primary.DriveName_AKD2G" /> is 255.255.255.0. The first three octets of the drive’s IP address must be the same as the first three octets of the HMI’s IP address. The last octet must be different.</p>
+        <p>Modbus TCP and <MadCap:variable name="Primary.WorkBenchName" />/<MadCap:variable name="Primary.KASIDEName" /> can operate simultaneously if a switch is used.</p>
+        <p class="Bold">Communication profile</p>
+        <p>For Modbus communication profile description refer to  the <MadCap:variable name="Primary.WorkBenchName" /> Online Help.</p>
+    </body>
+</html>

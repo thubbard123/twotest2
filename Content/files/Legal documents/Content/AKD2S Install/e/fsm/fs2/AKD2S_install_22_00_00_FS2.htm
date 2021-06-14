@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="783" MadCap:lastWidth="641" class="" MadCap:conditions="Default.Exclude from AKD2_Safety1,Default.Exclude from AKD2_Safety3,Default.Exclude from AKD">
+    <head>
+        <link href="../../../../Resources/TableStyles/82079_Standard_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../Resources/TableStyles/82079_notes.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../../Resources/Stylesheets/82079_multi.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 name="optionAS" MadCap:autonum="1 &#160;&#160;">Safety Functions Option 2 (I/O, FSoE, SIL3 PLe)<MadCap:keyword term="Functional Safety 2 (FS2)" /></h1>
+        <p MadCap:conditions="Default.BetaVersionOnly,Default.ToBeReviewed" style="color: #ff0000;">The safety functions on the <MadCap:variable name="Primary.DriveName_AKD2G" /> with functional safety option 2 are certified. </p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_notes.css');" class="TableStyle-82079_notes" cellspacing="0">
+            <col class="TableStyle-82079_notes-Column-Column1" />
+            <col class="TableStyle-82079_notes-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyH-Column1-Body1">
+                        <MadCap:snippetText src="../../../../Resources/Snippets/e/01notice.flsnp" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyG-Column2-Body1">
+                        <p src="../../../../Resources/Snippets/e/in-process-approvals.flsnp" class="TableContentLeft">The drive is ready to operate with pre-configured STO function.</p>
+                        <p src="../../../../Resources/Snippets/e/in-process-approvals.flsnp" class="TableContentLeft">Each safety function can either be activated through FSoE or digital input or both. The source of activation shall be configured inside the safety parameters and it needs to match the system requirements. </p>
+                        <p src="../../../../Resources/Snippets/e/in-process-approvals.flsnp" class="TableContentLeft">The user must review the default setting and check if it matches his requirements. In case it doesn't match, the safety parameters need to be adapted and validated.</p>
+                        <p class="TableContentLeft">For digital I/O commanding use <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable> to map safety functions to safe I/Os. </p>
+                        <p class="TableContentLeft">With&#160;<a href="../AKD2S_install_24_00_00_FSoE.htm">FSoE</a> the safety functions can be activated by using the safePLC of the FSoE Master.</p>
+                        <p class="TableContentLeft">With dual axis drives every safety function can be activated for one axis or for both axes (axis 1 or axis 2 or axes 1&amp;2).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_notes-Body-Body1">
+                    <td class="TableStyle-82079_notes-BodyB-Column1-Body1">
+                        <img src="../../../../Resources/Images/Symbols/e/0info.png" style="width: 27mm;height: auto;" />
+                    </td>
+                    <td class="TableStyle-82079_notes-BodyA-Column2-Body1">
+                        <p class="TableContentLeft">The systematic safety integrity indicated by the systematic capability can be achieved only when the instructions and constraints are observed. Where violations occur, the claim for systematic capability is partially or wholly invalid.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Standards<a name="FS2-13849-14"></a></p>
+        <table cellspacing="0" style="caption-side: top;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');width: 640px;" class="TableStyle-82079_Standard_Table">
+            <col style="width: 100px;" class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">
+                        <p class="TableHeaderLeft">Standard </p>
+                    </th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">
+                        <p class="TableHeaderLeft">Content</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">ISO 13849:2015</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Safety of machinery: Safety-related parts of control systems</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                    <p class="TableContentLeft">IEC 62061:2015</p>
+                </td>
+                <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                    <p class="TableContentLeft">Functional safety of electrical/electronic/programmable electronic safety-related systems</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Bold">Available Safety Functions<a name="FS2-61508-31a"></a></p>
+        <p>Activation and reachable Performance level / Category <MadCap:xref href="AKD2S_install_22_03_00_Safety Properties Overview.htm#Activati2" class="XrefSee">(➜ # 1)</MadCap:xref>.</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 53px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 141px;" MadCap:conditions="">
+            </col>
+            <thead>
+                <tr class="TableStyle-82079_Standard_Table-Head-Header1">
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Abbr.</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadE-Column1-Header1">Function</th>
+                    <th class="TableStyle-82079_Standard_Table-HeadD-Column1-Header1">Refer to</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">STO</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safe Torque Off</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:xref class="XrefSee" href="AKD2S_install_22_04_00_STO.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">SS1-t</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safe Stop 1, time based</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:xref class="XrefSee" href="AKD2S_install_22_05_00_SS1.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">SBC</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyE-Column1-Body1">
+                        <p class="TableContentLeft">Safe Brake Control</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyD-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:xref class="XrefSee" href="AKD2S_install_22_06_00_SBC.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">SDB</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Safe Dynamic Brake</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:xref class="XrefSee" href="AKD2S_install_22_08_00_SDB.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Necessary test function</p>
+        <table style="width: 640px;mc-table-style: url('../../../../Resources/TableStyles/82079_Standard_Table.css');" class="TableStyle-82079_Standard_Table" cellspacing="0">
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 53px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 106px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 219px;">
+            </col>
+            <col class="TableStyle-82079_Standard_Table-Column-Column1" style="width: 146px;" MadCap:conditions="">
+            </col>
+            <tbody>
+                <tr class="TableStyle-82079_Standard_Table-Body-Body1">
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p class="TableContentLeft">SBT</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Safe Brake Test</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyB-Column1-Body1">
+                        <p class="TableContentLeft">Activated by a non safe digital input or a non safe fieldbus (EtherCAT or CANopen) or by <MadCap:variable name="Primary.WorkBenchName" />.</p>
+                    </td>
+                    <td class="TableStyle-82079_Standard_Table-BodyA-Column1-Body1">
+                        <p class="TableContentLeft">
+                            <MadCap:xref class="XrefSee" href="AKD2S_install_22_07_00_SBT.htm">(➜ # 1)</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Bold">Rotary switches S1/S2 and push-buttons B1/B2<a name="Rotary"></a></p>
+        <p>Switches and buttons in the device front <MadCap:xref href="../AKD2S_install_20_07_Settings.htm#rotary">(➜ # 1)</MadCap:xref> are used to set the SafeID <MadCap:xref class="XrefSee" href="../AKD2S_install_20_07_Settings.htm#SafeID">(➜ # 1)</MadCap:xref>.</p>
+    </body>
+</html>

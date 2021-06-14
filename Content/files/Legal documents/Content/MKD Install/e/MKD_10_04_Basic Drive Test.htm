@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="" MadCap:lastBlockDepth="4" MadCap:lastHeight="945" MadCap:lastWidth="641" MadCap:conditions="Default.Not in KAS">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;">
+            <MadCap:keyword term="Initial Drive Test" />Initial System Test</h1>
+        <ul>
+            <li class="ListNumbered">Unpack the devices and accessories. Observe the safety instructions in the documentation.</li>
+            <li class="ListNumbered">Mount the devices and wire the system.</li>
+            <li class="ListNumbered">Validate mechanical and electrical installation.</li>
+            <li class="ListNumbered">Validate IP addresses</li>
+            <li class="ListNumbered">Make sure you have on hand the following information about the drive components:</li>
+            <li class="ListBulletIndent">rated mains supply voltage</li>
+            <li class="ListBulletIndent">motor type (motor data, if the motor type is not listed in the motor database)</li>
+            <li class="ListBulletIndent">feedback unit built into the motor (type, poles/lines/protocol)</li>
+            <li class="ListBulletIndent">moment of inertia of the load</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 &#160;&#160;">Set system addresses</h2>
+        <p>We suggest to use Auto-IP. Set rotary switch S1 to "0". All network devices that are connected receive a unique IP address in the range 169.254.x.y. <MadCap:variable name="Primary.WorkBenchName" /> looks for IP addresses in the subnet to detect devices in the LAN and start communication. Refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for information.</p>
+        <h2 MadCap:autonum="1.2 &#160;&#160;">Confirm connections</h2>
+        <p>Switch on 24 VDC logic power for the system (mains supply voltage is not needed for communications).</p>
+        <p>Confirm that the green link LED 1 on the <MadCap:variable name="Primary.DriveVariant_MKD" />-C and on the PC are both illuminated.</p>
+        <p>
+            <img src="../../Resources/Images/MKD/n/MKD-x18_LEDs_pinout.png" style="width: 95px;height: 46px;" />
+        </p>
+        <p>While the PC is connecting, your status bar will show the following acquiring icon:</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/acquiring_drive_connection.png" style="width: 350px;height: auto;">
+            </img>
+        </p>
+        <p>Wait for this icon to change to the limited functionality icon (this process can take up to one minute).</p>
+        <p>
+            <img src="../../Resources/Images/MKD/e/complete_drive_connection.png" style="width: 350px;height: auto;">
+            </img>
+        </p>
+        <p>Although Windows displays this limited functionality icon for the drive connection, the PC can communicate fully with the drive. Using <MadCap:variable name="Primary.WorkBenchName" />, you can now configure the drive through this connection.</p>
+        <h2 MadCap:autonum="1.3 &#160;&#160;">Install and start <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable></h2>
+        <p><MadCap:variable name="Primary.WorkBenchName" /> is available from the DVD included with the drive and on the <MadCap:variable name="Primary.CompanyName" /> Website: <MadCap:variable name="Primary.CompanyWebsite" />. Select the install file and follow the instructions given by the installer.</p>
+        <p>Once installation is complete, click the <MadCap:variable name="Primary.WorkBenchName"></MadCap:variable> icon to start the program. </p>
+        <h2 MadCap:autonum="1.4 &#160;&#160;">Parameterize and enable the axes in <MadCap:variable name="Primary.WorkBenchName" /></h2>
+        <p>Refer to the <MadCap:variable name="Primary.WorkBenchName" /> Online Help for information.</p>
+    </body>
+</html>
